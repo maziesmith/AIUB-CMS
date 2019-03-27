@@ -17,5 +17,10 @@ namespace AIUB_CMS
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
