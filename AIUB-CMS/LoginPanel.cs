@@ -16,11 +16,27 @@ namespace AIUB_CMS
         public LoginPanel()
         {
             InitializeComponent();
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            this.Activate();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            IDValidator validator = new IDValidator();
+            if (validator.validateID(this.IdField.Text))
+            {
+                MessageBox.Show("Valid ID.");
+                ID id = new ID(IdField.Text);
+                id.parseID();
+                MessageBox.Show(id.getIdType() + "");
+            }
+            else
+            {
+                MessageBox.Show("Invalid ID.");
+            }
             
         }
+
     }
 }

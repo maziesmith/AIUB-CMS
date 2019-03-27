@@ -28,40 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PasswordField = new MetroFramework.Controls.MetroTextBox();
-            this.IdField = new MetroFramework.Controls.MetroTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPanel));
             this.LoginButton = new MetroFramework.Controls.MetroButton();
             this.RememberPasswordCheckbox = new MaterialSkin.Controls.MaterialCheckBox();
             this.CMSLogo = new System.Windows.Forms.PictureBox();
+            this.PasswordField = new MetroFramework.Controls.MetroTextBox();
             this.CMSLabel = new System.Windows.Forms.Label();
+            this.IdField = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CMSLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PasswordField
-            // 
-            this.PasswordField.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.PasswordField.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.PasswordField.Location = new System.Drawing.Point(126, 292);
-            this.PasswordField.MaxLength = 20;
-            this.PasswordField.Name = "PasswordField";
-            this.PasswordField.PasswordChar = '●';
-            this.PasswordField.PromptText = "Password";
-            this.PasswordField.Size = new System.Drawing.Size(250, 33);
-            this.PasswordField.TabIndex = 1;
-            this.PasswordField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PasswordField.UseSystemPasswordChar = true;
-            // 
-            // IdField
-            // 
-            this.IdField.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.IdField.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.IdField.Location = new System.Drawing.Point(126, 246);
-            this.IdField.MaxLength = 20;
-            this.IdField.Name = "IdField";
-            this.IdField.PromptText = "ID";
-            this.IdField.Size = new System.Drawing.Size(250, 33);
-            this.IdField.TabIndex = 0;
-            this.IdField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LoginButton
             // 
@@ -102,6 +77,20 @@
             this.CMSLogo.TabIndex = 5;
             this.CMSLogo.TabStop = false;
             // 
+            // PasswordField
+            // 
+            this.PasswordField.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.PasswordField.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
+            this.PasswordField.Location = new System.Drawing.Point(126, 292);
+            this.PasswordField.MaxLength = 20;
+            this.PasswordField.Name = "PasswordField";
+            this.PasswordField.PasswordChar = '●';
+            this.PasswordField.PromptText = "Password";
+            this.PasswordField.Size = new System.Drawing.Size(250, 33);
+            this.PasswordField.TabIndex = 1;
+            this.PasswordField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PasswordField.UseSystemPasswordChar = true;
+            // 
             // CMSLabel
             // 
             this.CMSLabel.AutoSize = true;
@@ -111,6 +100,18 @@
             this.CMSLabel.Size = new System.Drawing.Size(294, 25);
             this.CMSLabel.TabIndex = 6;
             this.CMSLabel.Text = "AIUB-Class-Mangement-System";
+            // 
+            // IdField
+            // 
+            this.IdField.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.IdField.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
+            this.IdField.Location = new System.Drawing.Point(126, 246);
+            this.IdField.MaxLength = 20;
+            this.IdField.Name = "IdField";
+            this.IdField.PromptText = "ID";
+            this.IdField.Size = new System.Drawing.Size(250, 33);
+            this.IdField.TabIndex = 0;
+            this.IdField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LoginPanel
             // 
@@ -125,6 +126,7 @@
             this.Controls.Add(this.CMSLogo);
             this.Controls.Add(this.RememberPasswordCheckbox);
             this.Controls.Add(this.LoginButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(500, 500);
             this.MinimizeBox = false;
@@ -139,13 +141,12 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTextBox PasswordField;
-        private MetroFramework.Controls.MetroTextBox IdField;
         private MetroFramework.Controls.MetroButton LoginButton;
         private MaterialSkin.Controls.MaterialCheckBox RememberPasswordCheckbox;
         private System.Windows.Forms.PictureBox CMSLogo;
+        private MetroFramework.Controls.MetroTextBox PasswordField;
         private System.Windows.Forms.Label CMSLabel;
+        private MetroFramework.Controls.MetroTextBox IdField;
     }
 }
 
