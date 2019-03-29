@@ -23,16 +23,40 @@ namespace AIUB_CMS
             this.password = password;
         }
 
-        public bool Validate()
+        public bool Validate(string id)
         {
-            LoginTest lt = new LoginTest();
+            DataClasses1DataContext dc = new DataClasses1DataContext();
 
-            
+            var dtm = dc.Mapping;
+
+            foreach (var t in dtm.GetTables())
+            {
+                Console.WriteLine(t.TableName);
+            }
+
+            var query =
+                from a in dc.LoginTests
+                where a.ID.Equals(id)
+                select a.HashedPassword;
+
+
+            string pass = "";
+
+            foreach (var student in query)
+            {
+                pass = student;
+            }
+
+            // Console.WriteLine(query);
+
             string hash = CalculateMD5Hash(password);
-            Console.WriteLine(hash);
-            return true;
 
-            
+            if (hash.Equals(pass))
+                return true;
+            else
+                return false;
+
+ 
         }
 
         public string CalculateMD5Hash(string input)

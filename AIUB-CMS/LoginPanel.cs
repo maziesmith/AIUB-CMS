@@ -31,7 +31,12 @@ namespace AIUB_CMS
                 id.ParseID();
                 MessageBox.Show(id.GetIdType() + "");
 
-                // PasswordValidator password = new PasswordValidator(PasswordField.Text);
+                PasswordValidator password = new PasswordValidator(PasswordField.Text);
+
+                if (password.Validate(IdField.Text))
+                    MessageBox.Show("Valid password.");
+                else
+                    MessageBox.Show("Invalid password.");
 
 
             }
