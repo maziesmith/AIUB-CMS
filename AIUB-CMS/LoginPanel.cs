@@ -24,12 +24,16 @@ namespace AIUB_CMS
         private void LoginButton_Click(object sender, EventArgs e)
         {
             IDValidator validator = new IDValidator();
-            if (validator.validateID(this.IdField.Text))
+            if (validator.ValidateID(this.IdField.Text))
             {
                 MessageBox.Show("Valid ID.");
                 ID id = new ID(IdField.Text);
-                id.parseID();
-                MessageBox.Show(id.getIdType() + "");
+                id.ParseID();
+                MessageBox.Show(id.GetIdType() + "");
+
+                // PasswordValidator password = new PasswordValidator(PasswordField.Text);
+
+
             }
             else
             {

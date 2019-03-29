@@ -29,10 +29,10 @@ namespace AIUB_CMS
             firstPart = splitID[0];
             secondPart = splitID[1];
             thirdPart = splitID[2];
-            this.parseID();
+            this.ParseID();
         }
 
-        public void parseID()
+        public void ParseID()
         {
             if (firstPart.Length == 4 && int.Parse(thirdPart) == 1)
             {
@@ -62,12 +62,12 @@ namespace AIUB_CMS
             }
         }
 
-        public string getIdType()
+        public string GetIdType()
         {
             return this.idType;
         }
 
-        public string getSemester()
+        public string GetSemester()
         {
             return this.semester;
         }

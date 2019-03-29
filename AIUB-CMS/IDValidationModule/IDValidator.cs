@@ -13,13 +13,12 @@ namespace AIUB_CMS
             // Do Nothing.
         }
 
-        public bool validateID(string ID)
+        public bool ValidateID(string ID)
         {
             string[] splitID = ID.Split('-');
-
             if (splitID.Length > 3)
                 return false;
-            else
+            else if (int.TryParse(splitID[0], out int x) && int.TryParse(splitID[1], out int y) && int.TryParse(splitID[2], out int z))
             {
                 if (splitID[0].Length == 2 || splitID[0].Length == 4)
                     if (splitID[1].Length == 5)
@@ -28,9 +27,10 @@ namespace AIUB_CMS
                                 return true;
                             else if (int.Parse(splitID[2]) <= 3 && splitID[0].Length == 2 && int.Parse(splitID[2]) != 0)
                                 return true;
+                return false;
             }
-
-            return false;
+            else
+                return false;
         }
     }
 }
