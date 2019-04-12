@@ -8,7 +8,7 @@ namespace AIUB_CMS.Login.Logic
 {
     class IDValidation
     {
-        IDValidation()
+        public IDValidation()
         {
             // Do Nothing.
         }

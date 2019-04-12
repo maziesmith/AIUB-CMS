@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AIUB_CMS.Login.Logic;
 
 namespace AIUB_CMS.Login.Interface
 {
@@ -15,6 +16,31 @@ namespace AIUB_CMS.Login.Interface
         public LoginInterface()
         {
             InitializeComponent();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            IDValidation validator = new IDValidation();
+            if (validator.ValidateID(this.textboxID.Text))
+            {
+                MessageBox.Show("Valid ID.");
+                ID id = new ID(textboxID.Text);
+                id.ParseID();
+                MessageBox.Show(id.GetIdType() + "");
+
+                PasswordValidation password = new PasswordValidation(textboxPassword.Text);
+
+                if (password.Validate(textboxID.Text))
+                    MessageBox.Show("Valid password.");
+                else
+                    MessageBox.Show("Invalid password.");
+
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid ID.");
+            }
         }
     }
 }

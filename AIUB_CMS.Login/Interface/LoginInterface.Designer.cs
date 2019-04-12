@@ -86,6 +86,7 @@
             this.buttonLogin.Size = new System.Drawing.Size(99, 50);
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // LoginInterface
             // 
