@@ -9,6 +9,7 @@ namespace AIUB_CMS.Login.Interface
 {
     public static class LoginFormInitializer
     {
+        // Initialize the login form.
         public static void InitializeLoginForm()
         {
             Application.EnableVisualStyles();

@@ -60,7 +60,7 @@
             // textboxID
             // 
             this.textboxID.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.textboxID.Location = new System.Drawing.Point(117, 306);
+            this.textboxID.Location = new System.Drawing.Point(117, 290);
             this.textboxID.Name = "textboxID";
             this.textboxID.PromptText = "ID";
             this.textboxID.Size = new System.Drawing.Size(216, 35);
@@ -70,7 +70,7 @@
             // textboxPassword
             // 
             this.textboxPassword.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.textboxPassword.Location = new System.Drawing.Point(117, 347);
+            this.textboxPassword.Location = new System.Drawing.Point(117, 331);
             this.textboxPassword.Name = "textboxPassword";
             this.textboxPassword.PasswordChar = '●';
             this.textboxPassword.PromptText = "Password";
@@ -100,6 +100,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.MaximizeBox = false;
             this.Name = "LoginInterface";
             this.Padding = new System.Windows.Forms.Padding(40, 138, 40, 46);
             this.Resizable = false;
