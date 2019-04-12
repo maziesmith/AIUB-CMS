@@ -20,6 +20,8 @@ namespace AIUB_CMS.Login.Interface
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            // The code below is a temporary place holder for testing purposes.
+            // Used to check if the passwords are working as intended.
             IDValidation validator = new IDValidation();
             if (validator.ValidateID(this.textboxID.Text))
             {

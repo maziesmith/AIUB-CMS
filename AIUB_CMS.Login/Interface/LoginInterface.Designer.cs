@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginInterface));
             this.labelWelcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.textboxID = new MetroFramework.Controls.MetroTextBox();
             this.textboxPassword = new MetroFramework.Controls.MetroTextBox();
             this.buttonLogin = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelWelcome
@@ -47,15 +47,15 @@
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "Welcome to AIUB-CMS";
             // 
-            // pictureBox1
+            // pictureLogo
             // 
-            this.pictureBox1.Image = global::AIUB_CMS.Login.Properties.Resources.LogoCMS;
-            this.pictureBox1.Location = new System.Drawing.Point(145, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureLogo.Image = global::AIUB_CMS.Login.Properties.Resources.LogoCMS;
+            this.pictureLogo.Location = new System.Drawing.Point(145, 69);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(166, 160);
+            this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLogo.TabIndex = 2;
+            this.pictureLogo.TabStop = false;
             // 
             // textboxID
             // 
@@ -96,7 +96,7 @@
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textboxPassword);
             this.Controls.Add(this.textboxID);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureLogo);
             this.Controls.Add(this.labelWelcome);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -105,7 +105,7 @@
             this.Name = "LoginInterface";
             this.Padding = new System.Windows.Forms.Padding(40, 138, 40, 46);
             this.Resizable = false;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,7 +114,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelWelcome;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureLogo;
         private MetroFramework.Controls.MetroTextBox textboxID;
         private MetroFramework.Controls.MetroTextBox textboxPassword;
         private MetroFramework.Controls.MetroButton buttonLogin;
