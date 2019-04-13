@@ -1,0 +1,10 @@
+Name
+ID
+CGPA
+Credit
+Program
+Department
+Father
+Mother
+Phone
+Email
