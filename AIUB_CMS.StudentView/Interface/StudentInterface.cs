@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Google.GData.Calendar;
 using AIUB_CMS.StudentView.Data;
 
 namespace AIUB_CMS.StudentView.Interface

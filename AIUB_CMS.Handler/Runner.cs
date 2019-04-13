@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AIUB_CMS.Login.Interface;
+using AIUB_CMS.StudentView.Handler;
 
 namespace AIUB_CMS.Handler
 {
@@ -12,6 +13,8 @@ namespace AIUB_CMS.Handler
         static void Main()
         {
             LoginFormInitializer.InitializeLoginForm();
+            Console.WriteLine(LoginFormInitializer.GetID());
+            StudentFormInitializer.InitializeStudentForm(LoginFormInitializer.GetID());
         }
     }
 }

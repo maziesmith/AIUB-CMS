@@ -33,7 +33,11 @@ namespace AIUB_CMS.Login.Interface
                 PasswordValidation password = new PasswordValidation(textboxPassword.Text);
 
                 if (password.Validate(textboxID.Text))
+                {
                     MessageBox.Show("Valid password.");
+                    LoginFormInitializer.SetID(textboxID.Text);
+                    this.Close();
+                } 
                 else
                     MessageBox.Show("Invalid password.");
 

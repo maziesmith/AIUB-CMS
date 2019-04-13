@@ -80,7 +80,7 @@
             this.tabControlStudent.SelectedIndex = 3;
             this.tabControlStudent.Size = new System.Drawing.Size(934, 519);
             this.tabControlStudent.TabIndex = 0;
-            this.tabControlStudent.UseSelectable = true;
+            // this.tabControlStudent.UseSelectable = true;
             // 
             // tabSchedule
             // 

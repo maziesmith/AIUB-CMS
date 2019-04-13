@@ -76,7 +76,7 @@ namespace AIUB_CMS.StudentView.Data
 
         public int GetCredit()
         {
-            return this.credit
+            return this.credit;
         }
 
         public string GetProgram()
