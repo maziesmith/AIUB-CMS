@@ -58,7 +58,6 @@
             this.labelDOB = new MetroFramework.Controls.MetroLabel();
             this.labelName = new MetroFramework.Controls.MetroLabel();
             this.tabStudentDatabase = new MetroFramework.Controls.MetroTabPage();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
             this.datagridStudentTable = new MetroFramework.Controls.MetroGrid();
             this.tabCourseDatabase = new MetroFramework.Controls.MetroTabPage();
             this.tabManageFaculty = new MetroFramework.Controls.MetroTabPage();
@@ -493,7 +492,6 @@
             // 
             // tabStudentDatabase
             // 
-            this.tabStudentDatabase.Controls.Add(this.metroTextBox7);
             this.tabStudentDatabase.Controls.Add(this.datagridStudentTable);
             this.tabStudentDatabase.HorizontalScrollbarBarColor = true;
             this.tabStudentDatabase.HorizontalScrollbarHighlightOnWheel = false;
@@ -506,38 +504,6 @@
             this.tabStudentDatabase.VerticalScrollbarBarColor = true;
             this.tabStudentDatabase.VerticalScrollbarHighlightOnWheel = false;
             this.tabStudentDatabase.VerticalScrollbarSize = 10;
-            // 
-            // metroTextBox7
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox7.CustomButton.Image = null;
-            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(482, 1);
-            this.metroTextBox7.CustomButton.Name = "";
-            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox7.CustomButton.TabIndex = 1;
-            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox7.CustomButton.UseSelectable = true;
-            this.metroTextBox7.CustomButton.Visible = false;
-            this.metroTextBox7.Lines = new string[] {
-        "metroTextBox7"};
-            this.metroTextBox7.Location = new System.Drawing.Point(0, 3);
-            this.metroTextBox7.MaxLength = 32767;
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.PasswordChar = '\0';
-            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox7.SelectedText = "";
-            this.metroTextBox7.SelectionLength = 0;
-            this.metroTextBox7.SelectionStart = 0;
-            this.metroTextBox7.ShortcutsEnabled = true;
-            this.metroTextBox7.Size = new System.Drawing.Size(504, 23);
-            this.metroTextBox7.TabIndex = 2;
-            this.metroTextBox7.Text = "metroTextBox7";
-            this.metroTextBox7.UseSelectable = true;
-            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // datagridStudentTable
             // 
@@ -915,6 +881,7 @@
             this.buttonGetStudent.TabIndex = 57;
             this.buttonGetStudent.Text = "Get Student";
             this.buttonGetStudent.UseSelectable = true;
+            this.buttonGetStudent.Click += new System.EventHandler(this.buttonGetStudent_Click);
             // 
             // labelNationality
             // 
@@ -1069,7 +1036,6 @@
         private MetroFramework.Controls.MetroTextBox textboxMother;
         private MetroFramework.Controls.MetroTextBox textboxPhone;
         private MetroFramework.Controls.MetroTextBox textboxEmail;
-        private MetroFramework.Controls.MetroTextBox metroTextBox7;
         private MetroFramework.Controls.MetroDateTime datetimeDOB;
         private System.Windows.Forms.GroupBox groupboxAcademicInformation;
         private System.Windows.Forms.GroupBox groupboxPersonalInformation;

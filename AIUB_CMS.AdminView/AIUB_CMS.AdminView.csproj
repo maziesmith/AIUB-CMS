@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdminData.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Data\StudentDataHandler.cs" />
     <Compile Include="Handler\AdminFormInitializer.cs" />
     <Compile Include="Interface\AdminInterface.cs">
       <SubType>Form</SubType>
