@@ -11,7 +11,7 @@ namespace AIUB_CMS.AdminView.Handler
     public static class AdminFormInitializer
     {
         // Initialize the student form.
-        public static void InitializeStudentForm(string id)
+        public static void InitializeAdminForm()
         {
             Application.Run(new AdminInterface());
         }

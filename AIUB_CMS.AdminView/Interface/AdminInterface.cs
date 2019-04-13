@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AIUB_CMS.AdminView.Data;
 
 namespace AIUB_CMS.AdminView.Interface
 {
@@ -15,6 +16,10 @@ namespace AIUB_CMS.AdminView.Interface
         public AdminInterface()
         {
             InitializeComponent();
+
+            AdminDataHandler AdminData = new AdminDataHandler();
+
+            datagridStudentTable.DataSource = AdminData.GetStudentTables();
         }
     }
 }
