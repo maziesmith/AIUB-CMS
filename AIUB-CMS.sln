@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIUB_CMS.Login", "AIUB_CMS.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIUB_CMS.StudentView", "AIUB_CMS.StudentView\AIUB_CMS.StudentView.csproj", "{8BB0BDF8-CBAC-49F1-8EC4-0D20BAB6E99A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIUB_CMS.AdminView", "AIUB_CMS.AdminView\AIUB_CMS.AdminView.csproj", "{A1FAD575-8147-4294-9EA7-458E95DA8C1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8BB0BDF8-CBAC-49F1-8EC4-0D20BAB6E99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB0BDF8-CBAC-49F1-8EC4-0D20BAB6E99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB0BDF8-CBAC-49F1-8EC4-0D20BAB6E99A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FAD575-8147-4294-9EA7-458E95DA8C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FAD575-8147-4294-9EA7-458E95DA8C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FAD575-8147-4294-9EA7-458E95DA8C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FAD575-8147-4294-9EA7-458E95DA8C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

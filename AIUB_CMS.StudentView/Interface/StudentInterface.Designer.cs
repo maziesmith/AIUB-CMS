@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInterface));
             this.tabControlStudent = new MetroFramework.Controls.MetroTabControl();
             this.tabSchedule = new MetroFramework.Controls.MetroTabPage();
-            this.tabRegistration = new MetroFramework.Controls.MetroTabPage();
             this.tabAppointment = new MetroFramework.Controls.MetroTabPage();
+            this.tabRegistration = new MetroFramework.Controls.MetroTabPage();
             this.tabStudentInfo = new MetroFramework.Controls.MetroTabPage();
             this.labelGenderAns = new MetroFramework.Controls.MetroLabel();
             this.labelBloodGroupAns = new MetroFramework.Controls.MetroLabel();
@@ -71,59 +71,46 @@
             // tabControlStudent
             // 
             this.tabControlStudent.Controls.Add(this.tabSchedule);
+            this.tabControlStudent.Controls.Add(this.tabStudentInfo);
             this.tabControlStudent.Controls.Add(this.tabAppointment);
             this.tabControlStudent.Controls.Add(this.tabRegistration);
-            this.tabControlStudent.Controls.Add(this.tabStudentInfo);
             this.tabControlStudent.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.tabControlStudent.Location = new System.Drawing.Point(20, 121);
             this.tabControlStudent.Name = "tabControlStudent";
             this.tabControlStudent.SelectedIndex = 3;
-            this.tabControlStudent.Size = new System.Drawing.Size(934, 519);
+            this.tabControlStudent.Size = new System.Drawing.Size(941, 490);
             this.tabControlStudent.TabIndex = 0;
-            // this.tabControlStudent.UseSelectable = true;
             // 
             // tabSchedule
             // 
             this.tabSchedule.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSchedule.HorizontalScrollbarBarColor = true;
-            this.tabSchedule.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabSchedule.HorizontalScrollbarSize = 10;
-            this.tabSchedule.Location = new System.Drawing.Point(4, 38);
+            this.tabSchedule.Location = new System.Drawing.Point(4, 35);
             this.tabSchedule.Name = "tabSchedule";
-            this.tabSchedule.Size = new System.Drawing.Size(926, 477);
+            this.tabSchedule.Size = new System.Drawing.Size(926, 480);
             this.tabSchedule.TabIndex = 0;
             this.tabSchedule.Text = "Schedule";
             this.tabSchedule.VerticalScrollbarBarColor = true;
-            this.tabSchedule.VerticalScrollbarHighlightOnWheel = false;
-            this.tabSchedule.VerticalScrollbarSize = 10;
-            // 
-            // tabRegistration
-            // 
-            this.tabRegistration.HorizontalScrollbarBarColor = true;
-            this.tabRegistration.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabRegistration.HorizontalScrollbarSize = 10;
-            this.tabRegistration.Location = new System.Drawing.Point(4, 38);
-            this.tabRegistration.Name = "tabRegistration";
-            this.tabRegistration.Size = new System.Drawing.Size(926, 477);
-            this.tabRegistration.TabIndex = 1;
-            this.tabRegistration.Text = "Registration";
-            this.tabRegistration.VerticalScrollbarBarColor = true;
-            this.tabRegistration.VerticalScrollbarHighlightOnWheel = false;
-            this.tabRegistration.VerticalScrollbarSize = 10;
             // 
             // tabAppointment
             // 
             this.tabAppointment.HorizontalScrollbarBarColor = true;
-            this.tabAppointment.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabAppointment.HorizontalScrollbarSize = 10;
-            this.tabAppointment.Location = new System.Drawing.Point(4, 38);
+            this.tabAppointment.Location = new System.Drawing.Point(4, 35);
             this.tabAppointment.Name = "tabAppointment";
-            this.tabAppointment.Size = new System.Drawing.Size(926, 477);
+            this.tabAppointment.Size = new System.Drawing.Size(926, 480);
             this.tabAppointment.TabIndex = 2;
             this.tabAppointment.Text = "Appointment";
             this.tabAppointment.VerticalScrollbarBarColor = true;
-            this.tabAppointment.VerticalScrollbarHighlightOnWheel = false;
-            this.tabAppointment.VerticalScrollbarSize = 10;
+            // 
+            // tabRegistration
+            // 
+            this.tabRegistration.HorizontalScrollbarBarColor = true;
+            this.tabRegistration.Location = new System.Drawing.Point(4, 35);
+            this.tabRegistration.Name = "tabRegistration";
+            this.tabRegistration.Size = new System.Drawing.Size(926, 480);
+            this.tabRegistration.TabIndex = 1;
+            this.tabRegistration.Text = "Registration";
+            this.tabRegistration.VerticalScrollbarBarColor = true;
             // 
             // tabStudentInfo
             // 
@@ -154,16 +141,12 @@
             this.tabStudentInfo.Controls.Add(this.labelDOB);
             this.tabStudentInfo.Controls.Add(this.labelName);
             this.tabStudentInfo.HorizontalScrollbarBarColor = true;
-            this.tabStudentInfo.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabStudentInfo.HorizontalScrollbarSize = 10;
-            this.tabStudentInfo.Location = new System.Drawing.Point(4, 38);
+            this.tabStudentInfo.Location = new System.Drawing.Point(4, 35);
             this.tabStudentInfo.Name = "tabStudentInfo";
-            this.tabStudentInfo.Size = new System.Drawing.Size(926, 477);
+            this.tabStudentInfo.Size = new System.Drawing.Size(933, 451);
             this.tabStudentInfo.TabIndex = 3;
             this.tabStudentInfo.Text = "Student Info";
             this.tabStudentInfo.VerticalScrollbarBarColor = true;
-            this.tabStudentInfo.VerticalScrollbarHighlightOnWheel = false;
-            this.tabStudentInfo.VerticalScrollbarSize = 10;
             // 
             // labelGenderAns
             // 
