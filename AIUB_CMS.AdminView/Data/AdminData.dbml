@@ -17,4 +17,10 @@
       <Column Name="BloodGroup" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Test_PasswordTable" Member="Test_PasswordTables">
+    <Type Name="Test_PasswordTable">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

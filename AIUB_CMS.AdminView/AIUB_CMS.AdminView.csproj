@@ -54,10 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\AdminDataHandler.cs" />
-    <Compile Include="Data\StudentData.designer.cs">
+    <Compile Include="Data\AdminData.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StudentData.dbml</DependentUpon>
+      <DependentUpon>AdminData.dbml</DependentUpon>
     </Compile>
     <Compile Include="Handler\AdminFormInitializer.cs" />
     <Compile Include="Interface\AdminInterface.cs">
@@ -83,13 +83,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Data\StudentData.dbml">
+    <None Include="Data\AdminData.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>StudentData.designer.cs</LastGenOutput>
+      <LastGenOutput>AdminData.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\StudentData.dbml.layout">
-      <DependentUpon>StudentData.dbml</DependentUpon>
+    <None Include="Data\AdminData.dbml.layout">
+      <DependentUpon>AdminData.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

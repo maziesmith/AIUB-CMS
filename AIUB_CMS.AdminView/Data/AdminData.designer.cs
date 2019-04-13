@@ -69,6 +69,14 @@ namespace AIUB_CMS.AdminView.Data
 				return this.GetTable<Test_StudentTable>();
 			}
 		}
+		
+		public System.Data.Linq.Table<Test_PasswordTable> Test_PasswordTables
+		{
+			get
+			{
+				return this.GetTable<Test_PasswordTable>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_StudentTable")]
@@ -309,6 +317,51 @@ namespace AIUB_CMS.AdminView.Data
 				if ((this._BloodGroup != value))
 				{
 					this._BloodGroup = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_PasswordTable")]
+	public partial class Test_PasswordTable
+	{
+		
+		private string _ID;
+		
+		private string _Password;
+		
+		public Test_PasswordTable()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(50)")]
+		public string ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(100)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
 				}
 			}
 		}
