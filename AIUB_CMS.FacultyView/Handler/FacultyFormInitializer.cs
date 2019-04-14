@@ -8,10 +8,10 @@ using AIUB_CMS.FacultyView.Interface;
 
 namespace AIUB_CMS.FacultyView.Handler
 {
-    class FacultyFormInitializer
+    public static class FacultyFormInitializer
     {
-        // Initialize the student form.
-        public static void FacultyInitializer()
+        // Initialize the Faculty form.
+        public static void InitializeFacultyForm()
         {
             Application.Run(new FacultyInterface());
         }

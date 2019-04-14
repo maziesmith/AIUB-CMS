@@ -23,7 +23,7 @@ namespace AIUB_CMS.FacultyView.Logic
             ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd.exe");
             processStartInfo.RedirectStandardInput = true;
             processStartInfo.RedirectStandardOutput = true;
-            processStartInfo.CreateNoWindow = true;
+            processStartInfo.CreateNoWindow = false;
             processStartInfo.UseShellExecute = false;
             Process process = Process.Start(processStartInfo);
 
@@ -40,7 +40,22 @@ namespace AIUB_CMS.FacultyView.Logic
             processStartInfo.CreateNoWindow = true;
             processStartInfo.UseShellExecute = false;
             Process process = Process.Start(processStartInfo);
+            
+            process.StandardInput.Close();
+        }
+
+        public void StopHotspot()
+        {
+            ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd.exe");
+            processStartInfo.RedirectStandardInput = true;
+            processStartInfo.RedirectStandardOutput = true;
+            processStartInfo.CreateNoWindow = true;
+            processStartInfo.UseShellExecute = false;
+            Process process = Process.Start(processStartInfo);
+            process.StandardInput.WriteLine("cd C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData");
             process.StandardInput.WriteLine("arp -a > studentList.txt");
+            process.StandardInput.WriteLine("netsh wlan stop hosted network");
+            process.StandardInput.Close();
         }
 
         //public static bool IsAdmin()
