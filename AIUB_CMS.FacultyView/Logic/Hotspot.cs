@@ -29,7 +29,18 @@ namespace AIUB_CMS.FacultyView.Logic
 
             process.StandardInput.WriteLine("netsh wlan set hostednetwork mode=allow ssid=" + SSID + " key=" + password);
             process.StandardInput.WriteLine("netsh wlan start hosted network");
-            // process.StandardInput.Close();
+            process.StandardInput.Close();
+        }
+
+        public void GenerateStudentList()
+        {
+            ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd.exe");
+            processStartInfo.RedirectStandardInput = true;
+            processStartInfo.RedirectStandardOutput = true;
+            processStartInfo.CreateNoWindow = true;
+            processStartInfo.UseShellExecute = false;
+            Process process = Process.Start(processStartInfo);
+            process.StandardInput.WriteLine("arp -a > studentList.txt");
         }
 
         //public static bool IsAdmin()

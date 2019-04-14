@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AIUB_CMS.FacultyView.Logic;
 
 namespace AIUB_CMS.FacultyView.Interface
 {
@@ -19,7 +20,8 @@ namespace AIUB_CMS.FacultyView.Interface
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-
+            Hotspot hotspot = new Hotspot(this.textboxSSID.Text, this.textboxPassword.Text);
+            hotspot.GenerateStudentList();
         }
     }
 }

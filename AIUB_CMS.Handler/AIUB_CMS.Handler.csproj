@@ -81,6 +81,10 @@
       <Project>{a1fad575-8147-4294-9ea7-458e95da8c1e}</Project>
       <Name>AIUB_CMS.AdminView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AIUB_CMS.FacultyView\AIUB_CMS.FacultyView.csproj">
+      <Project>{e0e0b8d0-1e11-4a12-9468-c937dd58e119}</Project>
+      <Name>AIUB_CMS.FacultyView</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AIUB_CMS.Login\AIUB_CMS.Login.csproj">
       <Project>{5024e4b9-d034-4495-adc4-7c28edde9397}</Project>
       <Name>AIUB_CMS.Login</Name>

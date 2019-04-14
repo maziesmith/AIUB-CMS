@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handler\FacultyFormInitializer.cs" />
     <Compile Include="Interface\FacultyInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,11 +60,11 @@
       <DependentUpon>FacultyInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Hotspot.cs" />
+    <Compile Include="Logic\MACParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Handler\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Interface\FacultyInterface.resx">
