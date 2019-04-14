@@ -39,5 +39,25 @@ namespace AIUB_CMS.AdminView.Interface
             this.textboxCGPA.Text = studentData.GetCGPA().ToString();
             // this.labelBloodGroupAns.Text = studentData.GetBloodGroup().ToString();
         }
+
+        private void buttonCreateStudent_Click(object sender, EventArgs e)
+        {
+            string id = this.textboxID.Text;
+            StudentDataHandler studentData = new StudentDataHandler(id);
+            // this..Text = studentData.SetProgram();
+            studentData.SetPhone(this.textboxPhone.Text);
+            studentData.SetName(this.textboxName.Text);
+            studentData.SetMother(this.textboxMother.Text);
+            studentData.SetID(this.textboxID.Text);
+            // this..Text = studentData.SetGender().ToString();
+            studentData.SetFather(this.textboxFather.Text);
+            studentData.SetEmail(this.textboxEmail.Text);
+            // this.labelDOBAns.Text = studentData.SetDOB();
+            // this.labelDepartmentAns.Text = studentData.SetDepartment();
+            studentData.SetCredit(Convert.ToInt32(this.textboxCreditsCompleted.Text));
+            studentData.SetCGPA(Convert.ToDouble(this.textboxCGPA.Text));
+            // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
+            studentData.InsertStudent();
+        }
     }
 }

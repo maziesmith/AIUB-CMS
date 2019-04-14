@@ -55,6 +55,26 @@ namespace AIUB_CMS.AdminView.Data
             }
         }
 
+        public void InsertStudent()
+        {
+            var newStudent = new Test_StudentTable();
+            newStudent.Name = this.name;
+            newStudent.CGPA = this.CGPA;
+            newStudent.Credits = this.credit;
+            newStudent.Program = this.program;
+            newStudent.Department = this.department;
+            newStudent.FatherName = this.father;
+            newStudent.MotherName = this.mother;
+            newStudent.Phone = this.phone;
+            newStudent.Email = this.email;
+            newStudent.BloodGroup = this.bloodGroup;
+            newStudent.Gender = this.gender;
+            newStudent.ID = this.id;
+            newStudent.DOB = Convert.ToDateTime(this.dob);
+            StudentDataContext.Test_StudentTables.InsertOnSubmit(newStudent);
+            StudentDataContext.SubmitChanges();
+        }
+
         public IQueryable GetStudentTable()
         {
             return StudentDataContext.Test_StudentTables;
@@ -123,6 +143,71 @@ namespace AIUB_CMS.AdminView.Data
         public string GetDOB()
         {
             return this.dob;
+        }
+
+        public void SetName(string value)
+        {
+            this.name = value;
+        }
+
+        public void SetCGPA(double value)
+        {
+            this.CGPA = value;
+        }
+
+        public void SetCredit(int value)
+        {
+            this.credit = value;
+        }
+
+        public void SetProgram(string value)
+        {
+            this.program = value;
+        }
+
+        public void SetDepartment(string value)
+        {
+            this.department = value;
+        }
+
+        public void SetMother(string value)
+        {
+            this.mother = value;
+        }
+
+        public void SetFather(string value)
+        {
+            this.father = value;
+        }
+
+        public void SetEmail(string value)
+        {
+            this.email = value;
+        }
+
+        public void SetPhone(string value)
+        {
+            this.phone = value;
+        }
+
+        public void SetBloodGroup(int value)
+        {
+            this.bloodGroup = value;
+        }
+
+        public void SetGender(int value)
+        {
+            this.gender = value;
+        }
+
+        public void SetID(string value)
+        {
+            this.id = value;
+        }
+
+        public void SetDOB(string value)
+        {
+            this.dob = value;
         }
     }
 }

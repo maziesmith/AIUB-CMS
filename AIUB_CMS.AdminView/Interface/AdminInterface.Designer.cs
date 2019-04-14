@@ -790,6 +790,7 @@
             this.buttonCreateStudent.TabIndex = 56;
             this.buttonCreateStudent.Text = "Create Student";
             this.buttonCreateStudent.UseSelectable = true;
+            this.buttonCreateStudent.Click += new System.EventHandler(this.buttonCreateStudent_Click);
             // 
             // labelMAC
             // 
