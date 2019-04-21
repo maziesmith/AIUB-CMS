@@ -12,6 +12,7 @@ namespace AIUB_CMS.Handler
     // The Runner class is used to execute the initial login form.
     static class Runner
     {
+        [STAThread]
         static void Main()
         {
             // LoginFormInitializer.InitializeLoginForm();

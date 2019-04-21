@@ -13,11 +13,19 @@ namespace AIUB_CMS.AdminView.Interface
 {
     public partial class AdminInterface : MetroFramework.Forms.MetroForm
     {
+        string studentImageURL;
         public AdminInterface()
+        {
+            // Do nothing.
+            
+        }
+
+        public AdminInterface(string id)
         {
             InitializeComponent();
             StudentDataHandler studentData = new StudentDataHandler();
             this.datagridStudentTable.DataSource = studentData.GetStudentTable();
+            this.daad
         }
 
         private void buttonGetStudent_Click(object sender, EventArgs e)
@@ -68,6 +76,19 @@ namespace AIUB_CMS.AdminView.Interface
         private void datagridStudentTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void buttonStudentBrowseImage_Click(object sender, EventArgs e)
+        {
+            DialogResult result = this.openfiledialogImageSelection.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                studentImageURL = openfiledialogImageSelection.FileName;
+            }
+
+
+            pictureboxStudentPicture.ImageLocation = studentImageURL;
         }
     }
 }
