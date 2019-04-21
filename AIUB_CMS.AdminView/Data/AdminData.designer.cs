@@ -23,7 +23,7 @@ namespace AIUB_CMS.AdminView.Data
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="AIUB-CMS Database")]
-	public partial class StudentDataDataContext : System.Data.Linq.DataContext
+	public partial class AdminDataDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,41 +35,41 @@ namespace AIUB_CMS.AdminView.Data
     partial void DeleteTest_StudentTable(Test_StudentTable instance);
     #endregion
 		
-		public StudentDataDataContext() : 
+		public AdminDataDataContext() : 
 				base(global::AIUB_CMS.AdminView.Properties.Settings.Default.AIUB_CMS_DatabaseConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public StudentDataDataContext(string connection) : 
+		public AdminDataDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public StudentDataDataContext(System.Data.IDbConnection connection) : 
+		public AdminDataDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public StudentDataDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public AdminDataDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public StudentDataDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public AdminDataDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Test_PasswordTable> Test_PasswordTables
+		public System.Data.Linq.Table<Test_FacultyTable> Test_FacultyTables
 		{
 			get
 			{
-				return this.GetTable<Test_PasswordTable>();
+				return this.GetTable<Test_FacultyTable>();
 			}
 		}
 		
@@ -82,19 +82,57 @@ namespace AIUB_CMS.AdminView.Data
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_PasswordTable")]
-	public partial class Test_PasswordTable
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_FacultyTable")]
+	public partial class Test_FacultyTable
 	{
+		
+		private string _Name;
 		
 		private string _ID;
 		
 		private string _Password;
 		
-		public Test_PasswordTable()
+		private string _Email;
+		
+		private System.Nullable<int> _BloodGroup;
+		
+		private string _PhoneNumber;
+		
+		private System.Nullable<int> _Department;
+		
+		private System.Nullable<System.DateTime> _DOB;
+		
+		private System.Nullable<int> _Gender;
+		
+		private string _FatherName;
+		
+		private string _MotherName;
+		
+		private System.Nullable<int> _Nationality;
+		
+		private string _ImageDirectory;
+		
+		public Test_FacultyTable()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="VarChar(50)")]
 		public string ID
 		{
 			get
@@ -110,7 +148,7 @@ namespace AIUB_CMS.AdminView.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
 		public string Password
 		{
 			get
@@ -122,6 +160,166 @@ namespace AIUB_CMS.AdminView.Data
 				if ((this._Password != value))
 				{
 					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BloodGroup", DbType="Int")]
+		public System.Nullable<int> BloodGroup
+		{
+			get
+			{
+				return this._BloodGroup;
+			}
+			set
+			{
+				if ((this._BloodGroup != value))
+				{
+					this._BloodGroup = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(50)")]
+		public string PhoneNumber
+		{
+			get
+			{
+				return this._PhoneNumber;
+			}
+			set
+			{
+				if ((this._PhoneNumber != value))
+				{
+					this._PhoneNumber = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="Int")]
+		public System.Nullable<int> Department
+		{
+			get
+			{
+				return this._Department;
+			}
+			set
+			{
+				if ((this._Department != value))
+				{
+					this._Department = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOB", DbType="Date")]
+		public System.Nullable<System.DateTime> DOB
+		{
+			get
+			{
+				return this._DOB;
+			}
+			set
+			{
+				if ((this._DOB != value))
+				{
+					this._DOB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="Int")]
+		public System.Nullable<int> Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this._Gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FatherName", DbType="NVarChar(50)")]
+		public string FatherName
+		{
+			get
+			{
+				return this._FatherName;
+			}
+			set
+			{
+				if ((this._FatherName != value))
+				{
+					this._FatherName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MotherName", DbType="NVarChar(50)")]
+		public string MotherName
+		{
+			get
+			{
+				return this._MotherName;
+			}
+			set
+			{
+				if ((this._MotherName != value))
+				{
+					this._MotherName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nationality", DbType="Int")]
+		public System.Nullable<int> Nationality
+		{
+			get
+			{
+				return this._Nationality;
+			}
+			set
+			{
+				if ((this._Nationality != value))
+				{
+					this._Nationality = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageDirectory", DbType="NVarChar(250)")]
+		public string ImageDirectory
+		{
+			get
+			{
+				return this._ImageDirectory;
+			}
+			set
+			{
+				if ((this._ImageDirectory != value))
+				{
+					this._ImageDirectory = value;
 				}
 			}
 		}
@@ -159,6 +357,10 @@ namespace AIUB_CMS.AdminView.Data
 		
 		private System.Nullable<int> _BloodGroup;
 		
+		private string _Password;
+		
+		private string _ImageDirectory;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -189,6 +391,10 @@ namespace AIUB_CMS.AdminView.Data
     partial void OnGenderChanged();
     partial void OnBloodGroupChanging(System.Nullable<int> value);
     partial void OnBloodGroupChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnImageDirectoryChanging(string value);
+    partial void OnImageDirectoryChanged();
     #endregion
 		
 		public Test_StudentTable()
@@ -452,6 +658,46 @@ namespace AIUB_CMS.AdminView.Data
 					this._BloodGroup = value;
 					this.SendPropertyChanged("BloodGroup");
 					this.OnBloodGroupChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageDirectory", DbType="NVarChar(250)")]
+		public string ImageDirectory
+		{
+			get
+			{
+				return this._ImageDirectory;
+			}
+			set
+			{
+				if ((this._ImageDirectory != value))
+				{
+					this.OnImageDirectoryChanging(value);
+					this.SendPropertyChanging();
+					this._ImageDirectory = value;
+					this.SendPropertyChanged("ImageDirectory");
+					this.OnImageDirectoryChanged();
 				}
 			}
 		}

@@ -59,5 +59,15 @@ namespace AIUB_CMS.AdminView.Interface
             // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
             studentData.InsertStudent();
         }
+
+        private void textboxFacultyID_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void datagridStudentTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

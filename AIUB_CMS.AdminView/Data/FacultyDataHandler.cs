@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AIUB_CMS.AdminView.Data
 {
-    class StudentDataHandler
+    class FacultyDataHandler
     {
         private string name;
         private string id;
         private double CGPA;
         private int credit;
         private string program;
-        private string department;
+        private int department;
         private string father;
         private string mother;
         private string phone;
@@ -22,31 +22,28 @@ namespace AIUB_CMS.AdminView.Data
         private int bloodGroup;
         private string dob;
 
-        AdminDataDataContext StudentDataContext;
+        AdminDataDataContext FacultyDataContext;
 
-        public StudentDataHandler()
+        public FacultyDataHandler()
         {
-            this.StudentDataContext = new AdminDataDataContext();
+            this.FacultyDataContext = new AdminDataDataContext();
         }
 
-        public StudentDataHandler(string id)
+        public FacultyDataHandler(string id)
         {
             this.id = id;
-            this.StudentDataContext = new AdminDataDataContext();
-            var StudentInformation = from student in StudentDataContext.Test_StudentTables
+            this.FacultyDataContext = new AdminDataDataContext();
+            var FacultyInformation = from student in FacultyDataContext.Test_FacultyTables
                                      where student.ID == id
                                      select student;
-            StudentInformation.ToList();
-            foreach (var data in StudentInformation)
+            FacultyInformation.ToList();
+            foreach (var data in FacultyInformation)
             {
                 this.name = data.Name;
-                this.CGPA = (double)data.CGPA;
-                this.credit = data.Credits ?? 0;
-                this.program = data.Program;
-                this.department = data.Department;
+                this.department = data.Department ?? 1;
                 this.father = data.FatherName;
                 this.mother = data.MotherName;
-                this.phone = data.Phone;
+                this.phone = data.PhoneNumber;
                 this.email = data.Email;
                 this.bloodGroup = data.BloodGroup ?? 1;
                 this.gender = data.Gender ?? 1;
@@ -57,27 +54,24 @@ namespace AIUB_CMS.AdminView.Data
 
         public void InsertStudent()
         {
-            var newStudent = new Test_StudentTable();
-            newStudent.Name = this.name;
-            newStudent.CGPA = this.CGPA;
-            newStudent.Credits = this.credit;
-            newStudent.Program = this.program;
-            newStudent.Department = this.department;
-            newStudent.FatherName = this.father;
-            newStudent.MotherName = this.mother;
-            newStudent.Phone = this.phone;
-            newStudent.Email = this.email;
-            newStudent.BloodGroup = this.bloodGroup;
-            newStudent.Gender = this.gender;
-            newStudent.ID = this.id;
-            newStudent.DOB = Convert.ToDateTime(this.dob);
-            StudentDataContext.Test_StudentTables.InsertOnSubmit(newStudent);
-            StudentDataContext.SubmitChanges();
+            var newFaculty = new Test_FacultyTable();
+            newFaculty.Name = this.name;
+            newFaculty.Department = this.department;
+            newFaculty.FatherName = this.father;
+            newFaculty.MotherName = this.mother;
+            newFaculty.PhoneNumber = this.phone;
+            newFaculty.Email = this.email;
+            newFaculty.BloodGroup = this.bloodGroup;
+            newFaculty.Gender = this.gender;
+            newFaculty.ID = this.id;
+            newFaculty.DOB = Convert.ToDateTime(this.dob);
+            FacultyDataContext.Test_FacultyTables.InsertOnSubmit(newFaculty);
+            FacultyDataContext.SubmitChanges();
         }
 
         public IQueryable GetStudentTable()
         {
-            return StudentDataContext.Test_StudentTables;
+            return FacultyDataContext.Test_FacultyTables;
         }
 
         public string GetName()
@@ -100,7 +94,7 @@ namespace AIUB_CMS.AdminView.Data
             return this.program;
         }
 
-        public string GetDepartment()
+        public int GetDepartment()
         {
             return this.department;
         }
@@ -165,7 +159,7 @@ namespace AIUB_CMS.AdminView.Data
             this.program = value;
         }
 
-        public void SetDepartment(string value)
+        public void SetDepartment(int value)
         {
             this.department = value;
         }

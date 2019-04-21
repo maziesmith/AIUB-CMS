@@ -14,9 +14,9 @@ namespace AIUB_CMS.Handler
     {
         static void Main()
         {
-            LoginFormInitializer.InitializeLoginForm();
-            StudentFormInitializer.InitializeStudentForm(LoginFormInitializer.GetID());
-            // AdminFormInitializer.InitializeAdminForm();
+            // LoginFormInitializer.InitializeLoginForm();
+            // StudentFormInitializer.InitializeStudentForm(LoginFormInitializer.GetID());
+            AdminFormInitializer.InitializeAdminForm();
             // FacultyFormInitializer.InitializeFacultyForm();
         }
     }
