@@ -27,6 +27,7 @@ namespace AIUB_CMS.FacultyView.Interface
             InitializeComponent();
 
             FacultyDataHandler facultyData = new FacultyDataHandler(id);
+            hotspot = new Hotspot();
 
             this.labelPhoneAns.Text = facultyData.GetPhone();
             this.labelNameAns.Text = facultyData.GetName();
@@ -40,10 +41,15 @@ namespace AIUB_CMS.FacultyView.Interface
             this.labelBloodGroupAns.Text = facultyData.GetBloodGroup().ToString();
         }
 
-        private void buttonStart_Click(object sender, EventArgs e)
+        private async void buttonStart_Click(object sender, EventArgs e)
         {
-            hotspot = new Hotspot(this.textboxSSID.Text, this.textboxPassword.Text);
+            hotspot.StartHotspot(this.textboxSSID.Text, this.textboxPassword.Text);
             // hotspot.GenerateStudentList();
+            timerForHotspot.Start();
+            await Task.Delay(10000);
+            hotspot.StopHotspot();
+            timerForHotspot.Stop();
+
         }
 
         private void buttonTest_Click(object sender, EventArgs e)
@@ -52,15 +58,30 @@ namespace AIUB_CMS.FacultyView.Interface
             string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
             this.richTextBox1.Text = macList;
 
-            if (macList.Contains("00-ec-0a-5f-38-a8"))
-                MessageBox.Show("17-33863-1 is present.");
-            else
-                MessageBox.Show("17-33863-1 is absent.");
+            //if (macList.Contains("00-ec-0a-5f-38-a8"))
+            //    MessageBox.Show("17-33863-1 is present.");
+            //else
+            //    MessageBox.Show("17-33863-1 is absent.");
         }
 
-        private void buttonStop_Click(object sender, EventArgs e)
+        private async void buttonStop_Click(object sender, EventArgs e)
         {
             hotspot.StopHotspot();
+            timerForHotspot.Stop();
+        }
+
+        private void buttonAutoCredentials_Click(object sender, EventArgs e)
+        {
+            this.textboxSSID.Text = hotspot.GetUniqueKey(8);
+            this.textboxPassword.Text = hotspot.GetUniqueKey(8);
+        }
+
+        private void timerForHotspot_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine("tick");
+            hotspot.GenerateStudentList();
+            string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
+            this.richTextBox1.Text = macList;
         }
     }
 }

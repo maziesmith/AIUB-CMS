@@ -21,6 +21,7 @@ namespace AIUB_CMS.AdminView.Data
         private int gender;
         private int bloodGroup;
         private string dob;
+        private string imageDirectory;
 
         AdminDataDataContext StudentDataContext;
 
@@ -51,6 +52,7 @@ namespace AIUB_CMS.AdminView.Data
                 this.bloodGroup = data.BloodGroup ?? 1;
                 this.gender = data.Gender ?? 1;
                 this.dob = data.DOB.ToString();
+                this.imageDirectory = data.ImageDirectory;
 
             }
         }
@@ -71,6 +73,7 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.Gender = this.gender;
             newStudent.ID = this.id;
             newStudent.DOB = Convert.ToDateTime(this.dob);
+            newStudent.ImageDirectory = this.imageDirectory;
             StudentDataContext.Test_StudentTables.InsertOnSubmit(newStudent);
             StudentDataContext.SubmitChanges();
         }
@@ -91,6 +94,7 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.Gender = this.gender;
             newStudent.ID = this.id;
             newStudent.DOB = Convert.ToDateTime(this.dob);
+            newStudent.ImageDirectory = this.imageDirectory;
             StudentDataContext.SubmitChanges();
         }
 
@@ -168,7 +172,17 @@ namespace AIUB_CMS.AdminView.Data
 
         public string GetDOB()
         {
-            return this.dob;
+            return this.imageDirectory;
+        }
+
+        public string GetImageDirectory()
+        {
+            return this.imageDirectory;
+        }
+
+        public void SetImageDirectory(string value)
+        {
+            this.imageDirectory = value;
         }
 
         public void SetName(string value)

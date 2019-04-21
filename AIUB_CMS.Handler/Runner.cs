@@ -17,8 +17,8 @@ namespace AIUB_CMS.Handler
         {
             // LoginFormInitializer.InitializeLoginForm();
             // StudentFormInitializer.InitializeStudentForm(LoginFormInitializer.GetID());
-            AdminFormInitializer.InitializeAdminForm("1234-12345-2");
-            // FacultyFormInitializer.InitializeFacultyForm();
+            // AdminFormInitializer.InitializeAdminForm("1234-12345-2");
+            FacultyFormInitializer.InitializeFacultyForm("1234-14785-1");
         }
     }
 }

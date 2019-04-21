@@ -11,9 +11,9 @@ namespace AIUB_CMS.FacultyView.Handler
     public static class FacultyFormInitializer
     {
         // Initialize the Faculty form.
-        public static void InitializeFacultyForm()
+        public static void InitializeFacultyForm(string id)
         {
-            Application.Run(new FacultyInterface());
+            Application.Run(new FacultyInterface(id));
         }
     }
 }

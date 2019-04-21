@@ -63,6 +63,8 @@ namespace AIUB_CMS.AdminView.Interface
             this.textboxStudentCreditsCompleted.Text = studentData.GetCredit().ToString();
             this.textboxStudentCGPA.Text = studentData.GetCGPA().ToString();
             // this.labelBloodGroupAns.Text = studentData.GetBloodGroup().ToString();
+            this.pictureboxStudentPicture.ImageLocation = studentData.GetImageDirectory();
+            this.pictureboxStudentPicture.Load();
         }
 
         private void buttonCreateStudent_Click(object sender, EventArgs e)
@@ -82,8 +84,10 @@ namespace AIUB_CMS.AdminView.Interface
             studentData.SetCredit(Convert.ToInt32(this.textboxStudentCreditsCompleted.Text));
             studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
             // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
+            studentData.SetImageDirectory(studentImageURL);
             studentData.InsertStudent();
             UpdateForm();
+            MessageBox.Show("Student Created");
         }
 
         private void textboxFacultyID_Click(object sender, EventArgs e)
@@ -126,8 +130,10 @@ namespace AIUB_CMS.AdminView.Interface
             studentData.SetCredit(Convert.ToInt32(this.textboxStudentCreditsCompleted.Text));
             studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
             // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
+            studentData.SetImageDirectory(studentImageURL);
             studentData.UpdateStudent();
             UpdateForm();
+            MessageBox.Show("Student Updated");
         }
 
         private void buttonDeleteStudent_Click(object sender, EventArgs e)
@@ -136,6 +142,7 @@ namespace AIUB_CMS.AdminView.Interface
             StudentDataHandler studentData = new StudentDataHandler(id);
             studentData.DeleteStudent();
             UpdateForm();
+            MessageBox.Show("Student Deleted");
         }
     }
 }

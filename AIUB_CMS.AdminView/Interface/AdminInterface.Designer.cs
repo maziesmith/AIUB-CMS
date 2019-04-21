@@ -211,7 +211,7 @@
             this.tabControlAdmin.Controls.Add(this.tabAdminDatabase);
             this.tabControlAdmin.Location = new System.Drawing.Point(8, 117);
             this.tabControlAdmin.Name = "tabControlAdmin";
-            this.tabControlAdmin.SelectedIndex = 1;
+            this.tabControlAdmin.SelectedIndex = 0;
             this.tabControlAdmin.Size = new System.Drawing.Size(1184, 521);
             this.tabControlAdmin.TabIndex = 1;
             this.tabControlAdmin.UseSelectable = true;
@@ -2077,7 +2077,7 @@
             this.groupboxAdminInformation.Controls.Add(this.labelNameAns);
             this.groupboxAdminInformation.Location = new System.Drawing.Point(11, 15);
             this.groupboxAdminInformation.Name = "groupboxAdminInformation";
-            this.groupboxAdminInformation.Size = new System.Drawing.Size(415, 337);
+            this.groupboxAdminInformation.Size = new System.Drawing.Size(410, 337);
             this.groupboxAdminInformation.TabIndex = 54;
             this.groupboxAdminInformation.TabStop = false;
             this.groupboxAdminInformation.Text = "Admin Information";

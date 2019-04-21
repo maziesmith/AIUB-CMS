@@ -74,6 +74,7 @@
       <DependentUpon>FacultyInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Hotspot.cs" />
+    <Compile Include="Logic\MacParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
