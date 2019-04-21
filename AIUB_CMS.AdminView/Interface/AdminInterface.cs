@@ -23,9 +23,19 @@ namespace AIUB_CMS.AdminView.Interface
         public AdminInterface(string id)
         {
             InitializeComponent();
-            StudentDataHandler studentData = new StudentDataHandler();
-            this.datagridStudentTable.DataSource = studentData.GetStudentTable();
-            this.daad
+            AdminDataHandler adminData = new AdminDataHandler(id);
+
+            this.labelPhoneAns.Text = adminData.GetPhone();
+            this.labelNameAns.Text = adminData.GetName();
+            this.labelMotherAns.Text = adminData.GetMother();
+            this.labelIDAns.Text = adminData.GetID();
+            this.labelGenderAns.Text = adminData.GetGender().ToString();
+            this.labelFatherAns.Text = adminData.GetFather();
+            this.labelEmailAns.Text = adminData.GetEmail();
+            this.labelDOBAns.Text = adminData.GetDOB();
+            this.labelBloodGroupAns.Text = adminData.GetBloodGroup().ToString();
+
+            this.datagridStudentTable.DataSource = adminData.GetStudentTable();
         }
 
         private void buttonGetStudent_Click(object sender, EventArgs e)
