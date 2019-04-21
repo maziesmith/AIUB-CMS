@@ -98,6 +98,7 @@ namespace AIUB_CMS.AdminView.Data
         {
             var newStudent = StudentDataContext.Test_StudentTables.SingleOrDefault(s => s.ID == id);
             StudentDataContext.Test_StudentTables.DeleteOnSubmit(newStudent);
+            StudentDataContext.SubmitChanges();
         }
 
         public IQueryable GetStudentTable()
