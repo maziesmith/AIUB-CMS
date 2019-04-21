@@ -75,6 +75,31 @@ namespace AIUB_CMS.AdminView.Data
             StudentDataContext.SubmitChanges();
         }
 
+        public void UpdateStudent()
+        {
+            var newStudent = StudentDataContext.Test_StudentTables.SingleOrDefault(s => s.ID == id);
+            newStudent.Name = this.name;
+            newStudent.CGPA = this.CGPA;
+            newStudent.Credits = this.credit;
+            newStudent.Program = this.program;
+            newStudent.Department = this.department;
+            newStudent.FatherName = this.father;
+            newStudent.MotherName = this.mother;
+            newStudent.Phone = this.phone;
+            newStudent.Email = this.email;
+            newStudent.BloodGroup = this.bloodGroup;
+            newStudent.Gender = this.gender;
+            newStudent.ID = this.id;
+            newStudent.DOB = Convert.ToDateTime(this.dob);
+            StudentDataContext.SubmitChanges();
+        }
+
+        public void DeleteStudent()
+        {
+            var newStudent = StudentDataContext.Test_StudentTables.SingleOrDefault(s => s.ID == id);
+            StudentDataContext.Test_StudentTables.DeleteOnSubmit(newStudent);
+        }
+
         public IQueryable GetStudentTable()
         {
             return StudentDataContext.Test_StudentTables;

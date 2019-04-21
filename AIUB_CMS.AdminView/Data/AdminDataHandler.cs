@@ -64,7 +64,7 @@ namespace AIUB_CMS.AdminView.Data
 
         public IQueryable GetStudentTable()
         {
-            return AdminDataContext.Test_AdminTables;
+            return AdminDataContext.Test_StudentTables;
         }
 
         public string GetName()

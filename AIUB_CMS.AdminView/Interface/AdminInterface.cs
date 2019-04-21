@@ -20,10 +20,17 @@ namespace AIUB_CMS.AdminView.Interface
             
         }
 
+        private void UpdateForm()
+        {
+            StudentDataHandler studentData = new StudentDataHandler();
+            this.datagridStudentTable.DataSource = studentData.GetStudentTable();
+        }
+
         public AdminInterface(string id)
         {
             InitializeComponent();
             AdminDataHandler adminData = new AdminDataHandler(id);
+            StudentDataHandler studentData = new StudentDataHandler();
 
             this.labelPhoneAns.Text = adminData.GetPhone();
             this.labelNameAns.Text = adminData.GetName();
@@ -35,7 +42,7 @@ namespace AIUB_CMS.AdminView.Interface
             this.labelDOBAns.Text = adminData.GetDOB();
             this.labelBloodGroupAns.Text = adminData.GetBloodGroup().ToString();
 
-            this.datagridStudentTable.DataSource = adminData.GetStudentTable();
+            this.datagridStudentTable.DataSource = studentData.GetStudentTable();
         }
 
         private void buttonGetStudent_Click(object sender, EventArgs e)
@@ -76,6 +83,7 @@ namespace AIUB_CMS.AdminView.Interface
             studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
             // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
             studentData.InsertStudent();
+            UpdateForm();
         }
 
         private void textboxFacultyID_Click(object sender, EventArgs e)
@@ -99,6 +107,35 @@ namespace AIUB_CMS.AdminView.Interface
 
 
             pictureboxStudentPicture.ImageLocation = studentImageURL;
+        }
+
+        private void buttonUpdateStudent_Click(object sender, EventArgs e)
+        {
+            string id = this.textboxStudentID.Text;
+            StudentDataHandler studentData = new StudentDataHandler(id);
+            // this..Text = studentData.SetProgram();
+            studentData.SetPhone(this.textboxStudentPhone.Text);
+            studentData.SetName(this.textboxStudentName.Text);
+            studentData.SetMother(this.textboxStudentMother.Text);
+            studentData.SetID(this.textboxStudentID.Text);
+            // this..Text = studentData.SetGender().ToString();
+            studentData.SetFather(this.textboxStudentFather.Text);
+            studentData.SetEmail(this.textboxStudentEmail.Text);
+            // this.labelDOBAns.Text = studentData.SetDOB();
+            // this.labelDepartmentAns.Text = studentData.SetDepartment();
+            studentData.SetCredit(Convert.ToInt32(this.textboxStudentCreditsCompleted.Text));
+            studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
+            // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
+            studentData.UpdateStudent();
+            UpdateForm();
+        }
+
+        private void buttonDeleteStudent_Click(object sender, EventArgs e)
+        {
+            string id = this.textboxStudentID.Text;
+            StudentDataHandler studentData = new StudentDataHandler(id);
+            studentData.DeleteStudent();
+            UpdateForm();
         }
     }
 }

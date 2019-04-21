@@ -211,7 +211,7 @@
             this.tabControlAdmin.Controls.Add(this.tabAdminDatabase);
             this.tabControlAdmin.Location = new System.Drawing.Point(8, 117);
             this.tabControlAdmin.Name = "tabControlAdmin";
-            this.tabControlAdmin.SelectedIndex = 0;
+            this.tabControlAdmin.SelectedIndex = 1;
             this.tabControlAdmin.Size = new System.Drawing.Size(1184, 521);
             this.tabControlAdmin.TabIndex = 1;
             this.tabControlAdmin.UseSelectable = true;
@@ -490,6 +490,7 @@
             this.buttonDeleteStudent.TabIndex = 55;
             this.buttonDeleteStudent.Text = "Delete Student";
             this.buttonDeleteStudent.UseSelectable = true;
+            this.buttonDeleteStudent.Click += new System.EventHandler(this.buttonDeleteStudent_Click);
             // 
             // buttonUpdateStudent
             // 
@@ -501,6 +502,7 @@
             this.buttonUpdateStudent.TabIndex = 54;
             this.buttonUpdateStudent.Text = "Update Student";
             this.buttonUpdateStudent.UseSelectable = true;
+            this.buttonUpdateStudent.Click += new System.EventHandler(this.buttonUpdateStudent_Click);
             // 
             // groupboxStudentAcademicInformation
             // 
@@ -2073,7 +2075,7 @@
             this.groupboxAdminInformation.Controls.Add(this.labelGender);
             this.groupboxAdminInformation.Controls.Add(this.labelDOBAns);
             this.groupboxAdminInformation.Controls.Add(this.labelNameAns);
-            this.groupboxAdminInformation.Location = new System.Drawing.Point(3, 12);
+            this.groupboxAdminInformation.Location = new System.Drawing.Point(11, 15);
             this.groupboxAdminInformation.Name = "groupboxAdminInformation";
             this.groupboxAdminInformation.Size = new System.Drawing.Size(415, 337);
             this.groupboxAdminInformation.TabIndex = 54;
