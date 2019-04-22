@@ -71,5 +71,10 @@ namespace AIUB_CMS.Login.Logic
         {
             return this.semester;
         }
+
+        public string GetFullID()
+        {
+            return this.fullId;
+        }
     }
 }

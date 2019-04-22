@@ -11,6 +11,7 @@ namespace AIUB_CMS.Login.Interface
     {
         // Initialize the login form.
         private static string id;
+        private static string idType;
         public static void InitializeLoginForm()
         {
             Application.EnableVisualStyles();
@@ -26,6 +27,16 @@ namespace AIUB_CMS.Login.Interface
         public static string GetID()
         {
             return id;
+        }
+
+        public static void SetIDType(string Type)
+        {
+            idType = Type;
+        }
+
+        public static string GetIDType()
+        {
+            return idType;
         }
     }
 }

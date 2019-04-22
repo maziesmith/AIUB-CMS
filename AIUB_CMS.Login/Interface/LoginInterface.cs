@@ -20,8 +20,6 @@ namespace AIUB_CMS.Login.Interface
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            // The code below is a temporary place holder for testing purposes.
-            // Used to check if the passwords are working as intended.
             IDValidation validator = new IDValidation();
             if (validator.ValidateID(this.textboxID.Text))
             {
@@ -35,7 +33,8 @@ namespace AIUB_CMS.Login.Interface
                 if (password.Validate(textboxID.Text))
                 {
                     MessageBox.Show("Valid password.");
-                    LoginFormInitializer.SetID(textboxID.Text);
+                    LoginFormInitializer.SetID(id.GetFullID());
+                    LoginFormInitializer.SetIDType(id.GetIdType());
                     this.Close();
                 } 
                 else

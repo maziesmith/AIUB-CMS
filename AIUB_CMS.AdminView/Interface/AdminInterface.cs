@@ -13,6 +13,26 @@ namespace AIUB_CMS.AdminView.Interface
 {
     public partial class AdminInterface : MetroFramework.Forms.MetroForm
     {
+        public enum BloodGroup
+        {
+            APos = 1,
+            ANeg,
+            BPos,
+            BNeg,
+            ABPos,
+            ABNeg,
+            OPos,
+            ONeg
+        };
+
+        public enum Nationality
+        {
+            Bangladeshi,
+            Chinese,
+            Indian,
+            Japanese
+        };
+
         string studentImageURL;
         public AdminInterface()
         {
@@ -29,6 +49,21 @@ namespace AIUB_CMS.AdminView.Interface
         public AdminInterface(string id)
         {
             InitializeComponent();
+
+            foreach(var bg in Enum.GetValues(typeof(BloodGroup)))
+            {
+                comboboxAdminBloodGroup.Items.Add(bg);
+                comboboxFacultyBloodGroup.Items.Add(bg);
+                comboboxStudentBloodGroup.Items.Add(bg);
+            }
+
+            foreach (var nationality in Enum.GetValues(typeof(Nationality)))
+            {
+                comboboxAdminNationality.Items.Add(nationality);
+                comboboxFacultyNationality.Items.Add(nationality);
+                comboboxStudentNationality.Items.Add(nationality);
+            }
+
             AdminDataHandler adminData = new AdminDataHandler(id);
             StudentDataHandler studentData = new StudentDataHandler();
 
@@ -55,7 +90,12 @@ namespace AIUB_CMS.AdminView.Interface
             this.textboxStudentName.Text = studentData.GetName();
             this.textboxStudentMother.Text = studentData.GetMother();
             // this.textboxID.Text = studentData.GetID();
-            // this..Text = studentData.GetGender().ToString();
+
+            if (studentData.GetGender() == 1)
+                radiobuttonStudentMale.Checked = true;
+            else
+                radiobuttonStudentFemale.Checked = true;
+
             this.textboxStudentFather.Text = studentData.GetFather();
             this.textboxStudentEmail.Text = studentData.GetEmail();
             // this.labelDOBAns.Text = studentData.GetDOB();
@@ -64,7 +104,7 @@ namespace AIUB_CMS.AdminView.Interface
             this.textboxStudentCGPA.Text = studentData.GetCGPA().ToString();
             // this.labelBloodGroupAns.Text = studentData.GetBloodGroup().ToString();
             this.pictureboxStudentPicture.ImageLocation = studentData.GetImageDirectory();
-            this.pictureboxStudentPicture.Load();
+            // this.pictureboxStudentPicture.Load();
         }
 
         private void buttonCreateStudent_Click(object sender, EventArgs e)
