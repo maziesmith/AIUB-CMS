@@ -47,5 +47,13 @@ namespace AIUB_CMS.Login.Interface
                 MessageBox.Show("Invalid ID.");
             }
         }
+
+        private void textboxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                buttonLogin_Click(sender, e);
+            }
+        }
     }
 }

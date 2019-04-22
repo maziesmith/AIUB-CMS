@@ -125,6 +125,7 @@
             this.textboxPassword.WaterMark = "Password";
             this.textboxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxPassword_KeyPress);
             // 
             // buttonLogin
             // 
