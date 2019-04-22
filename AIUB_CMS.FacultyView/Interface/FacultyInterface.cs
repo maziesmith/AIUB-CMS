@@ -55,16 +55,20 @@ namespace AIUB_CMS.FacultyView.Interface
         private void buttonTest_Click(object sender, EventArgs e)
         {
             // hotspot.GenerateStudentList();
-            string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
-            this.richTextBox1.Text = macList;
+            //string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
+            //this.richTextBox1.Text = macList;
 
-            //if (macList.Contains("00-ec-0a-5f-38-a8"))
-            //    MessageBox.Show("17-33863-1 is present.");
-            //else
-            //    MessageBox.Show("17-33863-1 is absent.");
+            MacParser macParser = new MacParser();
+            List<string> studentList = macParser.ParseForMacAddress("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
+
+            foreach(string student in studentList)
+            {
+                this.richTextBox1.AppendText("\n" + student);
+            }
+
         }
 
-        private async void buttonStop_Click(object sender, EventArgs e)
+        private void buttonStop_Click(object sender, EventArgs e)
         {
             hotspot.StopHotspot();
             timerForHotspot.Stop();
@@ -80,8 +84,8 @@ namespace AIUB_CMS.FacultyView.Interface
         {
             Console.WriteLine("tick");
             hotspot.GenerateStudentList();
-            string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
-            this.richTextBox1.Text = macList;
+            //string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
+            //this.richTextBox1.Text = macList;
         }
     }
 }
