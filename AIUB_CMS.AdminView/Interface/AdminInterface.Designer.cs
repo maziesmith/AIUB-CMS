@@ -248,7 +248,7 @@
             this.tabControlAdmin.Controls.Add(this.tabAdminDatabase);
             this.tabControlAdmin.Location = new System.Drawing.Point(8, 117);
             this.tabControlAdmin.Name = "tabControlAdmin";
-            this.tabControlAdmin.SelectedIndex = 1;
+            this.tabControlAdmin.SelectedIndex = 7;
             this.tabControlAdmin.Size = new System.Drawing.Size(1184, 521);
             this.tabControlAdmin.TabIndex = 1;
             this.tabControlAdmin.UseSelectable = true;
@@ -2180,6 +2180,7 @@
             this.buttonGetAdmin.TabIndex = 67;
             this.buttonGetAdmin.Text = "Get Admin";
             this.buttonGetAdmin.UseSelectable = true;
+            this.buttonGetAdmin.Click += new System.EventHandler(this.buttonGetAdmin_Click);
             // 
             // buttonCreateAdmin
             // 
@@ -2191,6 +2192,7 @@
             this.buttonCreateAdmin.TabIndex = 66;
             this.buttonCreateAdmin.Text = "Create Admin";
             this.buttonCreateAdmin.UseSelectable = true;
+            this.buttonCreateAdmin.Click += new System.EventHandler(this.buttonCreateAdmin_Click);
             // 
             // buttonDeleteAdmin
             // 
@@ -2202,6 +2204,7 @@
             this.buttonDeleteAdmin.TabIndex = 65;
             this.buttonDeleteAdmin.Text = "Delete Admin";
             this.buttonDeleteAdmin.UseSelectable = true;
+            this.buttonDeleteAdmin.Click += new System.EventHandler(this.buttonDeleteAdmin_Click);
             // 
             // buttonUpdateAdmin
             // 
@@ -2213,6 +2216,7 @@
             this.buttonUpdateAdmin.TabIndex = 64;
             this.buttonUpdateAdmin.Text = "Update Admin";
             this.buttonUpdateAdmin.UseSelectable = true;
+            this.buttonUpdateAdmin.Click += new System.EventHandler(this.buttonUpdateAdmin_Click);
             // 
             // groupboxAdminPersonalInfo
             // 

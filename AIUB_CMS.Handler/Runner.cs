@@ -29,7 +29,7 @@ namespace AIUB_CMS.Handler
             //// Sample admin: 1234-12345-2
             //// Sample faculty: 1234-14785-1
             ///
-            AdminFormInitializer.InitializeAdminForm("1234-12345-2");
+            FacultyFormInitializer.InitializeFacultyForm("1234-14785-1");
         }
     }
 }

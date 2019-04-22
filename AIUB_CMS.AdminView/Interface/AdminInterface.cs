@@ -184,5 +184,25 @@ namespace AIUB_CMS.AdminView.Interface
             UpdateForm();
             MessageBox.Show("Student Deleted");
         }
+
+        private void buttonGetAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCreateAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdateAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
