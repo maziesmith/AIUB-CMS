@@ -43,7 +43,7 @@ namespace AIUB_CMS.AdminView.Data
                 this.name = data.Name;
                 this.CGPA = (double)data.CGPA;
                 this.credit = data.Credits ?? 0;
-                this.program = data.Program;
+                // this.program = data.Program;
                 this.department = data.Department;
                 this.father = data.FatherName;
                 this.mother = data.MotherName;
@@ -63,7 +63,7 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.Name = this.name;
             newStudent.CGPA = this.CGPA;
             newStudent.Credits = this.credit;
-            newStudent.Program = this.program;
+            // newStudent.Program = this.program;
             newStudent.Department = this.department;
             newStudent.FatherName = this.father;
             newStudent.MotherName = this.mother;
@@ -103,6 +103,30 @@ namespace AIUB_CMS.AdminView.Data
             var newStudent = StudentDataContext.Test_StudentTables.SingleOrDefault(s => s.ID == id);
             StudentDataContext.Test_StudentTables.DeleteOnSubmit(newStudent);
             StudentDataContext.SubmitChanges();
+        }
+
+        public IQueryable SearchStudentByName(string name)
+        {
+            var ByName = from table in StudentDataContext.Test_StudentTables
+                         where table.Name.Contains(name)
+                         select table;
+            return ByName;
+        }
+
+        // public IQueryable SearchStudentByDepartment(string dept)
+        // {
+        //     var ByDept = from table in StudentDataContext.Test_StudentTables
+        //                  where table.Department.Contains(dept)
+        //                  select table;
+        //     return ByDept;
+        // }
+
+        public IQueryable SearchStudentByID(string id)
+        {
+            var ByID = from table in StudentDataContext.Test_StudentTables
+                       where table.ID.Contains(id)
+                       select table;
+            return ByID;
         }
 
         public IQueryable GetStudentTable()

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AIUB_CMS.AdminView.Data;
@@ -13,6 +14,7 @@ namespace AIUB_CMS.AdminView.Interface
 {
     public partial class AdminInterface : MetroFramework.Forms.MetroForm
     {
+
         public enum BloodGroup
         {
             APos = 1,
@@ -34,6 +36,7 @@ namespace AIUB_CMS.AdminView.Interface
         };
 
         string studentImageURL;
+        string id;
         public AdminInterface()
         {
             // Do nothing.
@@ -48,6 +51,7 @@ namespace AIUB_CMS.AdminView.Interface
 
         public AdminInterface(string id)
         {
+            this.id = id;
             InitializeComponent();
 
             foreach(var bg in Enum.GetValues(typeof(BloodGroup)))
@@ -203,6 +207,27 @@ namespace AIUB_CMS.AdminView.Interface
         private void buttonDeleteAdmin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTextBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textboxSearchStudent_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                StudentDataHandler studentData = new StudentDataHandler();
+                if (Regex.IsMatch(textboxSearchStudent.Text, @"^[\p{L}]+$"))
+                    this.datagridStudentTable.DataSource = studentData.SearchStudentByName(textboxSearchStudent.Text);
+                // else if (textboxSearchStudent.Text.Length == 3)
+                //     this.datagridStudentTable.DataSource = studentData.SearchStudentByDepartment(textboxSearchStudent.Text);
+                else if (textboxSearchStudent.Text.Length > 0)
+                    this.datagridStudentTable.DataSource = studentData.SearchStudentByID(textboxSearchStudent.Text);
+                else
+                    this.datagridStudentTable.DataSource = studentData.GetStudentTable();
+            }
         }
     }
 }
