@@ -30,6 +30,9 @@ namespace AIUB_CMS.StudentView.Data
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertTest_StudentTable(Test_StudentTable instance);
+    partial void UpdateTest_StudentTable(Test_StudentTable instance);
+    partial void DeleteTest_StudentTable(Test_StudentTable instance);
     #endregion
 		
 		public StudentDataDataContext() : 
@@ -72,8 +75,10 @@ namespace AIUB_CMS.StudentView.Data
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_StudentTable")]
-	public partial class Test_StudentTable
+	public partial class Test_StudentTable : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _Name;
 		
@@ -82,8 +87,6 @@ namespace AIUB_CMS.StudentView.Data
 		private System.Nullable<double> _CGPA;
 		
 		private System.Nullable<int> _Credits;
-		
-		private string _Program;
 		
 		private string _Department;
 		
@@ -101,8 +104,55 @@ namespace AIUB_CMS.StudentView.Data
 		
 		private System.Nullable<int> _BloodGroup;
 		
+		private string _Password;
+		
+		private string _ImageDirectory;
+		
+		private string _MACAddress;
+		
+		private System.Nullable<int> _Nationality;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnIDChanging(string value);
+    partial void OnIDChanged();
+    partial void OnCGPAChanging(System.Nullable<double> value);
+    partial void OnCGPAChanged();
+    partial void OnCreditsChanging(System.Nullable<int> value);
+    partial void OnCreditsChanged();
+    partial void OnDepartmentChanging(string value);
+    partial void OnDepartmentChanged();
+    partial void OnFatherNameChanging(string value);
+    partial void OnFatherNameChanged();
+    partial void OnMotherNameChanging(string value);
+    partial void OnMotherNameChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnDOBChanging(System.Nullable<System.DateTime> value);
+    partial void OnDOBChanged();
+    partial void OnGenderChanging(System.Nullable<int> value);
+    partial void OnGenderChanged();
+    partial void OnBloodGroupChanging(System.Nullable<int> value);
+    partial void OnBloodGroupChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnImageDirectoryChanging(string value);
+    partial void OnImageDirectoryChanged();
+    partial void OnMACAddressChanging(string value);
+    partial void OnMACAddressChanged();
+    partial void OnNationalityChanging(System.Nullable<int> value);
+    partial void OnNationalityChanged();
+    #endregion
+		
 		public Test_StudentTable()
 		{
+			OnCreated();
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
@@ -116,12 +166,16 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._Name != value))
 				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
 					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string ID
 		{
 			get
@@ -132,7 +186,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._ID != value))
 				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
 					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
 				}
 			}
 		}
@@ -148,7 +206,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._CGPA != value))
 				{
+					this.OnCGPAChanging(value);
+					this.SendPropertyChanging();
 					this._CGPA = value;
+					this.SendPropertyChanged("CGPA");
+					this.OnCGPAChanged();
 				}
 			}
 		}
@@ -164,23 +226,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._Credits != value))
 				{
+					this.OnCreditsChanging(value);
+					this.SendPropertyChanging();
 					this._Credits = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Program", DbType="NVarChar(50)")]
-		public string Program
-		{
-			get
-			{
-				return this._Program;
-			}
-			set
-			{
-				if ((this._Program != value))
-				{
-					this._Program = value;
+					this.SendPropertyChanged("Credits");
+					this.OnCreditsChanged();
 				}
 			}
 		}
@@ -196,7 +246,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._Department != value))
 				{
+					this.OnDepartmentChanging(value);
+					this.SendPropertyChanging();
 					this._Department = value;
+					this.SendPropertyChanged("Department");
+					this.OnDepartmentChanged();
 				}
 			}
 		}
@@ -212,7 +266,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._FatherName != value))
 				{
+					this.OnFatherNameChanging(value);
+					this.SendPropertyChanging();
 					this._FatherName = value;
+					this.SendPropertyChanged("FatherName");
+					this.OnFatherNameChanged();
 				}
 			}
 		}
@@ -228,7 +286,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._MotherName != value))
 				{
+					this.OnMotherNameChanging(value);
+					this.SendPropertyChanging();
 					this._MotherName = value;
+					this.SendPropertyChanged("MotherName");
+					this.OnMotherNameChanged();
 				}
 			}
 		}
@@ -244,7 +306,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._Phone != value))
 				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
 					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
 				}
 			}
 		}
@@ -260,7 +326,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._Email != value))
 				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
 					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
 				}
 			}
 		}
@@ -276,7 +346,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._DOB != value))
 				{
+					this.OnDOBChanging(value);
+					this.SendPropertyChanging();
 					this._DOB = value;
+					this.SendPropertyChanged("DOB");
+					this.OnDOBChanged();
 				}
 			}
 		}
@@ -292,7 +366,11 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._Gender != value))
 				{
+					this.OnGenderChanging(value);
+					this.SendPropertyChanging();
 					this._Gender = value;
+					this.SendPropertyChanged("Gender");
+					this.OnGenderChanged();
 				}
 			}
 		}
@@ -308,8 +386,112 @@ namespace AIUB_CMS.StudentView.Data
 			{
 				if ((this._BloodGroup != value))
 				{
+					this.OnBloodGroupChanging(value);
+					this.SendPropertyChanging();
 					this._BloodGroup = value;
+					this.SendPropertyChanged("BloodGroup");
+					this.OnBloodGroupChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageDirectory", DbType="NVarChar(250)")]
+		public string ImageDirectory
+		{
+			get
+			{
+				return this._ImageDirectory;
+			}
+			set
+			{
+				if ((this._ImageDirectory != value))
+				{
+					this.OnImageDirectoryChanging(value);
+					this.SendPropertyChanging();
+					this._ImageDirectory = value;
+					this.SendPropertyChanged("ImageDirectory");
+					this.OnImageDirectoryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MACAddress", DbType="NVarChar(20)")]
+		public string MACAddress
+		{
+			get
+			{
+				return this._MACAddress;
+			}
+			set
+			{
+				if ((this._MACAddress != value))
+				{
+					this.OnMACAddressChanging(value);
+					this.SendPropertyChanging();
+					this._MACAddress = value;
+					this.SendPropertyChanged("MACAddress");
+					this.OnMACAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nationality", DbType="Int")]
+		public System.Nullable<int> Nationality
+		{
+			get
+			{
+				return this._Nationality;
+			}
+			set
+			{
+				if ((this._Nationality != value))
+				{
+					this.OnNationalityChanging(value);
+					this.SendPropertyChanging();
+					this._Nationality = value;
+					this.SendPropertyChanged("Nationality");
+					this.OnNationalityChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

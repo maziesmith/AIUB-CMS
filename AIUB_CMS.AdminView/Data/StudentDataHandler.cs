@@ -84,7 +84,7 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.Name = this.name;
             newStudent.CGPA = this.CGPA;
             newStudent.Credits = this.credit;
-            newStudent.Program = this.program;
+            // newStudent.Program = this.program;
             newStudent.Department = this.department;
             newStudent.FatherName = this.father;
             newStudent.MotherName = this.mother;

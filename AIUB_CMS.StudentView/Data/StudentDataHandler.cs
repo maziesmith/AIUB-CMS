@@ -43,7 +43,7 @@ namespace AIUB_CMS.StudentView.Data
                 this.name = data.Name;
                 this.CGPA = (double)data.CGPA;
                 this.credit = data.Credits ?? 0;
-                this.program = data.Program;
+                // this.program = data.Program;
                 this.department = data.Department;
                 this.father = data.FatherName;
                 this.mother = data.MotherName;

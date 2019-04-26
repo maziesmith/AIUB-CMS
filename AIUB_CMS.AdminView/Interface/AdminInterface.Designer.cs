@@ -193,6 +193,7 @@
             this.labelAdminId = new MetroFramework.Controls.MetroLabel();
             this.tabAdminDatabase = new MetroFramework.Controls.MetroTabPage();
             this.openfiledialogImageSelection = new System.Windows.Forms.OpenFileDialog();
+            this.LabelSearchBoxStudentDB = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlAdmin.SuspendLayout();
             this.tabAdminInfo.SuspendLayout();
@@ -248,7 +249,7 @@
             this.tabControlAdmin.Controls.Add(this.tabAdminDatabase);
             this.tabControlAdmin.Location = new System.Drawing.Point(8, 117);
             this.tabControlAdmin.Name = "tabControlAdmin";
-            this.tabControlAdmin.SelectedIndex = 7;
+            this.tabControlAdmin.SelectedIndex = 2;
             this.tabControlAdmin.Size = new System.Drawing.Size(1184, 521);
             this.tabControlAdmin.TabIndex = 1;
             this.tabControlAdmin.UseSelectable = true;
@@ -1140,6 +1141,7 @@
             // 
             // tabStudentDatabase
             // 
+            this.tabStudentDatabase.Controls.Add(this.LabelSearchBoxStudentDB);
             this.tabStudentDatabase.Controls.Add(this.metroTextBox4);
             this.tabStudentDatabase.Controls.Add(this.datagridStudentTable);
             this.tabStudentDatabase.HorizontalScrollbarBarColor = true;
@@ -1160,7 +1162,7 @@
             // 
             // 
             this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(103, 1);
             this.metroTextBox4.CustomButton.Name = "";
             this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1170,7 +1172,7 @@
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[] {
         "metroTextBox4"};
-            this.metroTextBox4.Location = new System.Drawing.Point(11, 3);
+            this.metroTextBox4.Location = new System.Drawing.Point(105, 4);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -1179,7 +1181,7 @@
             this.metroTextBox4.SelectionLength = 0;
             this.metroTextBox4.SelectionStart = 0;
             this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(170, 23);
+            this.metroTextBox4.Size = new System.Drawing.Size(125, 23);
             this.metroTextBox4.TabIndex = 3;
             this.metroTextBox4.Text = "metroTextBox4";
             this.metroTextBox4.UseSelectable = true;
@@ -2605,6 +2607,15 @@
             // 
             this.openfiledialogImageSelection.FileName = "openFileDialog1";
             // 
+            // LabelSearchBoxStudentDB
+            // 
+            this.LabelSearchBoxStudentDB.AutoSize = true;
+            this.LabelSearchBoxStudentDB.Location = new System.Drawing.Point(0, 4);
+            this.LabelSearchBoxStudentDB.Name = "LabelSearchBoxStudentDB";
+            this.LabelSearchBoxStudentDB.Size = new System.Drawing.Size(99, 19);
+            this.LabelSearchBoxStudentDB.TabIndex = 4;
+            this.LabelSearchBoxStudentDB.Text = "Search Student:";
+            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2631,6 +2642,7 @@
             this.grouboxStudentGender.ResumeLayout(false);
             this.grouboxStudentGender.PerformLayout();
             this.tabStudentDatabase.ResumeLayout(false);
+            this.tabStudentDatabase.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridStudentTable)).EndInit();
             this.tabManageFaculty.ResumeLayout(false);
             this.groupboxFacultyImage.ResumeLayout(false);
@@ -2815,5 +2827,6 @@
         private MetroFramework.Controls.MetroButton buttonCreateAdmin;
         private MetroFramework.Controls.MetroButton buttonDeleteAdmin;
         private MetroFramework.Controls.MetroButton buttonUpdateAdmin;
+        private MetroFramework.Controls.MetroLabel LabelSearchBoxStudentDB;
     }
 }
