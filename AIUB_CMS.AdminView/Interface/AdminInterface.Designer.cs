@@ -106,6 +106,7 @@
             this.textboxStudentEmail = new MetroFramework.Controls.MetroTextBox();
             this.labelStudentID = new MetroFramework.Controls.MetroLabel();
             this.tabStudentDatabase = new MetroFramework.Controls.MetroTabPage();
+            this.LabelSearchBoxStudentDB = new MetroFramework.Controls.MetroLabel();
             this.textboxSearchStudent = new MetroFramework.Controls.MetroTextBox();
             this.datagridStudentTable = new MetroFramework.Controls.MetroGrid();
             this.tabManageFaculty = new MetroFramework.Controls.MetroTabPage();
@@ -193,7 +194,6 @@
             this.labelAdminId = new MetroFramework.Controls.MetroLabel();
             this.tabAdminDatabase = new MetroFramework.Controls.MetroTabPage();
             this.openfiledialogImageSelection = new System.Windows.Forms.OpenFileDialog();
-            this.LabelSearchBoxStudentDB = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlAdmin.SuspendLayout();
             this.tabAdminInfo.SuspendLayout();
@@ -884,7 +884,7 @@
             // datetimeStudentDOB
             // 
             this.datetimeStudentDOB.Location = new System.Drawing.Point(159, 212);
-            this.datetimeStudentDOB.MinimumSize = new System.Drawing.Size(0, 29);
+            this.datetimeStudentDOB.MinimumSize = new System.Drawing.Size(4, 29);
             this.datetimeStudentDOB.Name = "datetimeStudentDOB";
             this.datetimeStudentDOB.Size = new System.Drawing.Size(200, 29);
             this.datetimeStudentDOB.TabIndex = 49;
@@ -1155,6 +1155,15 @@
             this.tabStudentDatabase.VerticalScrollbarBarColor = true;
             this.tabStudentDatabase.VerticalScrollbarHighlightOnWheel = false;
             this.tabStudentDatabase.VerticalScrollbarSize = 10;
+            // 
+            // LabelSearchBoxStudentDB
+            // 
+            this.LabelSearchBoxStudentDB.AutoSize = true;
+            this.LabelSearchBoxStudentDB.Location = new System.Drawing.Point(0, 4);
+            this.LabelSearchBoxStudentDB.Name = "LabelSearchBoxStudentDB";
+            this.LabelSearchBoxStudentDB.Size = new System.Drawing.Size(99, 19);
+            this.LabelSearchBoxStudentDB.TabIndex = 4;
+            this.LabelSearchBoxStudentDB.Text = "Search Student:";
             // 
             // textboxSearchStudent
             // 
@@ -1575,7 +1584,7 @@
             // datetimeFacultyDOB
             // 
             this.datetimeFacultyDOB.Location = new System.Drawing.Point(159, 212);
-            this.datetimeFacultyDOB.MinimumSize = new System.Drawing.Size(0, 29);
+            this.datetimeFacultyDOB.MinimumSize = new System.Drawing.Size(4, 29);
             this.datetimeFacultyDOB.Name = "datetimeFacultyDOB";
             this.datetimeFacultyDOB.Size = new System.Drawing.Size(200, 29);
             this.datetimeFacultyDOB.TabIndex = 49;
@@ -2336,7 +2345,7 @@
             // datetimeAdminDOB
             // 
             this.datetimeAdminDOB.Location = new System.Drawing.Point(159, 212);
-            this.datetimeAdminDOB.MinimumSize = new System.Drawing.Size(0, 29);
+            this.datetimeAdminDOB.MinimumSize = new System.Drawing.Size(4, 29);
             this.datetimeAdminDOB.Name = "datetimeAdminDOB";
             this.datetimeAdminDOB.Size = new System.Drawing.Size(200, 29);
             this.datetimeAdminDOB.TabIndex = 49;
@@ -2608,15 +2617,6 @@
             // openfiledialogImageSelection
             // 
             this.openfiledialogImageSelection.FileName = "openFileDialog1";
-            // 
-            // LabelSearchBoxStudentDB
-            // 
-            this.LabelSearchBoxStudentDB.AutoSize = true;
-            this.LabelSearchBoxStudentDB.Location = new System.Drawing.Point(0, 4);
-            this.LabelSearchBoxStudentDB.Name = "LabelSearchBoxStudentDB";
-            this.LabelSearchBoxStudentDB.Size = new System.Drawing.Size(99, 19);
-            this.LabelSearchBoxStudentDB.TabIndex = 4;
-            this.LabelSearchBoxStudentDB.Text = "Search Student:";
             // 
             // AdminInterface
             // 

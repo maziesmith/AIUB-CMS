@@ -32,7 +32,8 @@ namespace AIUB_CMS.AdminView.Interface
             Bangladeshi,
             Chinese,
             Indian,
-            Japanese
+            Japanese,
+            American
         };
 
         string studentImageURL;
@@ -79,7 +80,7 @@ namespace AIUB_CMS.AdminView.Interface
             this.labelFatherAns.Text = adminData.GetFather();
             this.labelEmailAns.Text = adminData.GetEmail();
             this.labelDOBAns.Text = adminData.GetDOB();
-            this.labelBloodGroupAns.Text = adminData.GetBloodGroup().ToString();
+            this.labelBloodGroupAns.Text = Enum.GetName(typeof(BloodGroup), adminData.GetBloodGroup());
 
             this.datagridStudentTable.DataSource = studentData.GetStudentTable();
         }
@@ -87,8 +88,12 @@ namespace AIUB_CMS.AdminView.Interface
         private void buttonGetStudent_Click(object sender, EventArgs e)
         {
             string id = this.textboxStudentID.Text;
-            StudentDataHandler studentData = new StudentDataHandler(id);
+            LoadGetStudentInfo(id);
+        }
 
+        public void LoadGetStudentInfo(string id)
+        {
+            StudentDataHandler studentData = new StudentDataHandler(id);
             // this..Text = studentData.GetProgram();
             this.textboxStudentPhone.Text = studentData.GetPhone();
             this.textboxStudentName.Text = studentData.GetName();
@@ -141,7 +146,11 @@ namespace AIUB_CMS.AdminView.Interface
 
         private void datagridStudentTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            Console.WriteLine(e.ColumnIndex);
+            Console.WriteLine(e.RowIndex);
+            string id = datagridStudentTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+            LoadGetStudentInfo(id);
+            this.tabControlAdmin.SelectTab(1);
         }
 
         private void buttonStudentBrowseImage_Click(object sender, EventArgs e)

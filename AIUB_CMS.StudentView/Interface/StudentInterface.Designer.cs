@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInterface));
             this.tabControlStudent = new MetroFramework.Controls.MetroTabControl();
             this.tabSchedule = new MetroFramework.Controls.MetroTabPage();
-            this.tabAppointment = new MetroFramework.Controls.MetroTabPage();
-            this.tabRegistration = new MetroFramework.Controls.MetroTabPage();
             this.tabStudentInfo = new MetroFramework.Controls.MetroTabPage();
             this.labelGenderAns = new MetroFramework.Controls.MetroLabel();
             this.labelBloodGroupAns = new MetroFramework.Controls.MetroLabel();
@@ -40,7 +38,6 @@
             this.labelDepartmentAns = new MetroFramework.Controls.MetroLabel();
             this.labelMotherAns = new MetroFramework.Controls.MetroLabel();
             this.labelPhoneAns = new MetroFramework.Controls.MetroLabel();
-            this.labelProgramAns = new MetroFramework.Controls.MetroLabel();
             this.labelIDAns = new MetroFramework.Controls.MetroLabel();
             this.labelCreditsAns = new MetroFramework.Controls.MetroLabel();
             this.labelFatherAns = new MetroFramework.Controls.MetroLabel();
@@ -53,13 +50,13 @@
             this.labelDepartment = new MetroFramework.Controls.MetroLabel();
             this.labelMother = new MetroFramework.Controls.MetroLabel();
             this.labelPhone = new MetroFramework.Controls.MetroLabel();
-            this.labelProgram = new MetroFramework.Controls.MetroLabel();
             this.labelID = new MetroFramework.Controls.MetroLabel();
             this.labelCredits = new MetroFramework.Controls.MetroLabel();
             this.labelFather = new MetroFramework.Controls.MetroLabel();
             this.labelEmail = new MetroFramework.Controls.MetroLabel();
             this.labelDOB = new MetroFramework.Controls.MetroLabel();
             this.labelName = new MetroFramework.Controls.MetroLabel();
+            this.tabAcademics = new MetroFramework.Controls.MetroTabPage();
             this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.labelStudentView = new MetroFramework.Controls.MetroLabel();
             this.labelWelcomeMessage = new MetroFramework.Controls.MetroLabel();
@@ -70,47 +67,31 @@
             // 
             // tabControlStudent
             // 
-            this.tabControlStudent.Controls.Add(this.tabSchedule);
             this.tabControlStudent.Controls.Add(this.tabStudentInfo);
-            this.tabControlStudent.Controls.Add(this.tabAppointment);
-            this.tabControlStudent.Controls.Add(this.tabRegistration);
+            this.tabControlStudent.Controls.Add(this.tabSchedule);
+            this.tabControlStudent.Controls.Add(this.tabAcademics);
             this.tabControlStudent.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.tabControlStudent.Location = new System.Drawing.Point(20, 121);
             this.tabControlStudent.Name = "tabControlStudent";
-            this.tabControlStudent.SelectedIndex = 3;
+            this.tabControlStudent.SelectedIndex = 0;
             this.tabControlStudent.Size = new System.Drawing.Size(941, 490);
             this.tabControlStudent.TabIndex = 0;
+            this.tabControlStudent.UseSelectable = true;
             // 
             // tabSchedule
             // 
             this.tabSchedule.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSchedule.HorizontalScrollbarBarColor = true;
-            this.tabSchedule.Location = new System.Drawing.Point(4, 35);
+            this.tabSchedule.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabSchedule.HorizontalScrollbarSize = 10;
+            this.tabSchedule.Location = new System.Drawing.Point(4, 38);
             this.tabSchedule.Name = "tabSchedule";
-            this.tabSchedule.Size = new System.Drawing.Size(926, 480);
+            this.tabSchedule.Size = new System.Drawing.Size(933, 448);
             this.tabSchedule.TabIndex = 0;
             this.tabSchedule.Text = "Schedule";
             this.tabSchedule.VerticalScrollbarBarColor = true;
-            // 
-            // tabAppointment
-            // 
-            this.tabAppointment.HorizontalScrollbarBarColor = true;
-            this.tabAppointment.Location = new System.Drawing.Point(4, 35);
-            this.tabAppointment.Name = "tabAppointment";
-            this.tabAppointment.Size = new System.Drawing.Size(926, 480);
-            this.tabAppointment.TabIndex = 2;
-            this.tabAppointment.Text = "Appointment";
-            this.tabAppointment.VerticalScrollbarBarColor = true;
-            // 
-            // tabRegistration
-            // 
-            this.tabRegistration.HorizontalScrollbarBarColor = true;
-            this.tabRegistration.Location = new System.Drawing.Point(4, 35);
-            this.tabRegistration.Name = "tabRegistration";
-            this.tabRegistration.Size = new System.Drawing.Size(926, 480);
-            this.tabRegistration.TabIndex = 1;
-            this.tabRegistration.Text = "Registration";
-            this.tabRegistration.VerticalScrollbarBarColor = true;
+            this.tabSchedule.VerticalScrollbarHighlightOnWheel = false;
+            this.tabSchedule.VerticalScrollbarSize = 10;
             // 
             // tabStudentInfo
             // 
@@ -120,7 +101,6 @@
             this.tabStudentInfo.Controls.Add(this.labelDepartmentAns);
             this.tabStudentInfo.Controls.Add(this.labelMotherAns);
             this.tabStudentInfo.Controls.Add(this.labelPhoneAns);
-            this.tabStudentInfo.Controls.Add(this.labelProgramAns);
             this.tabStudentInfo.Controls.Add(this.labelIDAns);
             this.tabStudentInfo.Controls.Add(this.labelCreditsAns);
             this.tabStudentInfo.Controls.Add(this.labelFatherAns);
@@ -133,7 +113,6 @@
             this.tabStudentInfo.Controls.Add(this.labelDepartment);
             this.tabStudentInfo.Controls.Add(this.labelMother);
             this.tabStudentInfo.Controls.Add(this.labelPhone);
-            this.tabStudentInfo.Controls.Add(this.labelProgram);
             this.tabStudentInfo.Controls.Add(this.labelID);
             this.tabStudentInfo.Controls.Add(this.labelCredits);
             this.tabStudentInfo.Controls.Add(this.labelFather);
@@ -141,17 +120,21 @@
             this.tabStudentInfo.Controls.Add(this.labelDOB);
             this.tabStudentInfo.Controls.Add(this.labelName);
             this.tabStudentInfo.HorizontalScrollbarBarColor = true;
-            this.tabStudentInfo.Location = new System.Drawing.Point(4, 35);
+            this.tabStudentInfo.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabStudentInfo.HorizontalScrollbarSize = 10;
+            this.tabStudentInfo.Location = new System.Drawing.Point(4, 38);
             this.tabStudentInfo.Name = "tabStudentInfo";
-            this.tabStudentInfo.Size = new System.Drawing.Size(933, 451);
+            this.tabStudentInfo.Size = new System.Drawing.Size(933, 448);
             this.tabStudentInfo.TabIndex = 3;
             this.tabStudentInfo.Text = "Student Info";
             this.tabStudentInfo.VerticalScrollbarBarColor = true;
+            this.tabStudentInfo.VerticalScrollbarHighlightOnWheel = false;
+            this.tabStudentInfo.VerticalScrollbarSize = 10;
             // 
             // labelGenderAns
             // 
             this.labelGenderAns.AutoSize = true;
-            this.labelGenderAns.Location = new System.Drawing.Point(146, 388);
+            this.labelGenderAns.Location = new System.Drawing.Point(146, 359);
             this.labelGenderAns.Name = "labelGenderAns";
             this.labelGenderAns.Size = new System.Drawing.Size(0, 0);
             this.labelGenderAns.TabIndex = 27;
@@ -159,7 +142,7 @@
             // labelBloodGroupAns
             // 
             this.labelBloodGroupAns.AutoSize = true;
-            this.labelBloodGroupAns.Location = new System.Drawing.Point(146, 422);
+            this.labelBloodGroupAns.Location = new System.Drawing.Point(146, 393);
             this.labelBloodGroupAns.Name = "labelBloodGroupAns";
             this.labelBloodGroupAns.Size = new System.Drawing.Size(0, 0);
             this.labelBloodGroupAns.TabIndex = 26;
@@ -175,7 +158,7 @@
             // labelDepartmentAns
             // 
             this.labelDepartmentAns.AutoSize = true;
-            this.labelDepartmentAns.Location = new System.Drawing.Point(146, 196);
+            this.labelDepartmentAns.Location = new System.Drawing.Point(146, 167);
             this.labelDepartmentAns.Name = "labelDepartmentAns";
             this.labelDepartmentAns.Size = new System.Drawing.Size(0, 0);
             this.labelDepartmentAns.TabIndex = 24;
@@ -183,7 +166,7 @@
             // labelMotherAns
             // 
             this.labelMotherAns.AutoSize = true;
-            this.labelMotherAns.Location = new System.Drawing.Point(146, 261);
+            this.labelMotherAns.Location = new System.Drawing.Point(146, 232);
             this.labelMotherAns.Name = "labelMotherAns";
             this.labelMotherAns.Size = new System.Drawing.Size(0, 0);
             this.labelMotherAns.TabIndex = 23;
@@ -191,18 +174,10 @@
             // labelPhoneAns
             // 
             this.labelPhoneAns.AutoSize = true;
-            this.labelPhoneAns.Location = new System.Drawing.Point(146, 293);
+            this.labelPhoneAns.Location = new System.Drawing.Point(146, 264);
             this.labelPhoneAns.Name = "labelPhoneAns";
             this.labelPhoneAns.Size = new System.Drawing.Size(0, 0);
             this.labelPhoneAns.TabIndex = 22;
-            // 
-            // labelProgramAns
-            // 
-            this.labelProgramAns.AutoSize = true;
-            this.labelProgramAns.Location = new System.Drawing.Point(146, 165);
-            this.labelProgramAns.Name = "labelProgramAns";
-            this.labelProgramAns.Size = new System.Drawing.Size(0, 0);
-            this.labelProgramAns.TabIndex = 21;
             // 
             // labelIDAns
             // 
@@ -223,7 +198,7 @@
             // labelFatherAns
             // 
             this.labelFatherAns.AutoSize = true;
-            this.labelFatherAns.Location = new System.Drawing.Point(146, 227);
+            this.labelFatherAns.Location = new System.Drawing.Point(146, 198);
             this.labelFatherAns.Name = "labelFatherAns";
             this.labelFatherAns.Size = new System.Drawing.Size(0, 0);
             this.labelFatherAns.TabIndex = 18;
@@ -231,7 +206,7 @@
             // labelEmailAns
             // 
             this.labelEmailAns.AutoSize = true;
-            this.labelEmailAns.Location = new System.Drawing.Point(146, 324);
+            this.labelEmailAns.Location = new System.Drawing.Point(146, 295);
             this.labelEmailAns.Name = "labelEmailAns";
             this.labelEmailAns.Size = new System.Drawing.Size(0, 0);
             this.labelEmailAns.TabIndex = 17;
@@ -239,7 +214,7 @@
             // labelDOBAns
             // 
             this.labelDOBAns.AutoSize = true;
-            this.labelDOBAns.Location = new System.Drawing.Point(146, 355);
+            this.labelDOBAns.Location = new System.Drawing.Point(146, 326);
             this.labelDOBAns.Name = "labelDOBAns";
             this.labelDOBAns.Size = new System.Drawing.Size(0, 0);
             this.labelDOBAns.TabIndex = 16;
@@ -256,7 +231,7 @@
             // 
             this.labelGender.AutoSize = true;
             this.labelGender.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelGender.Location = new System.Drawing.Point(14, 388);
+            this.labelGender.Location = new System.Drawing.Point(14, 359);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(57, 19);
             this.labelGender.TabIndex = 14;
@@ -266,7 +241,7 @@
             // 
             this.labelBloodGroup.AutoSize = true;
             this.labelBloodGroup.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelBloodGroup.Location = new System.Drawing.Point(14, 422);
+            this.labelBloodGroup.Location = new System.Drawing.Point(14, 393);
             this.labelBloodGroup.Name = "labelBloodGroup";
             this.labelBloodGroup.Size = new System.Drawing.Size(90, 19);
             this.labelBloodGroup.TabIndex = 13;
@@ -286,7 +261,7 @@
             // 
             this.labelDepartment.AutoSize = true;
             this.labelDepartment.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelDepartment.Location = new System.Drawing.Point(14, 196);
+            this.labelDepartment.Location = new System.Drawing.Point(14, 167);
             this.labelDepartment.Name = "labelDepartment";
             this.labelDepartment.Size = new System.Drawing.Size(86, 19);
             this.labelDepartment.TabIndex = 11;
@@ -296,7 +271,7 @@
             // 
             this.labelMother.AutoSize = true;
             this.labelMother.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelMother.Location = new System.Drawing.Point(14, 261);
+            this.labelMother.Location = new System.Drawing.Point(14, 232);
             this.labelMother.Name = "labelMother";
             this.labelMother.Size = new System.Drawing.Size(104, 19);
             this.labelMother.TabIndex = 10;
@@ -306,21 +281,11 @@
             // 
             this.labelPhone.AutoSize = true;
             this.labelPhone.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelPhone.Location = new System.Drawing.Point(14, 293);
+            this.labelPhone.Location = new System.Drawing.Point(14, 264);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(51, 19);
             this.labelPhone.TabIndex = 9;
             this.labelPhone.Text = "Phone:";
-            // 
-            // labelProgram
-            // 
-            this.labelProgram.AutoSize = true;
-            this.labelProgram.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelProgram.Location = new System.Drawing.Point(14, 165);
-            this.labelProgram.Name = "labelProgram";
-            this.labelProgram.Size = new System.Drawing.Size(65, 19);
-            this.labelProgram.TabIndex = 8;
-            this.labelProgram.Text = "Program:";
             // 
             // labelID
             // 
@@ -346,7 +311,7 @@
             // 
             this.labelFather.AutoSize = true;
             this.labelFather.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelFather.Location = new System.Drawing.Point(14, 227);
+            this.labelFather.Location = new System.Drawing.Point(14, 198);
             this.labelFather.Name = "labelFather";
             this.labelFather.Size = new System.Drawing.Size(100, 19);
             this.labelFather.TabIndex = 5;
@@ -356,7 +321,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelEmail.Location = new System.Drawing.Point(14, 324);
+            this.labelEmail.Location = new System.Drawing.Point(14, 295);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(44, 19);
             this.labelEmail.TabIndex = 4;
@@ -366,7 +331,7 @@
             // 
             this.labelDOB.AutoSize = true;
             this.labelDOB.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelDOB.Location = new System.Drawing.Point(14, 355);
+            this.labelDOB.Location = new System.Drawing.Point(14, 326);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Size = new System.Drawing.Size(41, 19);
             this.labelDOB.TabIndex = 3;
@@ -381,6 +346,20 @@
             this.labelName.Size = new System.Drawing.Size(52, 19);
             this.labelName.TabIndex = 2;
             this.labelName.Text = "Name: ";
+            // 
+            // tabAcademics
+            // 
+            this.tabAcademics.HorizontalScrollbarBarColor = true;
+            this.tabAcademics.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabAcademics.HorizontalScrollbarSize = 10;
+            this.tabAcademics.Location = new System.Drawing.Point(4, 38);
+            this.tabAcademics.Name = "tabAcademics";
+            this.tabAcademics.Size = new System.Drawing.Size(933, 448);
+            this.tabAcademics.TabIndex = 2;
+            this.tabAcademics.Text = "Academics";
+            this.tabAcademics.VerticalScrollbarBarColor = true;
+            this.tabAcademics.VerticalScrollbarHighlightOnWheel = false;
+            this.tabAcademics.VerticalScrollbarSize = 10;
             // 
             // pictureLogo
             // 
@@ -439,8 +418,7 @@
 
         private MetroFramework.Controls.MetroTabControl tabControlStudent;
         private MetroFramework.Controls.MetroTabPage tabSchedule;
-        private MetroFramework.Controls.MetroTabPage tabRegistration;
-        private MetroFramework.Controls.MetroTabPage tabAppointment;
+        private MetroFramework.Controls.MetroTabPage tabAcademics;
         private MetroFramework.Controls.MetroTabPage tabStudentInfo;
         private System.Windows.Forms.PictureBox pictureLogo;
         private MetroFramework.Controls.MetroLabel labelStudentView;
@@ -449,7 +427,6 @@
         private MetroFramework.Controls.MetroLabel labelDepartment;
         private MetroFramework.Controls.MetroLabel labelMother;
         private MetroFramework.Controls.MetroLabel labelPhone;
-        private MetroFramework.Controls.MetroLabel labelProgram;
         private MetroFramework.Controls.MetroLabel labelID;
         private MetroFramework.Controls.MetroLabel labelCredits;
         private MetroFramework.Controls.MetroLabel labelFather;
@@ -462,7 +439,6 @@
         private MetroFramework.Controls.MetroLabel labelDepartmentAns;
         private MetroFramework.Controls.MetroLabel labelMotherAns;
         private MetroFramework.Controls.MetroLabel labelPhoneAns;
-        private MetroFramework.Controls.MetroLabel labelProgramAns;
         private MetroFramework.Controls.MetroLabel labelIDAns;
         private MetroFramework.Controls.MetroLabel labelCreditsAns;
         private MetroFramework.Controls.MetroLabel labelFatherAns;

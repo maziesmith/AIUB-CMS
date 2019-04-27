@@ -13,8 +13,7 @@ namespace AIUB_CMS.StudentView.Data
         private string id;
         private double CGPA;
         private int credit;
-        private string program;
-        private string department;
+        private int department;
         private string father;
         private string mother;
         private string phone;
@@ -44,7 +43,7 @@ namespace AIUB_CMS.StudentView.Data
                 this.CGPA = (double)data.CGPA;
                 this.credit = data.Credits ?? 0;
                 // this.program = data.Program;
-                this.department = data.Department;
+                this.department = data.Department?? 1;
                 this.father = data.FatherName;
                 this.mother = data.MotherName;
                 this.phone = data.Phone;
@@ -78,15 +77,11 @@ namespace AIUB_CMS.StudentView.Data
         {
             return this.credit;
         }
-
-        public string GetProgram()
-        {
-            return this.program;
-        }
-
         public string GetDepartment()
         {
-            return this.department;
+            StudentDataDataContext studentData = new StudentDataDataContext();
+            string department = studentData.DepartmentTables.SingleOrDefault(s => s.DepartmentID == Convert.ToInt32(this.department)).DepartmentName;
+            return department;
         }
 
         public string GetMother()

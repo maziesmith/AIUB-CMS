@@ -65,11 +65,64 @@ namespace AIUB_CMS.StudentView.Data
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<DepartmentTable> DepartmentTables
+		{
+			get
+			{
+				return this.GetTable<DepartmentTable>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Test_StudentTable> Test_StudentTables
 		{
 			get
 			{
 				return this.GetTable<Test_StudentTable>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DepartmentTable")]
+	public partial class DepartmentTable
+	{
+		
+		private System.Nullable<int> _DepartmentID;
+		
+		private string _DepartmentName;
+		
+		public DepartmentTable()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="Int")]
+		public System.Nullable<int> DepartmentID
+		{
+			get
+			{
+				return this._DepartmentID;
+			}
+			set
+			{
+				if ((this._DepartmentID != value))
+				{
+					this._DepartmentID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentName", DbType="NVarChar(50)")]
+		public string DepartmentName
+		{
+			get
+			{
+				return this._DepartmentName;
+			}
+			set
+			{
+				if ((this._DepartmentName != value))
+				{
+					this._DepartmentName = value;
+				}
 			}
 		}
 	}
@@ -88,7 +141,7 @@ namespace AIUB_CMS.StudentView.Data
 		
 		private System.Nullable<int> _Credits;
 		
-		private string _Department;
+		private System.Nullable<int> _Department;
 		
 		private string _FatherName;
 		
@@ -124,7 +177,7 @@ namespace AIUB_CMS.StudentView.Data
     partial void OnCGPAChanged();
     partial void OnCreditsChanging(System.Nullable<int> value);
     partial void OnCreditsChanged();
-    partial void OnDepartmentChanging(string value);
+    partial void OnDepartmentChanging(System.Nullable<int> value);
     partial void OnDepartmentChanged();
     partial void OnFatherNameChanging(string value);
     partial void OnFatherNameChanged();
@@ -235,8 +288,8 @@ namespace AIUB_CMS.StudentView.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="NVarChar(10)")]
-		public string Department
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="Int")]
+		public System.Nullable<int> Department
 		{
 			get
 			{
