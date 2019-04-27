@@ -106,7 +106,7 @@
             this.textboxStudentEmail = new MetroFramework.Controls.MetroTextBox();
             this.labelStudentID = new MetroFramework.Controls.MetroLabel();
             this.tabStudentDatabase = new MetroFramework.Controls.MetroTabPage();
-            this.LabelSearchBoxStudentDB = new MetroFramework.Controls.MetroLabel();
+            this.labelStudentSearch = new MetroFramework.Controls.MetroLabel();
             this.textboxSearchStudent = new MetroFramework.Controls.MetroTextBox();
             this.datagridStudentTable = new MetroFramework.Controls.MetroGrid();
             this.tabManageFaculty = new MetroFramework.Controls.MetroTabPage();
@@ -148,8 +148,9 @@
             this.textboxFacultyEmail = new MetroFramework.Controls.MetroTextBox();
             this.labelFacultyID = new MetroFramework.Controls.MetroLabel();
             this.tabFacultyDatabase = new MetroFramework.Controls.MetroTabPage();
+            this.labelFacultySearch = new MetroFramework.Controls.MetroLabel();
+            this.textboxFacultySearch = new MetroFramework.Controls.MetroTextBox();
             this.datagridFacultyTable = new MetroFramework.Controls.MetroGrid();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.tabManageCourse = new MetroFramework.Controls.MetroTabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
@@ -249,7 +250,7 @@
             this.tabControlAdmin.Controls.Add(this.tabAdminDatabase);
             this.tabControlAdmin.Location = new System.Drawing.Point(8, 117);
             this.tabControlAdmin.Name = "tabControlAdmin";
-            this.tabControlAdmin.SelectedIndex = 2;
+            this.tabControlAdmin.SelectedIndex = 4;
             this.tabControlAdmin.Size = new System.Drawing.Size(1184, 521);
             this.tabControlAdmin.TabIndex = 1;
             this.tabControlAdmin.UseSelectable = true;
@@ -1141,7 +1142,7 @@
             // 
             // tabStudentDatabase
             // 
-            this.tabStudentDatabase.Controls.Add(this.LabelSearchBoxStudentDB);
+            this.tabStudentDatabase.Controls.Add(this.labelStudentSearch);
             this.tabStudentDatabase.Controls.Add(this.textboxSearchStudent);
             this.tabStudentDatabase.Controls.Add(this.datagridStudentTable);
             this.tabStudentDatabase.HorizontalScrollbarBarColor = true;
@@ -1156,14 +1157,14 @@
             this.tabStudentDatabase.VerticalScrollbarHighlightOnWheel = false;
             this.tabStudentDatabase.VerticalScrollbarSize = 10;
             // 
-            // LabelSearchBoxStudentDB
+            // labelStudentSearch
             // 
-            this.LabelSearchBoxStudentDB.AutoSize = true;
-            this.LabelSearchBoxStudentDB.Location = new System.Drawing.Point(0, 4);
-            this.LabelSearchBoxStudentDB.Name = "LabelSearchBoxStudentDB";
-            this.LabelSearchBoxStudentDB.Size = new System.Drawing.Size(99, 19);
-            this.LabelSearchBoxStudentDB.TabIndex = 4;
-            this.LabelSearchBoxStudentDB.Text = "Search Student:";
+            this.labelStudentSearch.AutoSize = true;
+            this.labelStudentSearch.Location = new System.Drawing.Point(0, 4);
+            this.labelStudentSearch.Name = "labelStudentSearch";
+            this.labelStudentSearch.Size = new System.Drawing.Size(99, 19);
+            this.labelStudentSearch.TabIndex = 4;
+            this.labelStudentSearch.Text = "Search Student:";
             // 
             // textboxSearchStudent
             // 
@@ -1842,8 +1843,9 @@
             // 
             // tabFacultyDatabase
             // 
+            this.tabFacultyDatabase.Controls.Add(this.labelFacultySearch);
+            this.tabFacultyDatabase.Controls.Add(this.textboxFacultySearch);
             this.tabFacultyDatabase.Controls.Add(this.datagridFacultyTable);
-            this.tabFacultyDatabase.Controls.Add(this.metroTextBox3);
             this.tabFacultyDatabase.HorizontalScrollbarBarColor = true;
             this.tabFacultyDatabase.HorizontalScrollbarHighlightOnWheel = false;
             this.tabFacultyDatabase.HorizontalScrollbarSize = 10;
@@ -1855,6 +1857,49 @@
             this.tabFacultyDatabase.VerticalScrollbarBarColor = true;
             this.tabFacultyDatabase.VerticalScrollbarHighlightOnWheel = false;
             this.tabFacultyDatabase.VerticalScrollbarSize = 10;
+            // 
+            // labelFacultySearch
+            // 
+            this.labelFacultySearch.AutoSize = true;
+            this.labelFacultySearch.Location = new System.Drawing.Point(2, 5);
+            this.labelFacultySearch.Name = "labelFacultySearch";
+            this.labelFacultySearch.Size = new System.Drawing.Size(94, 19);
+            this.labelFacultySearch.TabIndex = 6;
+            this.labelFacultySearch.Text = "Search Faculty:";
+            // 
+            // textboxFacultySearch
+            // 
+            // 
+            // 
+            // 
+            this.textboxFacultySearch.CustomButton.Image = null;
+            this.textboxFacultySearch.CustomButton.Location = new System.Drawing.Point(103, 1);
+            this.textboxFacultySearch.CustomButton.Name = "";
+            this.textboxFacultySearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textboxFacultySearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textboxFacultySearch.CustomButton.TabIndex = 1;
+            this.textboxFacultySearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxFacultySearch.CustomButton.UseSelectable = true;
+            this.textboxFacultySearch.CustomButton.Visible = false;
+            this.textboxFacultySearch.Lines = new string[0];
+            this.textboxFacultySearch.Location = new System.Drawing.Point(107, 5);
+            this.textboxFacultySearch.MaxLength = 32767;
+            this.textboxFacultySearch.Name = "textboxFacultySearch";
+            this.textboxFacultySearch.PasswordChar = '\0';
+            this.textboxFacultySearch.PromptText = "Name or ID";
+            this.textboxFacultySearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textboxFacultySearch.SelectedText = "";
+            this.textboxFacultySearch.SelectionLength = 0;
+            this.textboxFacultySearch.SelectionStart = 0;
+            this.textboxFacultySearch.ShortcutsEnabled = true;
+            this.textboxFacultySearch.Size = new System.Drawing.Size(125, 23);
+            this.textboxFacultySearch.TabIndex = 5;
+            this.textboxFacultySearch.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxFacultySearch.UseSelectable = true;
+            this.textboxFacultySearch.WaterMark = "Name or ID";
+            this.textboxFacultySearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textboxFacultySearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.textboxFacultySearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxFacultySearch_KeyPress);
             // 
             // datagridFacultyTable
             // 
@@ -1898,38 +1943,6 @@
             this.datagridFacultyTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridFacultyTable.Size = new System.Drawing.Size(1176, 424);
             this.datagridFacultyTable.TabIndex = 3;
-            // 
-            // metroTextBox3
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[] {
-        "metroTextBox3"};
-            this.metroTextBox3.Location = new System.Drawing.Point(0, 3);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(75, 23);
-            this.metroTextBox3.TabIndex = 2;
-            this.metroTextBox3.Text = "metroTextBox3";
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tabManageCourse
             // 
@@ -2657,6 +2670,7 @@
             this.groupboxFacultyGender.ResumeLayout(false);
             this.groupboxFacultyGender.PerformLayout();
             this.tabFacultyDatabase.ResumeLayout(false);
+            this.tabFacultyDatabase.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridFacultyTable)).EndInit();
             this.tabManageCourse.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -2769,7 +2783,6 @@
         private MetroFramework.Controls.MetroGrid gridFacultyCoursesAssigned;
         private MetroFramework.Controls.MetroTextBox textboxSearchStudent;
         private MetroFramework.Controls.MetroGrid datagridFacultyTable;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroButton metroButton6;
         private MetroFramework.Controls.MetroButton metroButton7;
@@ -2829,6 +2842,8 @@
         private MetroFramework.Controls.MetroButton buttonCreateAdmin;
         private MetroFramework.Controls.MetroButton buttonDeleteAdmin;
         private MetroFramework.Controls.MetroButton buttonUpdateAdmin;
-        private MetroFramework.Controls.MetroLabel LabelSearchBoxStudentDB;
+        private MetroFramework.Controls.MetroLabel labelStudentSearch;
+        private MetroFramework.Controls.MetroLabel labelFacultySearch;
+        private MetroFramework.Controls.MetroTextBox textboxFacultySearch;
     }
 }

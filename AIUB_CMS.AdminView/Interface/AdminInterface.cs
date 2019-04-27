@@ -218,11 +218,6 @@ namespace AIUB_CMS.AdminView.Interface
 
         }
 
-        private void metroTextBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void textboxSearchStudent_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -236,6 +231,22 @@ namespace AIUB_CMS.AdminView.Interface
                     this.datagridStudentTable.DataSource = studentData.SearchStudentByID(textboxSearchStudent.Text);
                 else
                     this.datagridStudentTable.DataSource = studentData.GetStudentTable();
+            }
+        }
+
+        private void textboxFacultySearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                FacultyDataHandler facultyData = new FacultyDataHandler();
+                if (Regex.IsMatch(textboxSearchStudent.Text, @"^[\p{L}]+$"))
+                    this.datagridFacultyTable.DataSource = facultyData.SearchFacultyByName(textboxFacultySearch.Text);
+                // else if (textboxSearchStudent.Text.Length == 3)
+                //     this.datagridStudentTable.DataSource = studentData.SearchStudentByDepartment(textboxSearchStudent.Text);
+                else if (textboxFacultySearch.Text.Length > 0)
+                    this.datagridFacultyTable.DataSource = facultyData.SearchFacultyByID(textboxFacultySearch.Text);
+                else
+                    this.datagridFacultyTable.DataSource = facultyData.GetFacultyTable();
             }
         }
     }

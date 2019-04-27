@@ -34,8 +34,8 @@ namespace AIUB_CMS.StudentView.Interface
         public StudentInterface(string id)
         {
             InitializeComponent();
-
             StudentDataHandler studentData = new StudentDataHandler(id);
+            this.Text = "Welcome, " + studentData.GetName();
             this.labelPhoneAns.Text = studentData.GetPhone();
             this.labelNameAns.Text = studentData.GetName();
             this.labelMotherAns.Text = studentData.GetMother();

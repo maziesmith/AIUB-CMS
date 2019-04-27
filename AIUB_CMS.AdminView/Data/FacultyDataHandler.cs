@@ -52,7 +52,7 @@ namespace AIUB_CMS.AdminView.Data
             }
         }
 
-        public void InsertStudent()
+        public void InsertFaculty()
         {
             var newFaculty = new Test_FacultyTable();
             newFaculty.Name = this.name;
@@ -69,10 +69,27 @@ namespace AIUB_CMS.AdminView.Data
             FacultyDataContext.SubmitChanges();
         }
 
-        public IQueryable GetStudentTable()
+        public IQueryable GetFacultyTable()
         {
             return FacultyDataContext.Test_FacultyTables;
         }
+
+        public IQueryable SearchFacultyByID(string id)
+        {
+            var ByID = from table in FacultyDataContext.Test_FacultyTables
+                       where table.ID.Contains(id)
+                       select table;
+            return ByID;
+        }
+
+        public IQueryable SearchFacultyByName(string name)
+        {
+            var ByName = from table in FacultyDataContext.Test_StudentTables
+                         where table.Name.Contains(name)
+                         select table;
+            return ByName;
+        }
+
 
         public string GetName()
         {

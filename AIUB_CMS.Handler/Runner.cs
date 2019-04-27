@@ -20,9 +20,9 @@ namespace AIUB_CMS.Handler
             string id = LoginFormInitializer.GetID();
 
             //if (type == "Student")
-                StudentFormInitializer.InitializeStudentForm(id);
+                //StudentFormInitializer.InitializeStudentForm(id);
             //else if (type == "Faculty")
-                // FacultyFormInitializer.InitializeFacultyForm("1234-14785-1");
+                 FacultyFormInitializer.InitializeFacultyForm("1234-14785-1");
             //else if (type == "Admin")
                 // AdminFormInitializer.InitializeAdminForm("1234-12345-2");
 

@@ -58,7 +58,7 @@
             this.labelStudentCount = new MetroFramework.Controls.MetroLabel();
             this.labelCourseName = new MetroFramework.Controls.MetroLabel();
             this.tabFacultyInfo = new MetroFramework.Controls.MetroTabPage();
-            this.groupboxAdminInformation = new System.Windows.Forms.GroupBox();
+            this.groupboxFacultyInformation = new System.Windows.Forms.GroupBox();
             this.labelDepartmentAns = new MetroFramework.Controls.MetroLabel();
             this.labelDepartment = new MetroFramework.Controls.MetroLabel();
             this.labelBloodGroupAns = new MetroFramework.Controls.MetroLabel();
@@ -84,7 +84,7 @@
             this.tabAcademics.SuspendLayout();
             this.grouboxAttendance.SuspendLayout();
             this.tabFacultyInfo.SuspendLayout();
-            this.groupboxAdminInformation.SuspendLayout();
+            this.groupboxFacultyInformation.SuspendLayout();
             this.tabcontrolFaculty.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -463,7 +463,7 @@
             // 
             // tabFacultyInfo
             // 
-            this.tabFacultyInfo.Controls.Add(this.groupboxAdminInformation);
+            this.tabFacultyInfo.Controls.Add(this.groupboxFacultyInformation);
             this.tabFacultyInfo.HorizontalScrollbarBarColor = true;
             this.tabFacultyInfo.HorizontalScrollbarHighlightOnWheel = false;
             this.tabFacultyInfo.HorizontalScrollbarSize = 10;
@@ -476,35 +476,35 @@
             this.tabFacultyInfo.VerticalScrollbarHighlightOnWheel = false;
             this.tabFacultyInfo.VerticalScrollbarSize = 10;
             // 
-            // groupboxAdminInformation
+            // groupboxFacultyInformation
             // 
-            this.groupboxAdminInformation.BackColor = System.Drawing.Color.Transparent;
-            this.groupboxAdminInformation.Controls.Add(this.labelDepartmentAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelDepartment);
-            this.groupboxAdminInformation.Controls.Add(this.labelBloodGroupAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelName);
-            this.groupboxAdminInformation.Controls.Add(this.labelDOB);
-            this.groupboxAdminInformation.Controls.Add(this.labelGenderAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelEmail);
-            this.groupboxAdminInformation.Controls.Add(this.labelFather);
-            this.groupboxAdminInformation.Controls.Add(this.labelMotherAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelID);
-            this.groupboxAdminInformation.Controls.Add(this.labelPhoneAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelPhone);
-            this.groupboxAdminInformation.Controls.Add(this.labelIDAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelMother);
-            this.groupboxAdminInformation.Controls.Add(this.labelFatherAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelBloodGroup);
-            this.groupboxAdminInformation.Controls.Add(this.labelEmailAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelGender);
-            this.groupboxAdminInformation.Controls.Add(this.labelDOBAns);
-            this.groupboxAdminInformation.Controls.Add(this.labelNameAns);
-            this.groupboxAdminInformation.Location = new System.Drawing.Point(15, 18);
-            this.groupboxAdminInformation.Name = "groupboxAdminInformation";
-            this.groupboxAdminInformation.Size = new System.Drawing.Size(410, 375);
-            this.groupboxAdminInformation.TabIndex = 55;
-            this.groupboxAdminInformation.TabStop = false;
-            this.groupboxAdminInformation.Text = "Admin Information";
+            this.groupboxFacultyInformation.BackColor = System.Drawing.Color.Transparent;
+            this.groupboxFacultyInformation.Controls.Add(this.labelDepartmentAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelDepartment);
+            this.groupboxFacultyInformation.Controls.Add(this.labelBloodGroupAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelName);
+            this.groupboxFacultyInformation.Controls.Add(this.labelDOB);
+            this.groupboxFacultyInformation.Controls.Add(this.labelGenderAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelEmail);
+            this.groupboxFacultyInformation.Controls.Add(this.labelFather);
+            this.groupboxFacultyInformation.Controls.Add(this.labelMotherAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelID);
+            this.groupboxFacultyInformation.Controls.Add(this.labelPhoneAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelPhone);
+            this.groupboxFacultyInformation.Controls.Add(this.labelIDAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelMother);
+            this.groupboxFacultyInformation.Controls.Add(this.labelFatherAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelBloodGroup);
+            this.groupboxFacultyInformation.Controls.Add(this.labelEmailAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelGender);
+            this.groupboxFacultyInformation.Controls.Add(this.labelDOBAns);
+            this.groupboxFacultyInformation.Controls.Add(this.labelNameAns);
+            this.groupboxFacultyInformation.Location = new System.Drawing.Point(15, 18);
+            this.groupboxFacultyInformation.Name = "groupboxFacultyInformation";
+            this.groupboxFacultyInformation.Size = new System.Drawing.Size(410, 375);
+            this.groupboxFacultyInformation.TabIndex = 55;
+            this.groupboxFacultyInformation.TabStop = false;
+            this.groupboxFacultyInformation.Text = "Faculty Information";
             // 
             // labelDepartmentAns
             // 
@@ -703,7 +703,7 @@
             this.tabcontrolFaculty.Controls.Add(this.tabTSF);
             this.tabcontrolFaculty.Location = new System.Drawing.Point(4, 86);
             this.tabcontrolFaculty.Name = "tabcontrolFaculty";
-            this.tabcontrolFaculty.SelectedIndex = 1;
+            this.tabcontrolFaculty.SelectedIndex = 0;
             this.tabcontrolFaculty.Size = new System.Drawing.Size(1174, 528);
             this.tabcontrolFaculty.TabIndex = 0;
             this.tabcontrolFaculty.UseSelectable = true;
@@ -726,8 +726,8 @@
             this.grouboxAttendance.ResumeLayout(false);
             this.grouboxAttendance.PerformLayout();
             this.tabFacultyInfo.ResumeLayout(false);
-            this.groupboxAdminInformation.ResumeLayout(false);
-            this.groupboxAdminInformation.PerformLayout();
+            this.groupboxFacultyInformation.ResumeLayout(false);
+            this.groupboxFacultyInformation.PerformLayout();
             this.tabcontrolFaculty.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -764,7 +764,7 @@
         private MetroFramework.Controls.MetroLabel labelStudentCount;
         private MetroFramework.Controls.MetroLabel labelCourseName;
         private MetroFramework.Controls.MetroTabPage tabFacultyInfo;
-        private System.Windows.Forms.GroupBox groupboxAdminInformation;
+        private System.Windows.Forms.GroupBox groupboxFacultyInformation;
         private MetroFramework.Controls.MetroLabel labelDepartmentAns;
         private MetroFramework.Controls.MetroLabel labelDepartment;
         private MetroFramework.Controls.MetroLabel labelBloodGroupAns;
