@@ -13,7 +13,7 @@ namespace AIUB_CMS.AdminView.Data
         private double CGPA;
         private int credit;
         private string program;
-        private string department;
+        private int department;
         private string father;
         private string mother;
         private string phone;
@@ -44,14 +44,14 @@ namespace AIUB_CMS.AdminView.Data
                 this.CGPA = (double)data.CGPA;
                 this.credit = data.Credits ?? 0;
                 // this.program = data.Program;
-                this.department = data.Department;
+                this.department = data.Department?? 1;
                 this.father = data.FatherName;
                 this.mother = data.MotherName;
                 this.phone = data.Phone;
                 this.email = data.Email;
                 this.bloodGroup = data.BloodGroup ?? 1;
                 this.gender = data.Gender ?? 1;
-                this.dob = data.DOB.ToString();
+                this.dob = Convert.ToDateTime(data.DOB).Date.ToString();
                 this.imageDirectory = data.ImageDirectory;
 
             }
@@ -154,7 +154,7 @@ namespace AIUB_CMS.AdminView.Data
             return this.program;
         }
 
-        public string GetDepartment()
+        public int GetDepartment()
         {
             return this.department;
         }
@@ -229,7 +229,7 @@ namespace AIUB_CMS.AdminView.Data
             this.program = value;
         }
 
-        public void SetDepartment(string value)
+        public void SetDepartment(int value)
         {
             this.department = value;
         }

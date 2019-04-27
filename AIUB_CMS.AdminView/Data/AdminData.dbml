@@ -38,7 +38,7 @@
       <Column Name="ID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="CGPA" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Credits" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Department" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Department" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="FatherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MotherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />

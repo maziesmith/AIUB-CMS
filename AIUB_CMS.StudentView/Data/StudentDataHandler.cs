@@ -20,7 +20,7 @@ namespace AIUB_CMS.StudentView.Data
         private string email;
         private int gender;
         private int bloodGroup;
-        private string dob;
+        private DateTime dob;
 
         StudentDataDataContext StudentDataContext;
 
@@ -50,7 +50,7 @@ namespace AIUB_CMS.StudentView.Data
                 this.email = data.Email;
                 this.bloodGroup = data.BloodGroup?? 1;
                 this.gender = data.Gender?? 1;
-                this.dob = data.DOB.ToString();
+                this.dob = data.DOB?? DateTime.Now;
 
             }
         }
@@ -121,7 +121,7 @@ namespace AIUB_CMS.StudentView.Data
 
         public string GetDOB()
         {
-            return this.dob;
+            return dob.ToShortDateString();
         }
     }
 }

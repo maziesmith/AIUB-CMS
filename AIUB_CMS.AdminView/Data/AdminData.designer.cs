@@ -652,7 +652,7 @@ namespace AIUB_CMS.AdminView.Data
 		
 		private System.Nullable<int> _Credits;
 		
-		private string _Department;
+		private System.Nullable<int> _Department;
 		
 		private string _FatherName;
 		
@@ -688,7 +688,7 @@ namespace AIUB_CMS.AdminView.Data
     partial void OnCGPAChanged();
     partial void OnCreditsChanging(System.Nullable<int> value);
     partial void OnCreditsChanged();
-    partial void OnDepartmentChanging(string value);
+    partial void OnDepartmentChanging(System.Nullable<int> value);
     partial void OnDepartmentChanged();
     partial void OnFatherNameChanging(string value);
     partial void OnFatherNameChanged();
@@ -799,8 +799,8 @@ namespace AIUB_CMS.AdminView.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="NVarChar(10)")]
-		public string Department
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="Int")]
+		public System.Nullable<int> Department
 		{
 			get
 			{
