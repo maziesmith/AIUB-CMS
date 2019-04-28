@@ -37,8 +37,8 @@ namespace AIUB_CMS.AdminView.Interface
             American
         };
 
-        string studentImageURL;
         string id;
+        string studentImageURL;
         public AdminInterface()
         {
             // Do nothing.
@@ -48,7 +48,9 @@ namespace AIUB_CMS.AdminView.Interface
         private void UpdateForm()
         {
             StudentDataHandler studentData = new StudentDataHandler();
+            FacultyDataHandler facultyData = new FacultyDataHandler();
             this.datagridStudentTable.DataSource = studentData.GetStudentTable();
+            this.datagridFacultyTable.DataSource = facultyData.GetFacultyTable();
         }
 
         public AdminInterface(string id)
@@ -82,6 +84,7 @@ namespace AIUB_CMS.AdminView.Interface
 
             AdminDataHandler adminData = new AdminDataHandler(id);
             StudentDataHandler studentData = new StudentDataHandler();
+            FacultyDataHandler facultyData = new FacultyDataHandler();
 
             this.labelPhoneAns.Text = adminData.GetPhone();
             this.labelNameAns.Text = adminData.GetName();
@@ -94,6 +97,7 @@ namespace AIUB_CMS.AdminView.Interface
             this.labelBloodGroupAns.Text = Enum.GetName(typeof(BloodGroup), adminData.GetBloodGroup());
 
             this.datagridStudentTable.DataSource = studentData.GetStudentTable();
+            this.datagridFacultyTable.DataSource = facultyData.GetFacultyTable();
         }
 
         private void buttonGetStudent_Click(object sender, EventArgs e)
@@ -128,6 +132,29 @@ namespace AIUB_CMS.AdminView.Interface
             // this.pictureboxStudentPicture.Load();
         }
 
+        public void LoadGetFacultyInfo(string id)
+        {
+            FacultyDataHandler facultyData = new FacultyDataHandler(id);
+            this.textboxFacultyPhone.Text = facultyData.GetPhone();
+            this.texboxFacultyName.Text = facultyData.GetName();
+            this.textboxFacultyID.Text = facultyData.GetID();
+            this.textboxFacultyFather.Text = facultyData.GetFather();
+            this.textboxFacultyMother.Text = facultyData.GetMother();
+            this.textboxFacultyEmail.Text = facultyData.GetEmail();
+            this.datetimeFacultyDOB.Value = facultyData.GetDOB();
+            this.comboboxFacultyDepartment.SelectedIndex = facultyData.GetDepartment();
+            this.comboboxFacultyBloodGroup.SelectedIndex = facultyData.GetBloodGroup();
+            this.comboboxFacultyNationality.SelectedIndex = facultyData.GetNationality();
+            
+            if (facultyData.GetGender() == 1)
+                radiobuttonFacultyMale.Checked = true;
+            else
+                radiobuttonFacultyFemale.Checked = true;
+
+            // Image directory code required.
+            // this.pictureboxStudentPicture.Load();
+        }
+
         private void buttonCreateStudent_Click(object sender, EventArgs e)
         {
             string id = this.textboxStudentID.Text;
@@ -149,17 +176,12 @@ namespace AIUB_CMS.AdminView.Interface
             studentData.SetCredit(Convert.ToInt32(this.textboxStudentCreditsCompleted.Text));
             studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
             studentData.SetBloodGroup(this.comboboxStudentBloodGroup.SelectedIndex);
-            studentData.SetImageDirectory(studentImageURL);
+            // studentData.SetImageDirectory(studentImageURL);
             studentData.SetMAC(this.textboxStudentMAC.Text);
             studentData.SetPassword(GeneratePasswordHash.CalculateMD5Hash(this.textboxStudentPassword.Text));
             studentData.InsertStudent();
             UpdateForm();
             MessageBox.Show("Student Created");
-        }
-
-        private void textboxFacultyID_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void datagridStudentTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -263,7 +285,7 @@ namespace AIUB_CMS.AdminView.Interface
             if (e.KeyChar == (char)13)
             {
                 FacultyDataHandler facultyData = new FacultyDataHandler();
-                if (Regex.IsMatch(textboxSearchStudent.Text, @"^[\p{L}]+$"))
+                if (Regex.IsMatch(textboxFacultySearch.Text, @"^[\p{L}]+$"))
                     this.datagridFacultyTable.DataSource = facultyData.SearchFacultyByName(textboxFacultySearch.Text);
                 // else if (textboxSearchStudent.Text.Length == 3)
                 //     this.datagridStudentTable.DataSource = studentData.SearchStudentByDepartment(textboxSearchStudent.Text);
@@ -296,17 +318,74 @@ namespace AIUB_CMS.AdminView.Interface
 
         private void buttonCreateFaculty_Click(object sender, EventArgs e)
         {
+            string id = this.textboxFacultyID.Text;
+            FacultyDataHandler facultyData = new FacultyDataHandler(id);
+            facultyData.SetPhone(this.textboxFacultyPhone.Text);
+            facultyData.SetName(this.texboxFacultyName.Text);
+            facultyData.SetID(this.textboxFacultyID.Text);
+            facultyData.SetFather(this.textboxFacultyFather.Text);
+            facultyData.SetMother(this.textboxFacultyMother.Text);
+            facultyData.SetEmail(this.textboxFacultyEmail.Text);
+            facultyData.SetDOB(this.datetimeFacultyDOB.Value);
+            facultyData.SetDepartment(this.comboboxFacultyDepartment.SelectedIndex);
+            facultyData.SetBloodGroup(this.comboboxFacultyBloodGroup.SelectedIndex);
+            facultyData.SetNationality(this.comboboxFacultyNationality.SelectedIndex);
 
+            if (radiobuttonFacultyMale.Checked)
+                facultyData.SetGender(1);
+            else
+                facultyData.SetGender(2);
+
+            facultyData.SetPassword(GeneratePasswordHash.CalculateMD5Hash(this.textboxStudentPassword.Text));
+            // studentData.SetImageDirectory(studentImageURL);
+            facultyData.InsertFaculty();
+            UpdateForm();
+            MessageBox.Show("Faculty Created");
         }
 
         private void buttonUpdateFaculty_Click(object sender, EventArgs e)
         {
+            string id = this.textboxFacultyID.Text;
+            FacultyDataHandler facultyData = new FacultyDataHandler(id);
+            facultyData.SetPhone(this.textboxFacultyPhone.Text);
+            facultyData.SetName(this.texboxFacultyName.Text);
+            facultyData.SetID(this.textboxFacultyID.Text);
+            facultyData.SetFather(this.textboxFacultyFather.Text);
+            facultyData.SetMother(this.textboxFacultyMother.Text);
+            facultyData.SetEmail(this.textboxFacultyEmail.Text);
+            facultyData.SetDOB(this.datetimeFacultyDOB.Value);
+            facultyData.SetDepartment(this.comboboxFacultyDepartment.SelectedIndex);
+            facultyData.SetBloodGroup(this.comboboxFacultyBloodGroup.SelectedIndex);
+            facultyData.SetNationality(this.comboboxFacultyNationality.SelectedIndex);
 
+            if (radiobuttonFacultyMale.Checked)
+                facultyData.SetGender(1);
+            else
+                facultyData.SetGender(2);
+
+            facultyData.SetPassword(GeneratePasswordHash.CalculateMD5Hash(this.textboxStudentPassword.Text));
+            // studentData.SetImageDirectory(studentImageURL);
+            facultyData.UpdateFaculty();
+            UpdateForm();
+            MessageBox.Show("Faculty Updated");
         }
 
         private void buttonDeleteFaculty_Click(object sender, EventArgs e)
         {
+            string id = this.textboxFacultyID.Text;
+            FacultyDataHandler facultyData = new FacultyDataHandler(id);
+            facultyData.DeleteFaculty();
+            UpdateForm();
+            MessageBox.Show("Faculty Deleted");
+        }
 
+        private void datagridFacultyTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Console.WriteLine(e.ColumnIndex);
+            Console.WriteLine(e.RowIndex);
+            string id = datagridFacultyTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+            LoadGetFacultyInfo(id);
+            this.tabControlAdmin.SelectTab(3);
         }
     }
 }

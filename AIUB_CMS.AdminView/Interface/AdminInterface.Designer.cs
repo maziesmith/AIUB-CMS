@@ -44,6 +44,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlAdmin = new MetroFramework.Controls.MetroTabControl();
             this.tabAdminInfo = new MetroFramework.Controls.MetroTabPage();
+            this.groupboxAdminPassword = new System.Windows.Forms.GroupBox();
+            this.buttonNewAdminPasswordSave = new MetroFramework.Controls.MetroButton();
+            this.textboxNewAdminPassword = new MetroFramework.Controls.MetroTextBox();
+            this.labelNewAdminPassword = new MetroFramework.Controls.MetroLabel();
+            this.groupboxAdminInfoImage = new System.Windows.Forms.GroupBox();
+            this.pictureboxAdminInfoImage = new System.Windows.Forms.PictureBox();
             this.groupboxAdminInformation = new System.Windows.Forms.GroupBox();
             this.labelBloodGroupAns = new MetroFramework.Controls.MetroLabel();
             this.labelName = new MetroFramework.Controls.MetroLabel();
@@ -64,6 +70,7 @@
             this.labelDOBAns = new MetroFramework.Controls.MetroLabel();
             this.labelNameAns = new MetroFramework.Controls.MetroLabel();
             this.tabManageStudent = new MetroFramework.Controls.MetroTabPage();
+            this.buttonClearStudentInfo = new MetroFramework.Controls.MetroButton();
             this.groupboxStudentImage = new System.Windows.Forms.GroupBox();
             this.buttonStudentBrowseImage = new MetroFramework.Controls.MetroButton();
             this.pictureboxStudentPicture = new System.Windows.Forms.PictureBox();
@@ -94,9 +101,10 @@
             this.datetimeStudentDOB = new MetroFramework.Controls.MetroDateTime();
             this.labelStudentFather = new MetroFramework.Controls.MetroLabel();
             this.comboboxStudentBloodGroup = new MetroFramework.Controls.MetroComboBox();
+            this.textboxStudentID = new MetroFramework.Controls.MetroTextBox();
+            this.labelStudentID = new MetroFramework.Controls.MetroLabel();
             this.textboxStudentName = new MetroFramework.Controls.MetroTextBox();
             this.labelStudentPhone = new MetroFramework.Controls.MetroLabel();
-            this.textboxStudentID = new MetroFramework.Controls.MetroTextBox();
             this.labelStudentMother = new MetroFramework.Controls.MetroLabel();
             this.textboxStudentFather = new MetroFramework.Controls.MetroTextBox();
             this.textboxStudentMother = new MetroFramework.Controls.MetroTextBox();
@@ -104,7 +112,6 @@
             this.textboxStudentPhone = new MetroFramework.Controls.MetroTextBox();
             this.labelStudentGender = new MetroFramework.Controls.MetroLabel();
             this.textboxStudentEmail = new MetroFramework.Controls.MetroTextBox();
-            this.labelStudentID = new MetroFramework.Controls.MetroLabel();
             this.tabStudentDatabase = new MetroFramework.Controls.MetroTabPage();
             this.labelStudentSearch = new MetroFramework.Controls.MetroLabel();
             this.textboxSearchStudent = new MetroFramework.Controls.MetroTextBox();
@@ -136,9 +143,10 @@
             this.datetimeFacultyDOB = new MetroFramework.Controls.MetroDateTime();
             this.labelFacultyFather = new MetroFramework.Controls.MetroLabel();
             this.comboboxFacultyBloodGroup = new MetroFramework.Controls.MetroComboBox();
+            this.textboxFacultyID = new MetroFramework.Controls.MetroTextBox();
+            this.labelFacultyID = new MetroFramework.Controls.MetroLabel();
             this.texboxFacultyName = new MetroFramework.Controls.MetroTextBox();
             this.labelFacultyPhone = new MetroFramework.Controls.MetroLabel();
-            this.textboxFacultyID = new MetroFramework.Controls.MetroTextBox();
             this.labelFacultyMother = new MetroFramework.Controls.MetroLabel();
             this.textboxFacultyFather = new MetroFramework.Controls.MetroTextBox();
             this.textboxFacultyMother = new MetroFramework.Controls.MetroTextBox();
@@ -146,12 +154,27 @@
             this.textboxFacultyPhone = new MetroFramework.Controls.MetroTextBox();
             this.lebelFacultyGender = new MetroFramework.Controls.MetroLabel();
             this.textboxFacultyEmail = new MetroFramework.Controls.MetroTextBox();
-            this.labelFacultyID = new MetroFramework.Controls.MetroLabel();
             this.tabFacultyDatabase = new MetroFramework.Controls.MetroTabPage();
             this.labelFacultySearch = new MetroFramework.Controls.MetroLabel();
             this.textboxFacultySearch = new MetroFramework.Controls.MetroTextBox();
             this.datagridFacultyTable = new MetroFramework.Controls.MetroGrid();
             this.tabManageCourse = new MetroFramework.Controls.MetroTabPage();
+            this.groupboxCourseInformation = new System.Windows.Forms.GroupBox();
+            this.textboxCourseID = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.buttonCourseDelete = new MetroFramework.Controls.MetroButton();
+            this.buttonCourseUpdate = new MetroFramework.Controls.MetroButton();
+            this.buttonoCourseCreate = new MetroFramework.Controls.MetroButton();
+            this.textboxCourseName = new MetroFramework.Controls.MetroTextBox();
+            this.comboboxCourseTimeSlot = new MetroFramework.Controls.MetroComboBox();
+            this.comboboxCourseSection = new MetroFramework.Controls.MetroComboBox();
+            this.comboboxCourseCredits = new MetroFramework.Controls.MetroComboBox();
+            this.comboboxCourseDepartment = new MetroFramework.Controls.MetroComboBox();
+            this.labelTimeSlot = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseSection = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseCredits = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseDepartment = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseName = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
@@ -195,32 +218,12 @@
             this.labelAdminId = new MetroFramework.Controls.MetroLabel();
             this.tabAdminDatabase = new MetroFramework.Controls.MetroTabPage();
             this.openfiledialogImageSelection = new System.Windows.Forms.OpenFileDialog();
-            this.groupboxAdminInfoImage = new System.Windows.Forms.GroupBox();
-            this.pictureboxAdminInfoImage = new System.Windows.Forms.PictureBox();
-            this.groupboxCourseInformation = new System.Windows.Forms.GroupBox();
-            this.labelCourseName = new MetroFramework.Controls.MetroLabel();
-            this.labelCourseDepartment = new MetroFramework.Controls.MetroLabel();
-            this.labelCourseCredits = new MetroFramework.Controls.MetroLabel();
-            this.labelCourseSection = new MetroFramework.Controls.MetroLabel();
-            this.labelTimeSlot = new MetroFramework.Controls.MetroLabel();
-            this.comboboxCourseDepartment = new MetroFramework.Controls.MetroComboBox();
-            this.comboboxCourseCredits = new MetroFramework.Controls.MetroComboBox();
-            this.comboboxCourseSection = new MetroFramework.Controls.MetroComboBox();
-            this.comboboxCourseTimeSlot = new MetroFramework.Controls.MetroComboBox();
-            this.textboxCourseName = new MetroFramework.Controls.MetroTextBox();
-            this.buttonCourseUpdate = new MetroFramework.Controls.MetroButton();
-            this.buttonoCourseCreate = new MetroFramework.Controls.MetroButton();
-            this.buttonCourseDelete = new MetroFramework.Controls.MetroButton();
-            this.textboxCourseID = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.groupboxAdminPassword = new System.Windows.Forms.GroupBox();
-            this.labelNewAdminPassword = new MetroFramework.Controls.MetroLabel();
-            this.textboxNewAdminPassword = new MetroFramework.Controls.MetroTextBox();
-            this.buttonNewAdminPasswordSave = new MetroFramework.Controls.MetroButton();
-            this.buttonClearStudentInfo = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlAdmin.SuspendLayout();
             this.tabAdminInfo.SuspendLayout();
+            this.groupboxAdminPassword.SuspendLayout();
+            this.groupboxAdminInfoImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxAdminInfoImage)).BeginInit();
             this.groupboxAdminInformation.SuspendLayout();
             this.tabManageStudent.SuspendLayout();
             this.groupboxStudentImage.SuspendLayout();
@@ -240,6 +243,7 @@
             this.tabFacultyDatabase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridFacultyTable)).BeginInit();
             this.tabManageCourse.SuspendLayout();
+            this.groupboxCourseInformation.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
             this.tabManageAdmin.SuspendLayout();
@@ -248,10 +252,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxAdminImage)).BeginInit();
             this.groupboxAdminPersonalInfo.SuspendLayout();
             this.groupboxAdminGender.SuspendLayout();
-            this.groupboxAdminInfoImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureboxAdminInfoImage)).BeginInit();
-            this.groupboxCourseInformation.SuspendLayout();
-            this.groupboxAdminPassword.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -298,6 +298,88 @@
             this.tabAdminInfo.VerticalScrollbarBarColor = true;
             this.tabAdminInfo.VerticalScrollbarHighlightOnWheel = false;
             this.tabAdminInfo.VerticalScrollbarSize = 10;
+            // 
+            // groupboxAdminPassword
+            // 
+            this.groupboxAdminPassword.BackColor = System.Drawing.Color.Transparent;
+            this.groupboxAdminPassword.Controls.Add(this.buttonNewAdminPasswordSave);
+            this.groupboxAdminPassword.Controls.Add(this.textboxNewAdminPassword);
+            this.groupboxAdminPassword.Controls.Add(this.labelNewAdminPassword);
+            this.groupboxAdminPassword.Location = new System.Drawing.Point(11, 358);
+            this.groupboxAdminPassword.Name = "groupboxAdminPassword";
+            this.groupboxAdminPassword.Size = new System.Drawing.Size(410, 83);
+            this.groupboxAdminPassword.TabIndex = 56;
+            this.groupboxAdminPassword.TabStop = false;
+            this.groupboxAdminPassword.Text = "Change Password";
+            // 
+            // buttonNewAdminPasswordSave
+            // 
+            this.buttonNewAdminPasswordSave.Location = new System.Drawing.Point(320, 33);
+            this.buttonNewAdminPasswordSave.Name = "buttonNewAdminPasswordSave";
+            this.buttonNewAdminPasswordSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonNewAdminPasswordSave.TabIndex = 2;
+            this.buttonNewAdminPasswordSave.Text = "Save";
+            this.buttonNewAdminPasswordSave.UseSelectable = true;
+            // 
+            // textboxNewAdminPassword
+            // 
+            // 
+            // 
+            // 
+            this.textboxNewAdminPassword.CustomButton.Image = null;
+            this.textboxNewAdminPassword.CustomButton.Location = new System.Drawing.Point(184, 1);
+            this.textboxNewAdminPassword.CustomButton.Name = "";
+            this.textboxNewAdminPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textboxNewAdminPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textboxNewAdminPassword.CustomButton.TabIndex = 1;
+            this.textboxNewAdminPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxNewAdminPassword.CustomButton.UseSelectable = true;
+            this.textboxNewAdminPassword.CustomButton.Visible = false;
+            this.textboxNewAdminPassword.Lines = new string[0];
+            this.textboxNewAdminPassword.Location = new System.Drawing.Point(108, 33);
+            this.textboxNewAdminPassword.MaxLength = 32767;
+            this.textboxNewAdminPassword.Name = "textboxNewAdminPassword";
+            this.textboxNewAdminPassword.PasswordChar = '●';
+            this.textboxNewAdminPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textboxNewAdminPassword.SelectedText = "";
+            this.textboxNewAdminPassword.SelectionLength = 0;
+            this.textboxNewAdminPassword.SelectionStart = 0;
+            this.textboxNewAdminPassword.ShortcutsEnabled = true;
+            this.textboxNewAdminPassword.Size = new System.Drawing.Size(206, 23);
+            this.textboxNewAdminPassword.TabIndex = 1;
+            this.textboxNewAdminPassword.UseSelectable = true;
+            this.textboxNewAdminPassword.UseSystemPasswordChar = true;
+            this.textboxNewAdminPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textboxNewAdminPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // labelNewAdminPassword
+            // 
+            this.labelNewAdminPassword.AutoSize = true;
+            this.labelNewAdminPassword.Location = new System.Drawing.Point(6, 33);
+            this.labelNewAdminPassword.Name = "labelNewAdminPassword";
+            this.labelNewAdminPassword.Size = new System.Drawing.Size(96, 19);
+            this.labelNewAdminPassword.TabIndex = 0;
+            this.labelNewAdminPassword.Text = "New Password:";
+            // 
+            // groupboxAdminInfoImage
+            // 
+            this.groupboxAdminInfoImage.BackColor = System.Drawing.Color.Transparent;
+            this.groupboxAdminInfoImage.Controls.Add(this.pictureboxAdminInfoImage);
+            this.groupboxAdminInfoImage.Location = new System.Drawing.Point(880, 15);
+            this.groupboxAdminInfoImage.Name = "groupboxAdminInfoImage";
+            this.groupboxAdminInfoImage.Size = new System.Drawing.Size(285, 263);
+            this.groupboxAdminInfoImage.TabIndex = 55;
+            this.groupboxAdminInfoImage.TabStop = false;
+            this.groupboxAdminInfoImage.Text = "Admin Picture";
+            // 
+            // pictureboxAdminInfoImage
+            // 
+            this.pictureboxAdminInfoImage.Location = new System.Drawing.Point(41, 33);
+            this.pictureboxAdminInfoImage.Name = "pictureboxAdminInfoImage";
+            this.pictureboxAdminInfoImage.Size = new System.Drawing.Size(203, 197);
+            this.pictureboxAdminInfoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxAdminInfoImage.TabIndex = 1;
+            this.pictureboxAdminInfoImage.TabStop = false;
             // 
             // groupboxAdminInformation
             // 
@@ -519,6 +601,18 @@
             this.tabManageStudent.VerticalScrollbarBarColor = true;
             this.tabManageStudent.VerticalScrollbarHighlightOnWheel = false;
             this.tabManageStudent.VerticalScrollbarSize = 10;
+            // 
+            // buttonClearStudentInfo
+            // 
+            this.buttonClearStudentInfo.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.buttonClearStudentInfo.Highlight = true;
+            this.buttonClearStudentInfo.Location = new System.Drawing.Point(516, 214);
+            this.buttonClearStudentInfo.Name = "buttonClearStudentInfo";
+            this.buttonClearStudentInfo.Size = new System.Drawing.Size(132, 46);
+            this.buttonClearStudentInfo.TabIndex = 62;
+            this.buttonClearStudentInfo.Text = "Clear";
+            this.buttonClearStudentInfo.UseSelectable = true;
+            this.buttonClearStudentInfo.Click += new System.EventHandler(this.buttonClearStudentInfo_Click);
             // 
             // groupboxStudentImage
             // 
@@ -941,6 +1035,46 @@
             this.comboboxStudentBloodGroup.TabIndex = 8;
             this.comboboxStudentBloodGroup.UseSelectable = true;
             // 
+            // textboxStudentID
+            // 
+            // 
+            // 
+            // 
+            this.textboxStudentID.CustomButton.Image = null;
+            this.textboxStudentID.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.textboxStudentID.CustomButton.Name = "";
+            this.textboxStudentID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textboxStudentID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textboxStudentID.CustomButton.TabIndex = 1;
+            this.textboxStudentID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxStudentID.CustomButton.UseSelectable = true;
+            this.textboxStudentID.CustomButton.Visible = false;
+            this.textboxStudentID.Lines = new string[0];
+            this.textboxStudentID.Location = new System.Drawing.Point(159, 24);
+            this.textboxStudentID.MaxLength = 32767;
+            this.textboxStudentID.Name = "textboxStudentID";
+            this.textboxStudentID.PasswordChar = '\0';
+            this.textboxStudentID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textboxStudentID.SelectedText = "";
+            this.textboxStudentID.SelectionLength = 0;
+            this.textboxStudentID.SelectionStart = 0;
+            this.textboxStudentID.ShortcutsEnabled = true;
+            this.textboxStudentID.Size = new System.Drawing.Size(200, 23);
+            this.textboxStudentID.TabIndex = 0;
+            this.textboxStudentID.UseSelectable = true;
+            this.textboxStudentID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textboxStudentID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // labelStudentID
+            // 
+            this.labelStudentID.AutoSize = true;
+            this.labelStudentID.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.labelStudentID.Location = new System.Drawing.Point(20, 24);
+            this.labelStudentID.Name = "labelStudentID";
+            this.labelStudentID.Size = new System.Drawing.Size(26, 19);
+            this.labelStudentID.TabIndex = 27;
+            this.labelStudentID.Text = "ID:";
+            // 
             // textboxStudentName
             // 
             // 
@@ -980,36 +1114,6 @@
             this.labelStudentPhone.Size = new System.Drawing.Size(51, 19);
             this.labelStudentPhone.TabIndex = 21;
             this.labelStudentPhone.Text = "Phone:";
-            // 
-            // textboxStudentID
-            // 
-            // 
-            // 
-            // 
-            this.textboxStudentID.CustomButton.Image = null;
-            this.textboxStudentID.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.textboxStudentID.CustomButton.Name = "";
-            this.textboxStudentID.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.textboxStudentID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.textboxStudentID.CustomButton.TabIndex = 1;
-            this.textboxStudentID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textboxStudentID.CustomButton.UseSelectable = true;
-            this.textboxStudentID.CustomButton.Visible = false;
-            this.textboxStudentID.Lines = new string[0];
-            this.textboxStudentID.Location = new System.Drawing.Point(159, 24);
-            this.textboxStudentID.MaxLength = 32767;
-            this.textboxStudentID.Name = "textboxStudentID";
-            this.textboxStudentID.PasswordChar = '\0';
-            this.textboxStudentID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textboxStudentID.SelectedText = "";
-            this.textboxStudentID.SelectionLength = 0;
-            this.textboxStudentID.SelectionStart = 0;
-            this.textboxStudentID.ShortcutsEnabled = true;
-            this.textboxStudentID.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentID.TabIndex = 0;
-            this.textboxStudentID.UseSelectable = true;
-            this.textboxStudentID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textboxStudentID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // labelStudentMother
             // 
@@ -1160,16 +1264,6 @@
             this.textboxStudentEmail.UseSelectable = true;
             this.textboxStudentEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // labelStudentID
-            // 
-            this.labelStudentID.AutoSize = true;
-            this.labelStudentID.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelStudentID.Location = new System.Drawing.Point(20, 24);
-            this.labelStudentID.Name = "labelStudentID";
-            this.labelStudentID.Size = new System.Drawing.Size(26, 19);
-            this.labelStudentID.TabIndex = 27;
-            this.labelStudentID.Text = "ID:";
             // 
             // tabStudentDatabase
             // 
@@ -1464,7 +1558,7 @@
             this.textboxFacultyPassword.Location = new System.Drawing.Point(157, 59);
             this.textboxFacultyPassword.MaxLength = 32767;
             this.textboxFacultyPassword.Name = "textboxFacultyPassword";
-            this.textboxFacultyPassword.PasswordChar = '\0';
+            this.textboxFacultyPassword.PasswordChar = '●';
             this.textboxFacultyPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.textboxFacultyPassword.SelectedText = "";
             this.textboxFacultyPassword.SelectionLength = 0;
@@ -1473,6 +1567,7 @@
             this.textboxFacultyPassword.Size = new System.Drawing.Size(201, 23);
             this.textboxFacultyPassword.TabIndex = 60;
             this.textboxFacultyPassword.UseSelectable = true;
+            this.textboxFacultyPassword.UseSystemPasswordChar = true;
             this.textboxFacultyPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -1645,6 +1740,46 @@
             this.comboboxFacultyBloodGroup.TabIndex = 48;
             this.comboboxFacultyBloodGroup.UseSelectable = true;
             // 
+            // textboxFacultyID
+            // 
+            // 
+            // 
+            // 
+            this.textboxFacultyID.CustomButton.Image = null;
+            this.textboxFacultyID.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.textboxFacultyID.CustomButton.Name = "";
+            this.textboxFacultyID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textboxFacultyID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textboxFacultyID.CustomButton.TabIndex = 1;
+            this.textboxFacultyID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxFacultyID.CustomButton.UseSelectable = true;
+            this.textboxFacultyID.CustomButton.Visible = false;
+            this.textboxFacultyID.Lines = new string[0];
+            this.textboxFacultyID.Location = new System.Drawing.Point(159, 24);
+            this.textboxFacultyID.MaxLength = 32767;
+            this.textboxFacultyID.Name = "textboxFacultyID";
+            this.textboxFacultyID.PasswordChar = '\0';
+            this.textboxFacultyID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textboxFacultyID.SelectedText = "";
+            this.textboxFacultyID.SelectionLength = 0;
+            this.textboxFacultyID.SelectionStart = 0;
+            this.textboxFacultyID.ShortcutsEnabled = true;
+            this.textboxFacultyID.Size = new System.Drawing.Size(200, 23);
+            this.textboxFacultyID.TabIndex = 46;
+            this.textboxFacultyID.UseSelectable = true;
+            this.textboxFacultyID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textboxFacultyID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // labelFacultyID
+            // 
+            this.labelFacultyID.AutoSize = true;
+            this.labelFacultyID.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.labelFacultyID.Location = new System.Drawing.Point(20, 24);
+            this.labelFacultyID.Name = "labelFacultyID";
+            this.labelFacultyID.Size = new System.Drawing.Size(26, 19);
+            this.labelFacultyID.TabIndex = 27;
+            this.labelFacultyID.Text = "ID:";
+            // 
             // texboxFacultyName
             // 
             // 
@@ -1684,37 +1819,6 @@
             this.labelFacultyPhone.Size = new System.Drawing.Size(51, 19);
             this.labelFacultyPhone.TabIndex = 21;
             this.labelFacultyPhone.Text = "Phone:";
-            // 
-            // textboxFacultyID
-            // 
-            // 
-            // 
-            // 
-            this.textboxFacultyID.CustomButton.Image = null;
-            this.textboxFacultyID.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.textboxFacultyID.CustomButton.Name = "";
-            this.textboxFacultyID.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.textboxFacultyID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.textboxFacultyID.CustomButton.TabIndex = 1;
-            this.textboxFacultyID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textboxFacultyID.CustomButton.UseSelectable = true;
-            this.textboxFacultyID.CustomButton.Visible = false;
-            this.textboxFacultyID.Lines = new string[0];
-            this.textboxFacultyID.Location = new System.Drawing.Point(159, 24);
-            this.textboxFacultyID.MaxLength = 32767;
-            this.textboxFacultyID.Name = "textboxFacultyID";
-            this.textboxFacultyID.PasswordChar = '\0';
-            this.textboxFacultyID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textboxFacultyID.SelectedText = "";
-            this.textboxFacultyID.SelectionLength = 0;
-            this.textboxFacultyID.SelectionStart = 0;
-            this.textboxFacultyID.ShortcutsEnabled = true;
-            this.textboxFacultyID.Size = new System.Drawing.Size(200, 23);
-            this.textboxFacultyID.TabIndex = 46;
-            this.textboxFacultyID.UseSelectable = true;
-            this.textboxFacultyID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textboxFacultyID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.textboxFacultyID.Click += new System.EventHandler(this.textboxFacultyID_Click);
             // 
             // labelFacultyMother
             // 
@@ -1866,16 +1970,6 @@
             this.textboxFacultyEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // labelFacultyID
-            // 
-            this.labelFacultyID.AutoSize = true;
-            this.labelFacultyID.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.labelFacultyID.Location = new System.Drawing.Point(20, 24);
-            this.labelFacultyID.Name = "labelFacultyID";
-            this.labelFacultyID.Size = new System.Drawing.Size(26, 19);
-            this.labelFacultyID.TabIndex = 27;
-            this.labelFacultyID.Text = "ID:";
-            // 
             // tabFacultyDatabase
             // 
             this.tabFacultyDatabase.Controls.Add(this.labelFacultySearch);
@@ -1938,6 +2032,8 @@
             // 
             // datagridFacultyTable
             // 
+            this.datagridFacultyTable.AllowUserToAddRows = false;
+            this.datagridFacultyTable.AllowUserToDeleteRows = false;
             this.datagridFacultyTable.AllowUserToResizeRows = false;
             this.datagridFacultyTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.datagridFacultyTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1965,6 +2061,7 @@
             this.datagridFacultyTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.datagridFacultyTable.Location = new System.Drawing.Point(0, 32);
             this.datagridFacultyTable.Name = "datagridFacultyTable";
+            this.datagridFacultyTable.ReadOnly = true;
             this.datagridFacultyTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -1978,6 +2075,7 @@
             this.datagridFacultyTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridFacultyTable.Size = new System.Drawing.Size(1176, 424);
             this.datagridFacultyTable.TabIndex = 3;
+            this.datagridFacultyTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridFacultyTable_CellContentClick);
             // 
             // tabManageCourse
             // 
@@ -1994,6 +2092,218 @@
             this.tabManageCourse.VerticalScrollbarBarColor = true;
             this.tabManageCourse.VerticalScrollbarHighlightOnWheel = false;
             this.tabManageCourse.VerticalScrollbarSize = 10;
+            // 
+            // groupboxCourseInformation
+            // 
+            this.groupboxCourseInformation.BackColor = System.Drawing.Color.Transparent;
+            this.groupboxCourseInformation.Controls.Add(this.textboxCourseID);
+            this.groupboxCourseInformation.Controls.Add(this.metroLabel2);
+            this.groupboxCourseInformation.Controls.Add(this.buttonCourseDelete);
+            this.groupboxCourseInformation.Controls.Add(this.buttonCourseUpdate);
+            this.groupboxCourseInformation.Controls.Add(this.buttonoCourseCreate);
+            this.groupboxCourseInformation.Controls.Add(this.textboxCourseName);
+            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseTimeSlot);
+            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseSection);
+            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseCredits);
+            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseDepartment);
+            this.groupboxCourseInformation.Controls.Add(this.labelTimeSlot);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseSection);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseCredits);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseDepartment);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseName);
+            this.groupboxCourseInformation.Location = new System.Drawing.Point(3, 13);
+            this.groupboxCourseInformation.Name = "groupboxCourseInformation";
+            this.groupboxCourseInformation.Size = new System.Drawing.Size(344, 321);
+            this.groupboxCourseInformation.TabIndex = 74;
+            this.groupboxCourseInformation.TabStop = false;
+            this.groupboxCourseInformation.Text = "Course Information";
+            // 
+            // textboxCourseID
+            // 
+            // 
+            // 
+            // 
+            this.textboxCourseID.CustomButton.Image = null;
+            this.textboxCourseID.CustomButton.Location = new System.Drawing.Point(179, 1);
+            this.textboxCourseID.CustomButton.Name = "";
+            this.textboxCourseID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textboxCourseID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textboxCourseID.CustomButton.TabIndex = 1;
+            this.textboxCourseID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxCourseID.CustomButton.UseSelectable = true;
+            this.textboxCourseID.CustomButton.Visible = false;
+            this.textboxCourseID.Lines = new string[] {
+        "HighestID"};
+            this.textboxCourseID.Location = new System.Drawing.Point(130, 31);
+            this.textboxCourseID.MaxLength = 32767;
+            this.textboxCourseID.Name = "textboxCourseID";
+            this.textboxCourseID.PasswordChar = '\0';
+            this.textboxCourseID.PromptText = "Name";
+            this.textboxCourseID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textboxCourseID.SelectedText = "";
+            this.textboxCourseID.SelectionLength = 0;
+            this.textboxCourseID.SelectionStart = 0;
+            this.textboxCourseID.ShortcutsEnabled = true;
+            this.textboxCourseID.Size = new System.Drawing.Size(201, 23);
+            this.textboxCourseID.TabIndex = 70;
+            this.textboxCourseID.Text = "HighestID";
+            this.textboxCourseID.UseSelectable = true;
+            this.textboxCourseID.WaterMark = "Name";
+            this.textboxCourseID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textboxCourseID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(17, 31);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel2.TabIndex = 69;
+            this.metroLabel2.Text = "Course ID:";
+            // 
+            // buttonCourseDelete
+            // 
+            this.buttonCourseDelete.Location = new System.Drawing.Point(245, 271);
+            this.buttonCourseDelete.Name = "buttonCourseDelete";
+            this.buttonCourseDelete.Size = new System.Drawing.Size(86, 36);
+            this.buttonCourseDelete.TabIndex = 68;
+            this.buttonCourseDelete.Text = "Delete";
+            this.buttonCourseDelete.UseSelectable = true;
+            // 
+            // buttonCourseUpdate
+            // 
+            this.buttonCourseUpdate.Location = new System.Drawing.Point(131, 271);
+            this.buttonCourseUpdate.Name = "buttonCourseUpdate";
+            this.buttonCourseUpdate.Size = new System.Drawing.Size(86, 36);
+            this.buttonCourseUpdate.TabIndex = 67;
+            this.buttonCourseUpdate.Text = "Update";
+            this.buttonCourseUpdate.UseSelectable = true;
+            // 
+            // buttonoCourseCreate
+            // 
+            this.buttonoCourseCreate.Location = new System.Drawing.Point(17, 271);
+            this.buttonoCourseCreate.Name = "buttonoCourseCreate";
+            this.buttonoCourseCreate.Size = new System.Drawing.Size(86, 36);
+            this.buttonoCourseCreate.TabIndex = 66;
+            this.buttonoCourseCreate.Text = "Create";
+            this.buttonoCourseCreate.UseSelectable = true;
+            // 
+            // textboxCourseName
+            // 
+            // 
+            // 
+            // 
+            this.textboxCourseName.CustomButton.Image = null;
+            this.textboxCourseName.CustomButton.Location = new System.Drawing.Point(179, 1);
+            this.textboxCourseName.CustomButton.Name = "";
+            this.textboxCourseName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textboxCourseName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textboxCourseName.CustomButton.TabIndex = 1;
+            this.textboxCourseName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textboxCourseName.CustomButton.UseSelectable = true;
+            this.textboxCourseName.CustomButton.Visible = false;
+            this.textboxCourseName.Lines = new string[0];
+            this.textboxCourseName.Location = new System.Drawing.Point(130, 65);
+            this.textboxCourseName.MaxLength = 32767;
+            this.textboxCourseName.Name = "textboxCourseName";
+            this.textboxCourseName.PasswordChar = '\0';
+            this.textboxCourseName.PromptText = "Name";
+            this.textboxCourseName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textboxCourseName.SelectedText = "";
+            this.textboxCourseName.SelectionLength = 0;
+            this.textboxCourseName.SelectionStart = 0;
+            this.textboxCourseName.ShortcutsEnabled = true;
+            this.textboxCourseName.Size = new System.Drawing.Size(201, 23);
+            this.textboxCourseName.TabIndex = 9;
+            this.textboxCourseName.UseSelectable = true;
+            this.textboxCourseName.WaterMark = "Name";
+            this.textboxCourseName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textboxCourseName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // comboboxCourseTimeSlot
+            // 
+            this.comboboxCourseTimeSlot.FormattingEnabled = true;
+            this.comboboxCourseTimeSlot.ItemHeight = 23;
+            this.comboboxCourseTimeSlot.Location = new System.Drawing.Point(130, 210);
+            this.comboboxCourseTimeSlot.Name = "comboboxCourseTimeSlot";
+            this.comboboxCourseTimeSlot.Size = new System.Drawing.Size(201, 29);
+            this.comboboxCourseTimeSlot.TabIndex = 8;
+            this.comboboxCourseTimeSlot.UseSelectable = true;
+            // 
+            // comboboxCourseSection
+            // 
+            this.comboboxCourseSection.FormattingEnabled = true;
+            this.comboboxCourseSection.ItemHeight = 23;
+            this.comboboxCourseSection.Location = new System.Drawing.Point(130, 174);
+            this.comboboxCourseSection.Name = "comboboxCourseSection";
+            this.comboboxCourseSection.Size = new System.Drawing.Size(98, 29);
+            this.comboboxCourseSection.TabIndex = 7;
+            this.comboboxCourseSection.UseSelectable = true;
+            // 
+            // comboboxCourseCredits
+            // 
+            this.comboboxCourseCredits.FormattingEnabled = true;
+            this.comboboxCourseCredits.ItemHeight = 23;
+            this.comboboxCourseCredits.Location = new System.Drawing.Point(130, 139);
+            this.comboboxCourseCredits.Name = "comboboxCourseCredits";
+            this.comboboxCourseCredits.Size = new System.Drawing.Size(98, 29);
+            this.comboboxCourseCredits.TabIndex = 6;
+            this.comboboxCourseCredits.UseSelectable = true;
+            // 
+            // comboboxCourseDepartment
+            // 
+            this.comboboxCourseDepartment.FormattingEnabled = true;
+            this.comboboxCourseDepartment.ItemHeight = 23;
+            this.comboboxCourseDepartment.Location = new System.Drawing.Point(130, 103);
+            this.comboboxCourseDepartment.Name = "comboboxCourseDepartment";
+            this.comboboxCourseDepartment.Size = new System.Drawing.Size(98, 29);
+            this.comboboxCourseDepartment.TabIndex = 5;
+            this.comboboxCourseDepartment.UseSelectable = true;
+            // 
+            // labelTimeSlot
+            // 
+            this.labelTimeSlot.AutoSize = true;
+            this.labelTimeSlot.Location = new System.Drawing.Point(17, 210);
+            this.labelTimeSlot.Name = "labelTimeSlot";
+            this.labelTimeSlot.Size = new System.Drawing.Size(67, 19);
+            this.labelTimeSlot.TabIndex = 4;
+            this.labelTimeSlot.Text = "Time Slot:";
+            // 
+            // labelCourseSection
+            // 
+            this.labelCourseSection.AutoSize = true;
+            this.labelCourseSection.Location = new System.Drawing.Point(17, 174);
+            this.labelCourseSection.Name = "labelCourseSection";
+            this.labelCourseSection.Size = new System.Drawing.Size(54, 19);
+            this.labelCourseSection.TabIndex = 3;
+            this.labelCourseSection.Text = "Section:";
+            // 
+            // labelCourseCredits
+            // 
+            this.labelCourseCredits.AutoSize = true;
+            this.labelCourseCredits.Location = new System.Drawing.Point(17, 139);
+            this.labelCourseCredits.Name = "labelCourseCredits";
+            this.labelCourseCredits.Size = new System.Drawing.Size(53, 19);
+            this.labelCourseCredits.TabIndex = 2;
+            this.labelCourseCredits.Text = "Credits:";
+            // 
+            // labelCourseDepartment
+            // 
+            this.labelCourseDepartment.AutoSize = true;
+            this.labelCourseDepartment.Location = new System.Drawing.Point(17, 103);
+            this.labelCourseDepartment.Name = "labelCourseDepartment";
+            this.labelCourseDepartment.Size = new System.Drawing.Size(83, 19);
+            this.labelCourseDepartment.TabIndex = 1;
+            this.labelCourseDepartment.Text = "Department:";
+            // 
+            // labelCourseName
+            // 
+            this.labelCourseName.AutoSize = true;
+            this.labelCourseName.Location = new System.Drawing.Point(17, 65);
+            this.labelCourseName.Name = "labelCourseName";
+            this.labelCourseName.Size = new System.Drawing.Size(93, 19);
+            this.labelCourseName.TabIndex = 0;
+            this.labelCourseName.Text = "Course Name:";
             // 
             // groupBox2
             // 
@@ -2394,7 +2704,7 @@
             // datetimeAdminDOB
             // 
             this.datetimeAdminDOB.Location = new System.Drawing.Point(159, 212);
-            this.datetimeAdminDOB.MinimumSize = new System.Drawing.Size(0, 29);
+            this.datetimeAdminDOB.MinimumSize = new System.Drawing.Size(4, 29);
             this.datetimeAdminDOB.Name = "datetimeAdminDOB";
             this.datetimeAdminDOB.Size = new System.Drawing.Size(200, 29);
             this.datetimeAdminDOB.TabIndex = 49;
@@ -2667,312 +2977,6 @@
             // 
             this.openfiledialogImageSelection.FileName = "openFileDialog1";
             // 
-            // groupboxAdminInfoImage
-            // 
-            this.groupboxAdminInfoImage.BackColor = System.Drawing.Color.Transparent;
-            this.groupboxAdminInfoImage.Controls.Add(this.pictureboxAdminInfoImage);
-            this.groupboxAdminInfoImage.Location = new System.Drawing.Point(880, 15);
-            this.groupboxAdminInfoImage.Name = "groupboxAdminInfoImage";
-            this.groupboxAdminInfoImage.Size = new System.Drawing.Size(285, 263);
-            this.groupboxAdminInfoImage.TabIndex = 55;
-            this.groupboxAdminInfoImage.TabStop = false;
-            this.groupboxAdminInfoImage.Text = "Admin Picture";
-            // 
-            // pictureboxAdminInfoImage
-            // 
-            this.pictureboxAdminInfoImage.Location = new System.Drawing.Point(41, 33);
-            this.pictureboxAdminInfoImage.Name = "pictureboxAdminInfoImage";
-            this.pictureboxAdminInfoImage.Size = new System.Drawing.Size(203, 197);
-            this.pictureboxAdminInfoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureboxAdminInfoImage.TabIndex = 1;
-            this.pictureboxAdminInfoImage.TabStop = false;
-            // 
-            // groupboxCourseInformation
-            // 
-            this.groupboxCourseInformation.BackColor = System.Drawing.Color.Transparent;
-            this.groupboxCourseInformation.Controls.Add(this.textboxCourseID);
-            this.groupboxCourseInformation.Controls.Add(this.metroLabel2);
-            this.groupboxCourseInformation.Controls.Add(this.buttonCourseDelete);
-            this.groupboxCourseInformation.Controls.Add(this.buttonCourseUpdate);
-            this.groupboxCourseInformation.Controls.Add(this.buttonoCourseCreate);
-            this.groupboxCourseInformation.Controls.Add(this.textboxCourseName);
-            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseTimeSlot);
-            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseSection);
-            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseCredits);
-            this.groupboxCourseInformation.Controls.Add(this.comboboxCourseDepartment);
-            this.groupboxCourseInformation.Controls.Add(this.labelTimeSlot);
-            this.groupboxCourseInformation.Controls.Add(this.labelCourseSection);
-            this.groupboxCourseInformation.Controls.Add(this.labelCourseCredits);
-            this.groupboxCourseInformation.Controls.Add(this.labelCourseDepartment);
-            this.groupboxCourseInformation.Controls.Add(this.labelCourseName);
-            this.groupboxCourseInformation.Location = new System.Drawing.Point(3, 13);
-            this.groupboxCourseInformation.Name = "groupboxCourseInformation";
-            this.groupboxCourseInformation.Size = new System.Drawing.Size(344, 321);
-            this.groupboxCourseInformation.TabIndex = 74;
-            this.groupboxCourseInformation.TabStop = false;
-            this.groupboxCourseInformation.Text = "Course Information";
-            // 
-            // labelCourseName
-            // 
-            this.labelCourseName.AutoSize = true;
-            this.labelCourseName.Location = new System.Drawing.Point(17, 65);
-            this.labelCourseName.Name = "labelCourseName";
-            this.labelCourseName.Size = new System.Drawing.Size(93, 19);
-            this.labelCourseName.TabIndex = 0;
-            this.labelCourseName.Text = "Course Name:";
-            // 
-            // labelCourseDepartment
-            // 
-            this.labelCourseDepartment.AutoSize = true;
-            this.labelCourseDepartment.Location = new System.Drawing.Point(17, 103);
-            this.labelCourseDepartment.Name = "labelCourseDepartment";
-            this.labelCourseDepartment.Size = new System.Drawing.Size(83, 19);
-            this.labelCourseDepartment.TabIndex = 1;
-            this.labelCourseDepartment.Text = "Department:";
-            // 
-            // labelCourseCredits
-            // 
-            this.labelCourseCredits.AutoSize = true;
-            this.labelCourseCredits.Location = new System.Drawing.Point(17, 139);
-            this.labelCourseCredits.Name = "labelCourseCredits";
-            this.labelCourseCredits.Size = new System.Drawing.Size(53, 19);
-            this.labelCourseCredits.TabIndex = 2;
-            this.labelCourseCredits.Text = "Credits:";
-            // 
-            // labelCourseSection
-            // 
-            this.labelCourseSection.AutoSize = true;
-            this.labelCourseSection.Location = new System.Drawing.Point(17, 174);
-            this.labelCourseSection.Name = "labelCourseSection";
-            this.labelCourseSection.Size = new System.Drawing.Size(54, 19);
-            this.labelCourseSection.TabIndex = 3;
-            this.labelCourseSection.Text = "Section:";
-            // 
-            // labelTimeSlot
-            // 
-            this.labelTimeSlot.AutoSize = true;
-            this.labelTimeSlot.Location = new System.Drawing.Point(17, 210);
-            this.labelTimeSlot.Name = "labelTimeSlot";
-            this.labelTimeSlot.Size = new System.Drawing.Size(67, 19);
-            this.labelTimeSlot.TabIndex = 4;
-            this.labelTimeSlot.Text = "Time Slot:";
-            // 
-            // comboboxCourseDepartment
-            // 
-            this.comboboxCourseDepartment.FormattingEnabled = true;
-            this.comboboxCourseDepartment.ItemHeight = 23;
-            this.comboboxCourseDepartment.Location = new System.Drawing.Point(130, 103);
-            this.comboboxCourseDepartment.Name = "comboboxCourseDepartment";
-            this.comboboxCourseDepartment.Size = new System.Drawing.Size(98, 29);
-            this.comboboxCourseDepartment.TabIndex = 5;
-            this.comboboxCourseDepartment.UseSelectable = true;
-            // 
-            // comboboxCourseCredits
-            // 
-            this.comboboxCourseCredits.FormattingEnabled = true;
-            this.comboboxCourseCredits.ItemHeight = 23;
-            this.comboboxCourseCredits.Location = new System.Drawing.Point(130, 139);
-            this.comboboxCourseCredits.Name = "comboboxCourseCredits";
-            this.comboboxCourseCredits.Size = new System.Drawing.Size(98, 29);
-            this.comboboxCourseCredits.TabIndex = 6;
-            this.comboboxCourseCredits.UseSelectable = true;
-            // 
-            // comboboxCourseSection
-            // 
-            this.comboboxCourseSection.FormattingEnabled = true;
-            this.comboboxCourseSection.ItemHeight = 23;
-            this.comboboxCourseSection.Location = new System.Drawing.Point(130, 174);
-            this.comboboxCourseSection.Name = "comboboxCourseSection";
-            this.comboboxCourseSection.Size = new System.Drawing.Size(98, 29);
-            this.comboboxCourseSection.TabIndex = 7;
-            this.comboboxCourseSection.UseSelectable = true;
-            // 
-            // comboboxCourseTimeSlot
-            // 
-            this.comboboxCourseTimeSlot.FormattingEnabled = true;
-            this.comboboxCourseTimeSlot.ItemHeight = 23;
-            this.comboboxCourseTimeSlot.Location = new System.Drawing.Point(130, 210);
-            this.comboboxCourseTimeSlot.Name = "comboboxCourseTimeSlot";
-            this.comboboxCourseTimeSlot.Size = new System.Drawing.Size(201, 29);
-            this.comboboxCourseTimeSlot.TabIndex = 8;
-            this.comboboxCourseTimeSlot.UseSelectable = true;
-            // 
-            // textboxCourseName
-            // 
-            // 
-            // 
-            // 
-            this.textboxCourseName.CustomButton.Image = null;
-            this.textboxCourseName.CustomButton.Location = new System.Drawing.Point(179, 1);
-            this.textboxCourseName.CustomButton.Name = "";
-            this.textboxCourseName.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.textboxCourseName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.textboxCourseName.CustomButton.TabIndex = 1;
-            this.textboxCourseName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textboxCourseName.CustomButton.UseSelectable = true;
-            this.textboxCourseName.CustomButton.Visible = false;
-            this.textboxCourseName.Lines = new string[0];
-            this.textboxCourseName.Location = new System.Drawing.Point(130, 65);
-            this.textboxCourseName.MaxLength = 32767;
-            this.textboxCourseName.Name = "textboxCourseName";
-            this.textboxCourseName.PasswordChar = '\0';
-            this.textboxCourseName.PromptText = "Name";
-            this.textboxCourseName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textboxCourseName.SelectedText = "";
-            this.textboxCourseName.SelectionLength = 0;
-            this.textboxCourseName.SelectionStart = 0;
-            this.textboxCourseName.ShortcutsEnabled = true;
-            this.textboxCourseName.Size = new System.Drawing.Size(201, 23);
-            this.textboxCourseName.TabIndex = 9;
-            this.textboxCourseName.UseSelectable = true;
-            this.textboxCourseName.WaterMark = "Name";
-            this.textboxCourseName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textboxCourseName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // buttonCourseUpdate
-            // 
-            this.buttonCourseUpdate.Location = new System.Drawing.Point(131, 271);
-            this.buttonCourseUpdate.Name = "buttonCourseUpdate";
-            this.buttonCourseUpdate.Size = new System.Drawing.Size(86, 36);
-            this.buttonCourseUpdate.TabIndex = 67;
-            this.buttonCourseUpdate.Text = "Update";
-            this.buttonCourseUpdate.UseSelectable = true;
-            // 
-            // buttonoCourseCreate
-            // 
-            this.buttonoCourseCreate.Location = new System.Drawing.Point(17, 271);
-            this.buttonoCourseCreate.Name = "buttonoCourseCreate";
-            this.buttonoCourseCreate.Size = new System.Drawing.Size(86, 36);
-            this.buttonoCourseCreate.TabIndex = 66;
-            this.buttonoCourseCreate.Text = "Create";
-            this.buttonoCourseCreate.UseSelectable = true;
-            // 
-            // buttonCourseDelete
-            // 
-            this.buttonCourseDelete.Location = new System.Drawing.Point(245, 271);
-            this.buttonCourseDelete.Name = "buttonCourseDelete";
-            this.buttonCourseDelete.Size = new System.Drawing.Size(86, 36);
-            this.buttonCourseDelete.TabIndex = 68;
-            this.buttonCourseDelete.Text = "Delete";
-            this.buttonCourseDelete.UseSelectable = true;
-            // 
-            // textboxCourseID
-            // 
-            // 
-            // 
-            // 
-            this.textboxCourseID.CustomButton.Image = null;
-            this.textboxCourseID.CustomButton.Location = new System.Drawing.Point(179, 1);
-            this.textboxCourseID.CustomButton.Name = "";
-            this.textboxCourseID.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.textboxCourseID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.textboxCourseID.CustomButton.TabIndex = 1;
-            this.textboxCourseID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textboxCourseID.CustomButton.UseSelectable = true;
-            this.textboxCourseID.CustomButton.Visible = false;
-            this.textboxCourseID.Lines = new string[] {
-        "HighestID"};
-            this.textboxCourseID.Location = new System.Drawing.Point(130, 31);
-            this.textboxCourseID.MaxLength = 32767;
-            this.textboxCourseID.Name = "textboxCourseID";
-            this.textboxCourseID.PasswordChar = '\0';
-            this.textboxCourseID.PromptText = "Name";
-            this.textboxCourseID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textboxCourseID.SelectedText = "";
-            this.textboxCourseID.SelectionLength = 0;
-            this.textboxCourseID.SelectionStart = 0;
-            this.textboxCourseID.ShortcutsEnabled = true;
-            this.textboxCourseID.Size = new System.Drawing.Size(201, 23);
-            this.textboxCourseID.TabIndex = 70;
-            this.textboxCourseID.Text = "HighestID";
-            this.textboxCourseID.UseSelectable = true;
-            this.textboxCourseID.WaterMark = "Name";
-            this.textboxCourseID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textboxCourseID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(17, 31);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(69, 19);
-            this.metroLabel2.TabIndex = 69;
-            this.metroLabel2.Text = "Course ID:";
-            // 
-            // groupboxAdminPassword
-            // 
-            this.groupboxAdminPassword.BackColor = System.Drawing.Color.Transparent;
-            this.groupboxAdminPassword.Controls.Add(this.buttonNewAdminPasswordSave);
-            this.groupboxAdminPassword.Controls.Add(this.textboxNewAdminPassword);
-            this.groupboxAdminPassword.Controls.Add(this.labelNewAdminPassword);
-            this.groupboxAdminPassword.Location = new System.Drawing.Point(11, 358);
-            this.groupboxAdminPassword.Name = "groupboxAdminPassword";
-            this.groupboxAdminPassword.Size = new System.Drawing.Size(410, 83);
-            this.groupboxAdminPassword.TabIndex = 56;
-            this.groupboxAdminPassword.TabStop = false;
-            this.groupboxAdminPassword.Text = "Change Password";
-            // 
-            // labelNewAdminPassword
-            // 
-            this.labelNewAdminPassword.AutoSize = true;
-            this.labelNewAdminPassword.Location = new System.Drawing.Point(6, 33);
-            this.labelNewAdminPassword.Name = "labelNewAdminPassword";
-            this.labelNewAdminPassword.Size = new System.Drawing.Size(96, 19);
-            this.labelNewAdminPassword.TabIndex = 0;
-            this.labelNewAdminPassword.Text = "New Password:";
-            // 
-            // textboxNewAdminPassword
-            // 
-            // 
-            // 
-            // 
-            this.textboxNewAdminPassword.CustomButton.Image = null;
-            this.textboxNewAdminPassword.CustomButton.Location = new System.Drawing.Point(184, 1);
-            this.textboxNewAdminPassword.CustomButton.Name = "";
-            this.textboxNewAdminPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.textboxNewAdminPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.textboxNewAdminPassword.CustomButton.TabIndex = 1;
-            this.textboxNewAdminPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textboxNewAdminPassword.CustomButton.UseSelectable = true;
-            this.textboxNewAdminPassword.CustomButton.Visible = false;
-            this.textboxNewAdminPassword.Lines = new string[0];
-            this.textboxNewAdminPassword.Location = new System.Drawing.Point(108, 33);
-            this.textboxNewAdminPassword.MaxLength = 32767;
-            this.textboxNewAdminPassword.Name = "textboxNewAdminPassword";
-            this.textboxNewAdminPassword.PasswordChar = '●';
-            this.textboxNewAdminPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textboxNewAdminPassword.SelectedText = "";
-            this.textboxNewAdminPassword.SelectionLength = 0;
-            this.textboxNewAdminPassword.SelectionStart = 0;
-            this.textboxNewAdminPassword.ShortcutsEnabled = true;
-            this.textboxNewAdminPassword.Size = new System.Drawing.Size(206, 23);
-            this.textboxNewAdminPassword.TabIndex = 1;
-            this.textboxNewAdminPassword.UseSelectable = true;
-            this.textboxNewAdminPassword.UseSystemPasswordChar = true;
-            this.textboxNewAdminPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textboxNewAdminPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // buttonNewAdminPasswordSave
-            // 
-            this.buttonNewAdminPasswordSave.Location = new System.Drawing.Point(320, 33);
-            this.buttonNewAdminPasswordSave.Name = "buttonNewAdminPasswordSave";
-            this.buttonNewAdminPasswordSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonNewAdminPasswordSave.TabIndex = 2;
-            this.buttonNewAdminPasswordSave.Text = "Save";
-            this.buttonNewAdminPasswordSave.UseSelectable = true;
-            // 
-            // buttonClearStudentInfo
-            // 
-            this.buttonClearStudentInfo.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.buttonClearStudentInfo.Highlight = true;
-            this.buttonClearStudentInfo.Location = new System.Drawing.Point(516, 214);
-            this.buttonClearStudentInfo.Name = "buttonClearStudentInfo";
-            this.buttonClearStudentInfo.Size = new System.Drawing.Size(132, 46);
-            this.buttonClearStudentInfo.TabIndex = 62;
-            this.buttonClearStudentInfo.Text = "Clear";
-            this.buttonClearStudentInfo.UseSelectable = true;
-            this.buttonClearStudentInfo.Click += new System.EventHandler(this.buttonClearStudentInfo_Click);
-            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2987,6 +2991,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlAdmin.ResumeLayout(false);
             this.tabAdminInfo.ResumeLayout(false);
+            this.groupboxAdminPassword.ResumeLayout(false);
+            this.groupboxAdminPassword.PerformLayout();
+            this.groupboxAdminInfoImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxAdminInfoImage)).EndInit();
             this.groupboxAdminInformation.ResumeLayout(false);
             this.groupboxAdminInformation.PerformLayout();
             this.tabManageStudent.ResumeLayout(false);
@@ -3015,6 +3023,8 @@
             this.tabFacultyDatabase.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridFacultyTable)).EndInit();
             this.tabManageCourse.ResumeLayout(false);
+            this.groupboxCourseInformation.ResumeLayout(false);
+            this.groupboxCourseInformation.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
@@ -3027,12 +3037,6 @@
             this.groupboxAdminPersonalInfo.PerformLayout();
             this.groupboxAdminGender.ResumeLayout(false);
             this.groupboxAdminGender.PerformLayout();
-            this.groupboxAdminInfoImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureboxAdminInfoImage)).EndInit();
-            this.groupboxCourseInformation.ResumeLayout(false);
-            this.groupboxCourseInformation.PerformLayout();
-            this.groupboxAdminPassword.ResumeLayout(false);
-            this.groupboxAdminPassword.PerformLayout();
             this.ResumeLayout(false);
 
         }

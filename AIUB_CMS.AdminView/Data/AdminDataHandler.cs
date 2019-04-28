@@ -17,6 +17,7 @@ namespace AIUB_CMS.AdminView.Data
         private int gender;
         private int bloodGroup;
         private string dob;
+        private string password;
 
         AdminDataDataContext AdminDataContext;
 
@@ -58,6 +59,7 @@ namespace AIUB_CMS.AdminView.Data
             newAdmin.Gender = this.gender;
             newAdmin.ID = this.id;
             newAdmin.DOB = Convert.ToDateTime(this.dob);
+            newAdmin.Password = this.password;
             AdminDataContext.Test_AdminTables.InsertOnSubmit(newAdmin);
             AdminDataContext.SubmitChanges();
         }
@@ -160,6 +162,11 @@ namespace AIUB_CMS.AdminView.Data
         public List<string> GetDepartmentData()
         {
             return AdminDataContext.DepartmentTables.Select(s => s.DepartmentName).ToList();
+        }
+
+        public void SetPassword(string value)
+        {
+            this.password = value;
         }
     }
 }

@@ -10,9 +10,6 @@ namespace AIUB_CMS.AdminView.Data
     {
         private string name;
         private string id;
-        private double CGPA;
-        private int credit;
-        private string program;
         private int department;
         private string father;
         private string mother;
@@ -20,7 +17,9 @@ namespace AIUB_CMS.AdminView.Data
         private string email;
         private int gender;
         private int bloodGroup;
-        private string dob;
+        private DateTime dob;
+        private int nationality;
+        private string password;
 
         AdminDataDataContext FacultyDataContext;
 
@@ -47,7 +46,8 @@ namespace AIUB_CMS.AdminView.Data
                 this.email = data.Email;
                 this.bloodGroup = data.BloodGroup ?? 1;
                 this.gender = data.Gender ?? 1;
-                this.dob = data.DOB.ToString();
+                this.dob = data.DOB?? DateTime.Now;
+                this.nationality = data.Nationality?? 1;
 
             }
         }
@@ -64,8 +64,35 @@ namespace AIUB_CMS.AdminView.Data
             newFaculty.BloodGroup = this.bloodGroup;
             newFaculty.Gender = this.gender;
             newFaculty.ID = this.id;
-            newFaculty.DOB = Convert.ToDateTime(this.dob);
+            newFaculty.DOB = this.dob;
+            newFaculty.Nationality = this.nationality;
+            newFaculty.Password = this.password;
             FacultyDataContext.Test_FacultyTables.InsertOnSubmit(newFaculty);
+            FacultyDataContext.SubmitChanges();
+        }
+
+        public void UpdateFaculty()
+        {
+            var newFaculty = FacultyDataContext.Test_FacultyTables.SingleOrDefault(f => f.ID == id);
+            newFaculty.Name = this.name;
+            newFaculty.Department = this.department;
+            newFaculty.FatherName = this.father;
+            newFaculty.MotherName = this.mother;
+            newFaculty.PhoneNumber = this.phone;
+            newFaculty.Email = this.email;
+            newFaculty.BloodGroup = this.bloodGroup;
+            newFaculty.Gender = this.gender;
+            newFaculty.ID = this.id;
+            newFaculty.DOB = this.dob;
+            newFaculty.Nationality = this.nationality;
+            newFaculty.Password = this.password;
+            FacultyDataContext.SubmitChanges();
+        }
+
+        public void DeleteFaculty()
+        {
+            var newFaculty = FacultyDataContext.Test_FacultyTables.SingleOrDefault(f => f.ID == id);
+            FacultyDataContext.Test_FacultyTables.DeleteOnSubmit(newFaculty);
             FacultyDataContext.SubmitChanges();
         }
 
@@ -84,31 +111,25 @@ namespace AIUB_CMS.AdminView.Data
 
         public IQueryable SearchFacultyByName(string name)
         {
-            var ByName = from table in FacultyDataContext.Test_StudentTables
+            var ByName = from table in FacultyDataContext.Test_FacultyTables
                          where table.Name.Contains(name)
                          select table;
             return ByName;
         }
 
+        public void SetNationality(int value)
+        {
+            this.nationality = value;
+        }
+
+        public int GetNationality()
+        {
+            return nationality;
+        }
 
         public string GetName()
         {
             return this.name;
-        }
-
-        public double GetCGPA()
-        {
-            return this.CGPA;
-        }
-
-        public int GetCredit()
-        {
-            return this.credit;
-        }
-
-        public string GetProgram()
-        {
-            return this.program;
         }
 
         public int GetDepartment()
@@ -151,7 +172,7 @@ namespace AIUB_CMS.AdminView.Data
             return this.id;
         }
 
-        public string GetDOB()
+        public DateTime GetDOB()
         {
             return this.dob;
         }
@@ -159,21 +180,6 @@ namespace AIUB_CMS.AdminView.Data
         public void SetName(string value)
         {
             this.name = value;
-        }
-
-        public void SetCGPA(double value)
-        {
-            this.CGPA = value;
-        }
-
-        public void SetCredit(int value)
-        {
-            this.credit = value;
-        }
-
-        public void SetProgram(string value)
-        {
-            this.program = value;
         }
 
         public void SetDepartment(int value)
@@ -216,9 +222,14 @@ namespace AIUB_CMS.AdminView.Data
             this.id = value;
         }
 
-        public void SetDOB(string value)
+        public void SetDOB(DateTime value)
         {
             this.dob = value;
+        }
+
+        public void SetPassword(string value)
+        {
+            this.password = value;
         }
     }
 }
