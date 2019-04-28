@@ -273,5 +273,40 @@ namespace AIUB_CMS.AdminView.Interface
                     this.datagridFacultyTable.DataSource = facultyData.GetFacultyTable();
             }
         }
+
+        private void buttonClearStudentInfo_Click(object sender, EventArgs e)
+        {
+            this.textboxStudentPhone.Text = "";
+            this.textboxStudentName.Text = "";
+            this.textboxStudentMother.Text = "";
+            this.textboxStudentID.Text = "";
+            radiobuttonStudentMale.Checked = true;
+            this.textboxStudentFather.Text = "";
+            this.textboxStudentEmail.Text ="";
+            this.textboxStudentCreditsCompleted.Text = "";
+            this.textboxStudentCGPA.Text = "";
+            this.textboxStudentMAC.Text = "";
+        }
+
+        private void buttonGetFaculty_Click(object sender, EventArgs e)
+        {
+            string id = this.textboxFacultyID.Text;
+            LoadGetFacultyInfo(id);
+        }
+
+        private void buttonCreateFaculty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdateFaculty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteFaculty_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -217,6 +217,7 @@
             this.labelNewAdminPassword = new MetroFramework.Controls.MetroLabel();
             this.textboxNewAdminPassword = new MetroFramework.Controls.MetroTextBox();
             this.buttonNewAdminPasswordSave = new MetroFramework.Controls.MetroButton();
+            this.buttonClearStudentInfo = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlAdmin.SuspendLayout();
             this.tabAdminInfo.SuspendLayout();
@@ -276,7 +277,7 @@
             this.tabControlAdmin.Controls.Add(this.tabAdminDatabase);
             this.tabControlAdmin.Location = new System.Drawing.Point(8, 117);
             this.tabControlAdmin.Name = "tabControlAdmin";
-            this.tabControlAdmin.SelectedIndex = 1;
+            this.tabControlAdmin.SelectedIndex = 3;
             this.tabControlAdmin.Size = new System.Drawing.Size(1184, 521);
             this.tabControlAdmin.TabIndex = 1;
             this.tabControlAdmin.UseSelectable = true;
@@ -499,6 +500,7 @@
             // 
             // tabManageStudent
             // 
+            this.tabManageStudent.Controls.Add(this.buttonClearStudentInfo);
             this.tabManageStudent.Controls.Add(this.groupboxStudentImage);
             this.tabManageStudent.Controls.Add(this.buttonGetStudent);
             this.tabManageStudent.Controls.Add(this.buttonCreateStudent);
@@ -644,7 +646,7 @@
             this.textboxStudentPassword.SelectionStart = 0;
             this.textboxStudentPassword.ShortcutsEnabled = true;
             this.textboxStudentPassword.Size = new System.Drawing.Size(201, 23);
-            this.textboxStudentPassword.TabIndex = 60;
+            this.textboxStudentPassword.TabIndex = 14;
             this.textboxStudentPassword.UseSelectable = true;
             this.textboxStudentPassword.UseSystemPasswordChar = true;
             this.textboxStudentPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -685,7 +687,7 @@
             this.textboxStudentCGPA.SelectionStart = 0;
             this.textboxStudentCGPA.ShortcutsEnabled = true;
             this.textboxStudentCGPA.Size = new System.Drawing.Size(201, 23);
-            this.textboxStudentCGPA.TabIndex = 58;
+            this.textboxStudentCGPA.TabIndex = 11;
             this.textboxStudentCGPA.UseSelectable = true;
             this.textboxStudentCGPA.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentCGPA.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -725,7 +727,7 @@
             this.textboxStudentMAC.SelectionStart = 0;
             this.textboxStudentMAC.ShortcutsEnabled = true;
             this.textboxStudentMAC.Size = new System.Drawing.Size(201, 23);
-            this.textboxStudentMAC.TabIndex = 56;
+            this.textboxStudentMAC.TabIndex = 12;
             this.textboxStudentMAC.UseSelectable = true;
             this.textboxStudentMAC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentMAC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -775,7 +777,7 @@
             this.textboxStudentCreditsCompleted.SelectionStart = 0;
             this.textboxStudentCreditsCompleted.ShortcutsEnabled = true;
             this.textboxStudentCreditsCompleted.Size = new System.Drawing.Size(201, 23);
-            this.textboxStudentCreditsCompleted.TabIndex = 54;
+            this.textboxStudentCreditsCompleted.TabIndex = 10;
             this.textboxStudentCreditsCompleted.UseSelectable = true;
             this.textboxStudentCreditsCompleted.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentCreditsCompleted.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -787,7 +789,7 @@
             this.comboboxStudentDepartment.Location = new System.Drawing.Point(160, 118);
             this.comboboxStudentDepartment.Name = "comboboxStudentDepartment";
             this.comboboxStudentDepartment.Size = new System.Drawing.Size(121, 29);
-            this.comboboxStudentDepartment.TabIndex = 39;
+            this.comboboxStudentDepartment.TabIndex = 13;
             this.comboboxStudentDepartment.UseSelectable = true;
             // 
             // labelStudentDepartment
@@ -837,7 +839,7 @@
             this.comboboxStudentNationality.Location = new System.Drawing.Point(159, 249);
             this.comboboxStudentNationality.Name = "comboboxStudentNationality";
             this.comboboxStudentNationality.Size = new System.Drawing.Size(200, 29);
-            this.comboboxStudentNationality.TabIndex = 54;
+            this.comboboxStudentNationality.TabIndex = 7;
             this.comboboxStudentNationality.UseSelectable = true;
             // 
             // labelStudentNationality
@@ -858,7 +860,7 @@
             this.grouboxStudentGender.Location = new System.Drawing.Point(159, 322);
             this.grouboxStudentGender.Name = "grouboxStudentGender";
             this.grouboxStudentGender.Size = new System.Drawing.Size(172, 54);
-            this.grouboxStudentGender.TabIndex = 52;
+            this.grouboxStudentGender.TabIndex = 9;
             this.grouboxStudentGender.TabStop = false;
             // 
             // radiobuttonStudentFemale
@@ -917,7 +919,7 @@
             this.datetimeStudentDOB.MinimumSize = new System.Drawing.Size(0, 29);
             this.datetimeStudentDOB.Name = "datetimeStudentDOB";
             this.datetimeStudentDOB.Size = new System.Drawing.Size(200, 29);
-            this.datetimeStudentDOB.TabIndex = 49;
+            this.datetimeStudentDOB.TabIndex = 6;
             // 
             // labelStudentFather
             // 
@@ -936,7 +938,7 @@
             this.comboboxStudentBloodGroup.Location = new System.Drawing.Point(159, 287);
             this.comboboxStudentBloodGroup.Name = "comboboxStudentBloodGroup";
             this.comboboxStudentBloodGroup.Size = new System.Drawing.Size(81, 29);
-            this.comboboxStudentBloodGroup.TabIndex = 48;
+            this.comboboxStudentBloodGroup.TabIndex = 8;
             this.comboboxStudentBloodGroup.UseSelectable = true;
             // 
             // textboxStudentName
@@ -964,7 +966,7 @@
             this.textboxStudentName.SelectionStart = 0;
             this.textboxStudentName.ShortcutsEnabled = true;
             this.textboxStudentName.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentName.TabIndex = 47;
+            this.textboxStudentName.TabIndex = 1;
             this.textboxStudentName.UseSelectable = true;
             this.textboxStudentName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1004,7 +1006,7 @@
             this.textboxStudentID.SelectionStart = 0;
             this.textboxStudentID.ShortcutsEnabled = true;
             this.textboxStudentID.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentID.TabIndex = 46;
+            this.textboxStudentID.TabIndex = 0;
             this.textboxStudentID.UseSelectable = true;
             this.textboxStudentID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1044,7 +1046,7 @@
             this.textboxStudentFather.SelectionStart = 0;
             this.textboxStudentFather.ShortcutsEnabled = true;
             this.textboxStudentFather.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentFather.TabIndex = 45;
+            this.textboxStudentFather.TabIndex = 2;
             this.textboxStudentFather.UseSelectable = true;
             this.textboxStudentFather.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentFather.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1074,7 +1076,7 @@
             this.textboxStudentMother.SelectionStart = 0;
             this.textboxStudentMother.ShortcutsEnabled = true;
             this.textboxStudentMother.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentMother.TabIndex = 44;
+            this.textboxStudentMother.TabIndex = 3;
             this.textboxStudentMother.UseSelectable = true;
             this.textboxStudentMother.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentMother.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1114,7 +1116,7 @@
             this.textboxStudentPhone.SelectionStart = 0;
             this.textboxStudentPhone.ShortcutsEnabled = true;
             this.textboxStudentPhone.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentPhone.TabIndex = 43;
+            this.textboxStudentPhone.TabIndex = 4;
             this.textboxStudentPhone.UseSelectable = true;
             this.textboxStudentPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentPhone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1154,7 +1156,7 @@
             this.textboxStudentEmail.SelectionStart = 0;
             this.textboxStudentEmail.ShortcutsEnabled = true;
             this.textboxStudentEmail.Size = new System.Drawing.Size(200, 23);
-            this.textboxStudentEmail.TabIndex = 42;
+            this.textboxStudentEmail.TabIndex = 5;
             this.textboxStudentEmail.UseSelectable = true;
             this.textboxStudentEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1338,6 +1340,7 @@
             this.buttonGetFaculty.TabIndex = 67;
             this.buttonGetFaculty.Text = "Get Faculty";
             this.buttonGetFaculty.UseSelectable = true;
+            this.buttonGetFaculty.Click += new System.EventHandler(this.buttonGetFaculty_Click);
             // 
             // buttonCreateFaculty
             // 
@@ -1349,6 +1352,7 @@
             this.buttonCreateFaculty.TabIndex = 66;
             this.buttonCreateFaculty.Text = "Create Faculty";
             this.buttonCreateFaculty.UseSelectable = true;
+            this.buttonCreateFaculty.Click += new System.EventHandler(this.buttonCreateFaculty_Click);
             // 
             // buttonDeleteFaculty
             // 
@@ -1360,6 +1364,7 @@
             this.buttonDeleteFaculty.TabIndex = 65;
             this.buttonDeleteFaculty.Text = "Delete Faculty";
             this.buttonDeleteFaculty.UseSelectable = true;
+            this.buttonDeleteFaculty.Click += new System.EventHandler(this.buttonDeleteFaculty_Click);
             // 
             // buttonUpdateFaculty
             // 
@@ -1371,6 +1376,7 @@
             this.buttonUpdateFaculty.TabIndex = 64;
             this.buttonUpdateFaculty.Text = "Update Faculty";
             this.buttonUpdateFaculty.UseSelectable = true;
+            this.buttonUpdateFaculty.Click += new System.EventHandler(this.buttonUpdateFaculty_Click);
             // 
             // groupboxFacultyAcademicINformation
             // 
@@ -2955,6 +2961,18 @@
             this.buttonNewAdminPasswordSave.Text = "Save";
             this.buttonNewAdminPasswordSave.UseSelectable = true;
             // 
+            // buttonClearStudentInfo
+            // 
+            this.buttonClearStudentInfo.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.buttonClearStudentInfo.Highlight = true;
+            this.buttonClearStudentInfo.Location = new System.Drawing.Point(516, 214);
+            this.buttonClearStudentInfo.Name = "buttonClearStudentInfo";
+            this.buttonClearStudentInfo.Size = new System.Drawing.Size(132, 46);
+            this.buttonClearStudentInfo.TabIndex = 62;
+            this.buttonClearStudentInfo.Text = "Clear";
+            this.buttonClearStudentInfo.UseSelectable = true;
+            this.buttonClearStudentInfo.Click += new System.EventHandler(this.buttonClearStudentInfo_Click);
+            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3197,5 +3215,6 @@
         private MetroFramework.Controls.MetroButton buttonNewAdminPasswordSave;
         private MetroFramework.Controls.MetroTextBox textboxNewAdminPassword;
         private MetroFramework.Controls.MetroLabel labelNewAdminPassword;
+        private MetroFramework.Controls.MetroButton buttonClearStudentInfo;
     }
 }
