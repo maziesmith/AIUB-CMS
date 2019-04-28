@@ -85,7 +85,7 @@ namespace AIUB_CMS.AdminView.Data
         {
             var coursesAssigned = from courses in CourseDataContext.Test_CourseAssignments
                                   where courses.FacultyID == CourseDataContext.Test_FacultyTables.SingleOrDefault(f => f.Name == facultyName).ID
-                                  select new { CourseID = courses.CourseID };
+                                  select new { Assigned = courses.ID, CourseID = courses.CourseID };
             return coursesAssigned;
         }
 
@@ -131,6 +131,24 @@ namespace AIUB_CMS.AdminView.Data
         public IQueryable GetCourseTable()
         {
             return CourseDataContext.Test_CourseTables;
+        }
+
+        public void AssignCourse(string FacultyName, int CourseID)
+        {
+            var AssignCourse = new Test_CourseAssignment();
+            AssignCourse.Assigned = 1;
+            AssignCourse.CourseID = CourseID;
+            AssignCourse.FacultyID = CourseDataContext.Test_FacultyTables.SingleOrDefault(f => f.Name == FacultyName).ID;
+
+            CourseDataContext.Test_CourseAssignments.InsertOnSubmit(AssignCourse);
+            CourseDataContext.SubmitChanges();
+        }
+
+        public void UnassignCourse(int AssignID)
+        {
+            var UnssignCourse = CourseDataContext.Test_CourseAssignments.SingleOrDefault(s => s.ID == AssignID);
+            CourseDataContext.Test_CourseAssignments.DeleteOnSubmit(UnssignCourse);
+            CourseDataContext.SubmitChanges();
         }
 
         public string GetName()

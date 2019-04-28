@@ -583,6 +583,17 @@ namespace AIUB_CMS.AdminView.Interface
         {
             string FacultyName = this.comboboxCourseAssignFaculty.SelectedItem.ToString();
             int CourseID = Convert.ToInt32(textboxCourseID.Text);
+
+            CourseDataHandler courseData = new CourseDataHandler();
+            courseData.AssignCourse(FacultyName, CourseID);
+            UpdateForm();
+        }
+
+        private void buttonCourseRemove_Click(object sender, EventArgs e)
+        {
+            CourseDataHandler courseData = new CourseDataHandler();
+            courseData.UnassignCourse(Convert.ToInt32(this.datagridFacultyCoursesAssigned.CurrentCell.Value.ToString()));
+            UpdateForm();
         }
     }
 }

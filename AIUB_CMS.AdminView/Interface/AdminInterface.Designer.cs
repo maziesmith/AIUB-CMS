@@ -1789,7 +1789,7 @@
             this.textboxFacultyID.SelectionStart = 0;
             this.textboxFacultyID.ShortcutsEnabled = true;
             this.textboxFacultyID.Size = new System.Drawing.Size(200, 23);
-            this.textboxFacultyID.TabIndex = 46;
+            this.textboxFacultyID.TabIndex = 0;
             this.textboxFacultyID.UseSelectable = true;
             this.textboxFacultyID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1829,7 +1829,7 @@
             this.texboxFacultyName.SelectionStart = 0;
             this.texboxFacultyName.ShortcutsEnabled = true;
             this.texboxFacultyName.Size = new System.Drawing.Size(200, 23);
-            this.texboxFacultyName.TabIndex = 47;
+            this.texboxFacultyName.TabIndex = 1;
             this.texboxFacultyName.UseSelectable = true;
             this.texboxFacultyName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.texboxFacultyName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1879,7 +1879,7 @@
             this.textboxFacultyFather.SelectionStart = 0;
             this.textboxFacultyFather.ShortcutsEnabled = true;
             this.textboxFacultyFather.Size = new System.Drawing.Size(200, 23);
-            this.textboxFacultyFather.TabIndex = 45;
+            this.textboxFacultyFather.TabIndex = 2;
             this.textboxFacultyFather.UseSelectable = true;
             this.textboxFacultyFather.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyFather.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1909,7 +1909,7 @@
             this.textboxFacultyMother.SelectionStart = 0;
             this.textboxFacultyMother.ShortcutsEnabled = true;
             this.textboxFacultyMother.Size = new System.Drawing.Size(200, 23);
-            this.textboxFacultyMother.TabIndex = 44;
+            this.textboxFacultyMother.TabIndex = 3;
             this.textboxFacultyMother.UseSelectable = true;
             this.textboxFacultyMother.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyMother.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1949,7 +1949,7 @@
             this.textboxFacultyPhone.SelectionStart = 0;
             this.textboxFacultyPhone.ShortcutsEnabled = true;
             this.textboxFacultyPhone.Size = new System.Drawing.Size(200, 23);
-            this.textboxFacultyPhone.TabIndex = 43;
+            this.textboxFacultyPhone.TabIndex = 4;
             this.textboxFacultyPhone.UseSelectable = true;
             this.textboxFacultyPhone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyPhone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1989,7 +1989,7 @@
             this.textboxFacultyEmail.SelectionStart = 0;
             this.textboxFacultyEmail.ShortcutsEnabled = true;
             this.textboxFacultyEmail.Size = new System.Drawing.Size(200, 23);
-            this.textboxFacultyEmail.TabIndex = 42;
+            this.textboxFacultyEmail.TabIndex = 5;
             this.textboxFacultyEmail.UseSelectable = true;
             this.textboxFacultyEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxFacultyEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -2274,7 +2274,7 @@
             this.textboxCourseName.SelectionStart = 0;
             this.textboxCourseName.ShortcutsEnabled = true;
             this.textboxCourseName.Size = new System.Drawing.Size(201, 23);
-            this.textboxCourseName.TabIndex = 9;
+            this.textboxCourseName.TabIndex = 1;
             this.textboxCourseName.UseSelectable = true;
             this.textboxCourseName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxCourseName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -3178,7 +3178,7 @@
             this.textboxCourseID.SelectionStart = 0;
             this.textboxCourseID.ShortcutsEnabled = true;
             this.textboxCourseID.Size = new System.Drawing.Size(201, 23);
-            this.textboxCourseID.TabIndex = 11;
+            this.textboxCourseID.TabIndex = 0;
             this.textboxCourseID.UseSelectable = true;
             this.textboxCourseID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxCourseID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -3230,6 +3230,7 @@
             this.buttonCourseRemove.TabIndex = 71;
             this.buttonCourseRemove.Text = "Remove";
             this.buttonCourseRemove.UseSelectable = true;
+            this.buttonCourseRemove.Click += new System.EventHandler(this.buttonCourseRemove_Click);
             // 
             // AdminInterface
             // 
