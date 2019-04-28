@@ -19,10 +19,35 @@ namespace AIUB_CMS.Login.Data
 
         public string GetPassword(string id)
         {
-            var password = loginData.Test_StudentTables;
+            
             // To print the hashed password, uncomment the line below.
             // Console.WriteLine(PasswordTable.FirstOrDefault(s => s.ID == id).Password);
-            return password.FirstOrDefault(s => s.ID == id).Password;
+            try
+            {
+                var password = loginData.Test_StudentTables;
+                return password.FirstOrDefault(s => s.ID == id).Password;
+            }
+            catch
+            {
+                try
+                {
+                    var password = loginData.Test_FacultyTables;
+                    return password.FirstOrDefault(s => s.ID == id).Password;
+                }
+                catch
+                {
+                    try
+                    {
+                        var password = loginData.Test_AdminTables;
+                        return password.FirstOrDefault(s => s.ID == id).Password;
+                    }
+                    catch
+                    {
+                        return "null";
+                    }
+                }
+            }
+            
         }
     }
 }

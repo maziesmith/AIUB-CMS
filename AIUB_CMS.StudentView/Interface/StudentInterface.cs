@@ -49,5 +49,10 @@ namespace AIUB_CMS.StudentView.Interface
             this.labelCGPAAns.Text = studentData.GetCGPA().ToString();
             this.labelBloodGroupAns.Text = Enum.GetName(typeof(BloodGroup), studentData.GetBloodGroup());
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

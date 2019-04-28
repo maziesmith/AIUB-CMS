@@ -15,19 +15,19 @@ namespace AIUB_CMS.Handler
         [STAThread]
         static void Main()
         {
-            // LoginFormInitializer.InitializeLoginForm();
+            LoginFormInitializer.InitializeLoginForm();
             string type = LoginFormInitializer.GetIDType();
             string id = LoginFormInitializer.GetID();
 
-            //if (type == "Student")
-                //StudentFormInitializer.InitializeStudentForm(id);
-            //else if (type == "Faculty")
-                 //FacultyFormInitializer.InitializeFacultyForm("1234-14785-1");
-            //else if (type == "Admin")
-                AdminFormInitializer.InitializeAdminForm("1234-12345-2");
+            if (type == "Student")
+                StudentFormInitializer.InitializeStudentForm(id);
+            else if (type == "Faculty")
+                FacultyFormInitializer.InitializeFacultyForm(id);
+            else if (type == "Admin")
+                AdminFormInitializer.InitializeAdminForm(id);
 
-            //// Sample admin: 1234-12345-2
-            //// Sample faculty: 1234-14785-1
+            //// Sample admin: 1234-12345-2 PASS: admin
+            //// Sample faculty: 1234-12345-1 PASS iamironman
         }
     }
 }

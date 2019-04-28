@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacultyInterface));
             this.tabTSF = new MetroFramework.Controls.MetroTabPage();
             this.tabAcademics = new MetroFramework.Controls.MetroTabPage();
             this.groupboxCourseInformation = new System.Windows.Forms.GroupBox();
@@ -81,11 +82,28 @@
             this.labelNameAns = new MetroFramework.Controls.MetroLabel();
             this.tabcontrolFaculty = new MetroFramework.Controls.MetroTabControl();
             this.timerForHotspot = new System.Windows.Forms.Timer(this.components);
+            this.buttonLogout = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupboxFacultyInfoImage = new System.Windows.Forms.GroupBox();
+            this.pictureboxFacultyInfoImage = new System.Windows.Forms.PictureBox();
+            this.labelCourseID = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseSection = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseInfoCourseName = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseTiming = new MetroFramework.Controls.MetroLabel();
+            this.labelDaysAns = new MetroFramework.Controls.MetroLabel();
+            this.labelStartTimeEndTime = new MetroFramework.Controls.MetroLabel();
+            this.labelSectionAns = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseNameAnswer = new MetroFramework.Controls.MetroLabel();
+            this.labelCourseIDAns = new MetroFramework.Controls.MetroLabel();
             this.tabAcademics.SuspendLayout();
+            this.groupboxCourseInformation.SuspendLayout();
             this.grouboxAttendance.SuspendLayout();
             this.tabFacultyInfo.SuspendLayout();
             this.groupboxFacultyInformation.SuspendLayout();
             this.tabcontrolFaculty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupboxFacultyInfoImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxFacultyInfoImage)).BeginInit();
             this.SuspendLayout();
             // 
             // tabTSF
@@ -123,9 +141,18 @@
             // groupboxCourseInformation
             // 
             this.groupboxCourseInformation.BackColor = System.Drawing.Color.Transparent;
-            this.groupboxCourseInformation.Location = new System.Drawing.Point(22, 135);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseIDAns);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseNameAnswer);
+            this.groupboxCourseInformation.Controls.Add(this.labelSectionAns);
+            this.groupboxCourseInformation.Controls.Add(this.labelStartTimeEndTime);
+            this.groupboxCourseInformation.Controls.Add(this.labelDaysAns);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseTiming);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseID);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseInfoCourseName);
+            this.groupboxCourseInformation.Controls.Add(this.labelCourseSection);
+            this.groupboxCourseInformation.Location = new System.Drawing.Point(22, 67);
             this.groupboxCourseInformation.Name = "groupboxCourseInformation";
-            this.groupboxCourseInformation.Size = new System.Drawing.Size(359, 348);
+            this.groupboxCourseInformation.Size = new System.Drawing.Size(359, 173);
             this.groupboxCourseInformation.TabIndex = 4;
             this.groupboxCourseInformation.TabStop = false;
             this.groupboxCourseInformation.Text = "Course Information";
@@ -139,6 +166,7 @@
             this.comboboxCourses.Size = new System.Drawing.Size(243, 29);
             this.comboboxCourses.TabIndex = 3;
             this.comboboxCourses.UseSelectable = true;
+            this.comboboxCourses.SelectedIndexChanged += new System.EventHandler(this.comboboxCourses_SelectedIndexChanged);
             // 
             // labelSelectCourse
             // 
@@ -463,6 +491,7 @@
             // 
             // tabFacultyInfo
             // 
+            this.tabFacultyInfo.Controls.Add(this.groupboxFacultyInfoImage);
             this.tabFacultyInfo.Controls.Add(this.groupboxFacultyInformation);
             this.tabFacultyInfo.HorizontalScrollbarBarColor = true;
             this.tabFacultyInfo.HorizontalScrollbarHighlightOnWheel = false;
@@ -701,7 +730,7 @@
             this.tabcontrolFaculty.Controls.Add(this.tabFacultyInfo);
             this.tabcontrolFaculty.Controls.Add(this.tabAcademics);
             this.tabcontrolFaculty.Controls.Add(this.tabTSF);
-            this.tabcontrolFaculty.Location = new System.Drawing.Point(4, 86);
+            this.tabcontrolFaculty.Location = new System.Drawing.Point(4, 114);
             this.tabcontrolFaculty.Name = "tabcontrolFaculty";
             this.tabcontrolFaculty.SelectedIndex = 1;
             this.tabcontrolFaculty.Size = new System.Drawing.Size(1174, 528);
@@ -713,23 +742,153 @@
             this.timerForHotspot.Interval = 5000;
             this.timerForHotspot.Tick += new System.EventHandler(this.timerForHotspot_Tick);
             // 
+            // buttonLogout
+            // 
+            this.buttonLogout.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonLogout.Highlight = true;
+            this.buttonLogout.Location = new System.Drawing.Point(1065, 63);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(109, 38);
+            this.buttonLogout.TabIndex = 3;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseSelectable = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(103, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupboxFacultyInfoImage
+            // 
+            this.groupboxFacultyInfoImage.BackColor = System.Drawing.Color.Transparent;
+            this.groupboxFacultyInfoImage.Controls.Add(this.pictureboxFacultyInfoImage);
+            this.groupboxFacultyInfoImage.Location = new System.Drawing.Point(878, 3);
+            this.groupboxFacultyInfoImage.Name = "groupboxFacultyInfoImage";
+            this.groupboxFacultyInfoImage.Size = new System.Drawing.Size(285, 263);
+            this.groupboxFacultyInfoImage.TabIndex = 56;
+            this.groupboxFacultyInfoImage.TabStop = false;
+            this.groupboxFacultyInfoImage.Text = "Faculty Picture";
+            // 
+            // pictureboxFacultyInfoImage
+            // 
+            this.pictureboxFacultyInfoImage.Location = new System.Drawing.Point(41, 33);
+            this.pictureboxFacultyInfoImage.Name = "pictureboxFacultyInfoImage";
+            this.pictureboxFacultyInfoImage.Size = new System.Drawing.Size(203, 197);
+            this.pictureboxFacultyInfoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxFacultyInfoImage.TabIndex = 1;
+            this.pictureboxFacultyInfoImage.TabStop = false;
+            // 
+            // labelCourseID
+            // 
+            this.labelCourseID.AutoSize = true;
+            this.labelCourseID.Location = new System.Drawing.Point(18, 33);
+            this.labelCourseID.Name = "labelCourseID";
+            this.labelCourseID.Size = new System.Drawing.Size(69, 19);
+            this.labelCourseID.TabIndex = 10;
+            this.labelCourseID.Text = "Course ID:";
+            // 
+            // labelCourseSection
+            // 
+            this.labelCourseSection.AutoSize = true;
+            this.labelCourseSection.Location = new System.Drawing.Point(18, 98);
+            this.labelCourseSection.Name = "labelCourseSection";
+            this.labelCourseSection.Size = new System.Drawing.Size(54, 19);
+            this.labelCourseSection.TabIndex = 3;
+            this.labelCourseSection.Text = "Section:";
+            // 
+            // labelCourseInfoCourseName
+            // 
+            this.labelCourseInfoCourseName.AutoSize = true;
+            this.labelCourseInfoCourseName.Location = new System.Drawing.Point(18, 67);
+            this.labelCourseInfoCourseName.Name = "labelCourseInfoCourseName";
+            this.labelCourseInfoCourseName.Size = new System.Drawing.Size(93, 19);
+            this.labelCourseInfoCourseName.TabIndex = 0;
+            this.labelCourseInfoCourseName.Text = "Course Name:";
+            // 
+            // labelCourseTiming
+            // 
+            this.labelCourseTiming.AutoSize = true;
+            this.labelCourseTiming.Location = new System.Drawing.Point(18, 131);
+            this.labelCourseTiming.Name = "labelCourseTiming";
+            this.labelCourseTiming.Size = new System.Drawing.Size(52, 19);
+            this.labelCourseTiming.TabIndex = 13;
+            this.labelCourseTiming.Text = "Timing:";
+            // 
+            // labelDaysAns
+            // 
+            this.labelDaysAns.AutoSize = true;
+            this.labelDaysAns.Location = new System.Drawing.Point(131, 131);
+            this.labelDaysAns.Name = "labelDaysAns";
+            this.labelDaysAns.Size = new System.Drawing.Size(57, 19);
+            this.labelDaysAns.TabIndex = 14;
+            this.labelDaysAns.Text = "DaysAns";
+            // 
+            // labelStartTimeEndTime
+            // 
+            this.labelStartTimeEndTime.AutoSize = true;
+            this.labelStartTimeEndTime.Location = new System.Drawing.Point(223, 131);
+            this.labelStartTimeEndTime.Name = "labelStartTimeEndTime";
+            this.labelStartTimeEndTime.Size = new System.Drawing.Size(80, 19);
+            this.labelStartTimeEndTime.TabIndex = 15;
+            this.labelStartTimeEndTime.Text = "StartEndAns";
+            // 
+            // labelSectionAns
+            // 
+            this.labelSectionAns.AutoSize = true;
+            this.labelSectionAns.Location = new System.Drawing.Point(131, 98);
+            this.labelSectionAns.Name = "labelSectionAns";
+            this.labelSectionAns.Size = new System.Drawing.Size(72, 19);
+            this.labelSectionAns.TabIndex = 16;
+            this.labelSectionAns.Text = "SectionAns";
+            // 
+            // labelCourseNameAnswer
+            // 
+            this.labelCourseNameAnswer.AutoSize = true;
+            this.labelCourseNameAnswer.Location = new System.Drawing.Point(131, 67);
+            this.labelCourseNameAnswer.Name = "labelCourseNameAnswer";
+            this.labelCourseNameAnswer.Size = new System.Drawing.Size(107, 19);
+            this.labelCourseNameAnswer.TabIndex = 17;
+            this.labelCourseNameAnswer.Text = "CourseNameAns";
+            // 
+            // labelCourseIDAns
+            // 
+            this.labelCourseIDAns.AutoSize = true;
+            this.labelCourseIDAns.Location = new System.Drawing.Point(131, 33);
+            this.labelCourseIDAns.Name = "labelCourseIDAns";
+            this.labelCourseIDAns.Size = new System.Drawing.Size(107, 19);
+            this.labelCourseIDAns.TabIndex = 18;
+            this.labelCourseIDAns.Text = "CourseNameAns";
+            // 
             // FacultyInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.tabcontrolFaculty);
             this.Name = "FacultyInterface";
-            this.Text = "FacultyInterface";
+            this.Text = "Welcome";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Right;
             this.tabAcademics.ResumeLayout(false);
             this.tabAcademics.PerformLayout();
+            this.groupboxCourseInformation.ResumeLayout(false);
+            this.groupboxCourseInformation.PerformLayout();
             this.grouboxAttendance.ResumeLayout(false);
             this.grouboxAttendance.PerformLayout();
             this.tabFacultyInfo.ResumeLayout(false);
             this.groupboxFacultyInformation.ResumeLayout(false);
             this.groupboxFacultyInformation.PerformLayout();
             this.tabcontrolFaculty.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupboxFacultyInfoImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxFacultyInfoImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -788,5 +947,18 @@
         private MetroFramework.Controls.MetroLabel labelNameAns;
         private MetroFramework.Controls.MetroTabControl tabcontrolFaculty;
         private System.Windows.Forms.Timer timerForHotspot;
+        private MetroFramework.Controls.MetroButton buttonLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupboxFacultyInfoImage;
+        private System.Windows.Forms.PictureBox pictureboxFacultyInfoImage;
+        private MetroFramework.Controls.MetroLabel labelCourseIDAns;
+        private MetroFramework.Controls.MetroLabel labelCourseNameAnswer;
+        private MetroFramework.Controls.MetroLabel labelSectionAns;
+        private MetroFramework.Controls.MetroLabel labelStartTimeEndTime;
+        private MetroFramework.Controls.MetroLabel labelDaysAns;
+        private MetroFramework.Controls.MetroLabel labelCourseTiming;
+        private MetroFramework.Controls.MetroLabel labelCourseID;
+        private MetroFramework.Controls.MetroLabel labelCourseInfoCourseName;
+        private MetroFramework.Controls.MetroLabel labelCourseSection;
     }
 }

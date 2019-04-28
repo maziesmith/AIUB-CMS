@@ -52,13 +52,39 @@ namespace AIUB_CMS.FacultyView.Data
             }
         }
 
-        public IQueryable GetStudentInfo(string id)
+        //public IQueryable GetStudentInfo(string id)
+        //{
+        //    var StudentInformation = from student in FacultyDataContext.Test_FacultyTables
+        //                             where student.ID == id
+        //                             select student;
+        //    return StudentInformation;
+        //}
+
+        public List<string> GetCourseList()
         {
-            var StudentInformation = from student in FacultyDataContext.Test_FacultyTables
-                                     where student.ID == id
-                                     select student;
-            return StudentInformation;
+            var CourseID = from course in FacultyDataContext.Test_CourseAssignments
+                           where course.FacultyID == this.id
+                           select course.CourseID;
+            CourseID.ToList();
+            List<string> CourseList = new List<string>();
+
+            foreach (var courseid in CourseID)
+            {
+                CourseList.Add(FacultyDataContext.Test_CourseTables.SingleOrDefault(c => c.ID == courseid).Name);
+            }
+            return CourseList;
+            
         }
+
+        public List<int?> GetCourseIDs()
+        {
+            var CourseID = from course in FacultyDataContext.Test_CourseAssignments
+                           where course.FacultyID == this.id
+                           select course.CourseID;
+            
+            return CourseID.ToList();
+        }
+        
 
         public string GetName()
         {

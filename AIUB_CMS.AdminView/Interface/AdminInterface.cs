@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AIUB_CMS.AdminView.Data;
 using AIUB_CMS.AdminView.Logic;
+using AIUB_CMS.AdminView.Handler;
 
 namespace AIUB_CMS.AdminView.Interface
 {
@@ -70,14 +71,12 @@ namespace AIUB_CMS.AdminView.Interface
 
             foreach(var bg in Enum.GetValues(typeof(BloodGroup)))
             {
-                comboboxAdminBloodGroup.Items.Add(bg);
                 comboboxFacultyBloodGroup.Items.Add(bg);
                 comboboxStudentBloodGroup.Items.Add(bg);
             }
 
             foreach (var nationality in Enum.GetValues(typeof(Nationality)))
             {
-                comboboxAdminNationality.Items.Add(nationality);
                 comboboxFacultyNationality.Items.Add(nationality);
                 comboboxStudentNationality.Items.Add(nationality);
             }
@@ -120,6 +119,7 @@ namespace AIUB_CMS.AdminView.Interface
                 this.comboboxCourseAssignFaculty.Items.Add(faculty);
             }
 
+            this.Text = "Welcome, " + adminData.GetName();
             this.labelPhoneAns.Text = adminData.GetPhone();
             this.labelNameAns.Text = adminData.GetName();
             this.labelMotherAns.Text = adminData.GetMother();
@@ -594,6 +594,12 @@ namespace AIUB_CMS.AdminView.Interface
             CourseDataHandler courseData = new CourseDataHandler();
             courseData.UnassignCourse(Convert.ToInt32(this.datagridFacultyCoursesAssigned.CurrentCell.Value.ToString()));
             UpdateForm();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }
