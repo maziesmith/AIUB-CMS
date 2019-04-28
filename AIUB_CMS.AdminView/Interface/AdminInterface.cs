@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AIUB_CMS.AdminView.Data;
+using AIUB_CMS.AdminView.Logic;
 
 namespace AIUB_CMS.AdminView.Interface
 {
@@ -17,7 +18,7 @@ namespace AIUB_CMS.AdminView.Interface
 
         public enum BloodGroup
         {
-            APos = 1,
+            APos,
             ANeg,
             BPos,
             BNeg,
@@ -68,6 +69,16 @@ namespace AIUB_CMS.AdminView.Interface
                 comboboxFacultyNationality.Items.Add(nationality);
                 comboboxStudentNationality.Items.Add(nationality);
             }
+            
+            AdminDataHandler departmentData = new AdminDataHandler();
+            List<string> departmentList = departmentData.GetDepartmentData();
+
+            foreach (string dept in departmentList)
+            {
+                this.comboboxCourseDepartment.Items.Add(dept);
+                this.comboboxFacultyDepartment.Items.Add(dept);
+                this.comboboxStudentDepartment.Items.Add(dept);
+            }
 
             AdminDataHandler adminData = new AdminDataHandler(id);
             StudentDataHandler studentData = new StudentDataHandler();
@@ -94,11 +105,10 @@ namespace AIUB_CMS.AdminView.Interface
         public void LoadGetStudentInfo(string id)
         {
             StudentDataHandler studentData = new StudentDataHandler(id);
-            // this..Text = studentData.GetProgram();
             this.textboxStudentPhone.Text = studentData.GetPhone();
             this.textboxStudentName.Text = studentData.GetName();
             this.textboxStudentMother.Text = studentData.GetMother();
-            // this.textboxID.Text = studentData.GetID();
+            this.textboxStudentID.Text = studentData.GetID();
 
             if (studentData.GetGender() == 1)
                 radiobuttonStudentMale.Checked = true;
@@ -107,12 +117,14 @@ namespace AIUB_CMS.AdminView.Interface
 
             this.textboxStudentFather.Text = studentData.GetFather();
             this.textboxStudentEmail.Text = studentData.GetEmail();
-            // this.labelDOBAns.Text = studentData.GetDOB();
-            // this.labelDepartmentAns.Text = studentData.GetDepartment();
+            this.datetimeStudentDOB.Value = studentData.GetDOB();
+            this.comboboxStudentDepartment.SelectedIndex = studentData.GetDepartment();
             this.textboxStudentCreditsCompleted.Text = studentData.GetCredit().ToString();
             this.textboxStudentCGPA.Text = studentData.GetCGPA().ToString();
-            // this.labelBloodGroupAns.Text = studentData.GetBloodGroup().ToString();
+            this.comboboxStudentNationality.SelectedIndex = studentData.GetNationality();
+            this.comboboxStudentBloodGroup.SelectedIndex = studentData.GetBloodGroup();
             this.pictureboxStudentPicture.ImageLocation = studentData.GetImageDirectory();
+            this.textboxStudentMAC.Text = studentData.GetMAC();
             // this.pictureboxStudentPicture.Load();
         }
 
@@ -120,20 +132,26 @@ namespace AIUB_CMS.AdminView.Interface
         {
             string id = this.textboxStudentID.Text;
             StudentDataHandler studentData = new StudentDataHandler(id);
-            // this..Text = studentData.SetProgram();
             studentData.SetPhone(this.textboxStudentPhone.Text);
             studentData.SetName(this.textboxStudentName.Text);
             studentData.SetMother(this.textboxStudentMother.Text);
             studentData.SetID(this.textboxStudentID.Text);
-            // this..Text = studentData.SetGender().ToString();
+
+            if (radiobuttonStudentMale.Checked)
+                studentData.SetGender(1);
+            else
+                studentData.SetGender(2);
+
             studentData.SetFather(this.textboxStudentFather.Text);
             studentData.SetEmail(this.textboxStudentEmail.Text);
-            // this.labelDOBAns.Text = studentData.SetDOB();
-            // this.labelDepartmentAns.Text = studentData.SetDepartment();
+            studentData.SetDOB(this.datetimeStudentDOB.Value);
+            studentData.SetDepartment(this.comboboxStudentDepartment.SelectedIndex);
             studentData.SetCredit(Convert.ToInt32(this.textboxStudentCreditsCompleted.Text));
             studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
-            // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
+            studentData.SetBloodGroup(this.comboboxStudentBloodGroup.SelectedIndex);
             studentData.SetImageDirectory(studentImageURL);
+            studentData.SetMAC(this.textboxStudentMAC.Text);
+            studentData.SetPassword(GeneratePasswordHash.CalculateMD5Hash(this.textboxStudentPassword.Text));
             studentData.InsertStudent();
             UpdateForm();
             MessageBox.Show("Student Created");
@@ -170,20 +188,26 @@ namespace AIUB_CMS.AdminView.Interface
         {
             string id = this.textboxStudentID.Text;
             StudentDataHandler studentData = new StudentDataHandler(id);
-            // this..Text = studentData.SetProgram();
             studentData.SetPhone(this.textboxStudentPhone.Text);
             studentData.SetName(this.textboxStudentName.Text);
             studentData.SetMother(this.textboxStudentMother.Text);
             studentData.SetID(this.textboxStudentID.Text);
-            // this..Text = studentData.SetGender().ToString();
+
+            if (radiobuttonStudentMale.Checked)
+                studentData.SetGender(1);
+            else
+                studentData.SetGender(2);
+
             studentData.SetFather(this.textboxStudentFather.Text);
             studentData.SetEmail(this.textboxStudentEmail.Text);
-            // this.labelDOBAns.Text = studentData.SetDOB();
-            // this.labelDepartmentAns.Text = studentData.SetDepartment();
+            studentData.SetDOB(this.datetimeStudentDOB.Value);
+            studentData.SetDepartment(this.comboboxStudentDepartment.SelectedIndex);
             studentData.SetCredit(Convert.ToInt32(this.textboxStudentCreditsCompleted.Text));
             studentData.SetCGPA(Convert.ToDouble(this.textboxStudentCGPA.Text));
-            // this.labelBloodGroupAns.Text = studentData.SetBloodGroup().ToString();
+            studentData.SetBloodGroup(this.comboboxStudentBloodGroup.SelectedIndex);
             studentData.SetImageDirectory(studentImageURL);
+            studentData.SetMAC(this.textboxStudentMAC.Text);
+            studentData.SetPassword(GeneratePasswordHash.CalculateMD5Hash(this.textboxStudentPassword.Text));
             studentData.UpdateStudent();
             UpdateForm();
             MessageBox.Show("Student Updated");

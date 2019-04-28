@@ -91,6 +91,14 @@ namespace AIUB_CMS.AdminView.Data
 				return this.GetTable<Test_StudentTable>();
 			}
 		}
+		
+		public System.Data.Linq.Table<DepartmentTable> DepartmentTables
+		{
+			get
+			{
+				return this.GetTable<DepartmentTable>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_FacultyTable")]
@@ -1056,6 +1064,51 @@ namespace AIUB_CMS.AdminView.Data
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DepartmentTable")]
+	public partial class DepartmentTable
+	{
+		
+		private System.Nullable<int> _DepartmentID;
+		
+		private string _DepartmentName;
+		
+		public DepartmentTable()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="Int")]
+		public System.Nullable<int> DepartmentID
+		{
+			get
+			{
+				return this._DepartmentID;
+			}
+			set
+			{
+				if ((this._DepartmentID != value))
+				{
+					this._DepartmentID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentName", DbType="NVarChar(50)")]
+		public string DepartmentName
+		{
+			get
+			{
+				return this._DepartmentName;
+			}
+			set
+			{
+				if ((this._DepartmentName != value))
+				{
+					this._DepartmentName = value;
+				}
 			}
 		}
 	}

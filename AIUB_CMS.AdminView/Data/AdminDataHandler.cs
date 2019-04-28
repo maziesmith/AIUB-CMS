@@ -46,19 +46,19 @@ namespace AIUB_CMS.AdminView.Data
             }
         }
 
-        public void InsertFaculty()
+        public void InsertAdmin()
         {
-            var newFaculty = new Test_AdminTable();
-            newFaculty.Name = this.name;
-            newFaculty.FatherName = this.father;
-            newFaculty.MotherName = this.mother;
-            newFaculty.Phone = this.phone;
-            newFaculty.Email = this.email;
-            newFaculty.BloodGroup = this.bloodGroup;
-            newFaculty.Gender = this.gender;
-            newFaculty.ID = this.id;
-            newFaculty.DOB = Convert.ToDateTime(this.dob);
-            AdminDataContext.Test_AdminTables.InsertOnSubmit(newFaculty);
+            var newAdmin = new Test_AdminTable();
+            newAdmin.Name = this.name;
+            newAdmin.FatherName = this.father;
+            newAdmin.MotherName = this.mother;
+            newAdmin.Phone = this.phone;
+            newAdmin.Email = this.email;
+            newAdmin.BloodGroup = this.bloodGroup;
+            newAdmin.Gender = this.gender;
+            newAdmin.ID = this.id;
+            newAdmin.DOB = Convert.ToDateTime(this.dob);
+            AdminDataContext.Test_AdminTables.InsertOnSubmit(newAdmin);
             AdminDataContext.SubmitChanges();
         }
 
@@ -155,6 +155,11 @@ namespace AIUB_CMS.AdminView.Data
         public void SetDOB(string value)
         {
             this.dob = value;
+        }
+
+        public List<string> GetDepartmentData()
+        {
+            return AdminDataContext.DepartmentTables.Select(s => s.DepartmentName).ToList();
         }
     }
 }

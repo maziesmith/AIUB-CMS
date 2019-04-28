@@ -20,8 +20,11 @@ namespace AIUB_CMS.AdminView.Data
         private string email;
         private int gender;
         private int bloodGroup;
-        private string dob;
+        private DateTime dob;
         private string imageDirectory;
+        private int nationality;
+        private string macAddress;
+        private string password;
 
         AdminDataDataContext StudentDataContext;
 
@@ -43,7 +46,6 @@ namespace AIUB_CMS.AdminView.Data
                 this.name = data.Name;
                 this.CGPA = (double)data.CGPA;
                 this.credit = data.Credits ?? 0;
-                // this.program = data.Program;
                 this.department = data.Department?? 1;
                 this.father = data.FatherName;
                 this.mother = data.MotherName;
@@ -51,9 +53,11 @@ namespace AIUB_CMS.AdminView.Data
                 this.email = data.Email;
                 this.bloodGroup = data.BloodGroup ?? 1;
                 this.gender = data.Gender ?? 1;
-                this.dob = Convert.ToDateTime(data.DOB).Date.ToString();
+                this.dob = data.DOB?? DateTime.Now;
                 this.imageDirectory = data.ImageDirectory;
-
+                this.nationality = data.Nationality?? 1;
+                this.macAddress = data.MACAddress;
+                this.password = data.Password;
             }
         }
 
@@ -63,7 +67,6 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.Name = this.name;
             newStudent.CGPA = this.CGPA;
             newStudent.Credits = this.credit;
-            // newStudent.Program = this.program;
             newStudent.Department = this.department;
             newStudent.FatherName = this.father;
             newStudent.MotherName = this.mother;
@@ -74,6 +77,9 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.ID = this.id;
             newStudent.DOB = Convert.ToDateTime(this.dob);
             newStudent.ImageDirectory = this.imageDirectory;
+            newStudent.Nationality = this.nationality;
+            newStudent.MACAddress = this.macAddress;
+            newStudent.Password = this.password;
             StudentDataContext.Test_StudentTables.InsertOnSubmit(newStudent);
             StudentDataContext.SubmitChanges();
         }
@@ -84,7 +90,6 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.Name = this.name;
             newStudent.CGPA = this.CGPA;
             newStudent.Credits = this.credit;
-            // newStudent.Program = this.program;
             newStudent.Department = this.department;
             newStudent.FatherName = this.father;
             newStudent.MotherName = this.mother;
@@ -95,6 +100,9 @@ namespace AIUB_CMS.AdminView.Data
             newStudent.ID = this.id;
             newStudent.DOB = Convert.ToDateTime(this.dob);
             newStudent.ImageDirectory = this.imageDirectory;
+            newStudent.Nationality = this.nationality;
+            newStudent.MACAddress = this.macAddress;
+            newStudent.Password = this.password;
             StudentDataContext.SubmitChanges();
         }
 
@@ -113,14 +121,6 @@ namespace AIUB_CMS.AdminView.Data
             return ByName;
         }
 
-        // public IQueryable SearchStudentByDepartment(string dept)
-        // {
-        //     var ByDept = from table in StudentDataContext.Test_StudentTables
-        //                  where table.Department.Contains(dept)
-        //                  select table;
-        //     return ByDept;
-        // }
-
         public IQueryable SearchStudentByID(string id)
         {
             var ByID = from table in StudentDataContext.Test_StudentTables
@@ -132,6 +132,11 @@ namespace AIUB_CMS.AdminView.Data
         public IQueryable GetStudentTable()
         {
             return StudentDataContext.Test_StudentTables;
+        }
+
+        public string GetMAC()
+        {
+            return this.macAddress;
         }
 
         public string GetName()
@@ -194,9 +199,9 @@ namespace AIUB_CMS.AdminView.Data
             return this.id;
         }
 
-        public string GetDOB()
+        public DateTime GetDOB()
         {
-            return this.imageDirectory;
+            return this.dob;
         }
 
         public string GetImageDirectory()
@@ -269,9 +274,30 @@ namespace AIUB_CMS.AdminView.Data
             this.id = value;
         }
 
-        public void SetDOB(string value)
+        public void SetDOB(DateTime value)
         {
             this.dob = value;
         }
+
+        public void SetNationality(int value)
+        {
+            this.nationality = value;
+        }
+
+        public int GetNationality()
+        {
+            return nationality;
+        }
+
+        public void SetMAC(string value)
+        {
+            this.macAddress = value;
+        }
+
+        public void SetPassword(string value)
+        {
+            this.password = value;
+        }
+
     }
 }
