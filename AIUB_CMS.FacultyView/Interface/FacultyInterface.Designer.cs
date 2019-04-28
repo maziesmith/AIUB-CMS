@@ -37,26 +37,20 @@
             this.labelSelectCourse = new MetroFramework.Controls.MetroLabel();
             this.grouboxAttendance = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.buttonTest = new MetroFramework.Controls.MetroButton();
+            this.buttonGenerateAttendance = new MetroFramework.Controls.MetroButton();
             this.buttonAutoCredentials = new MetroFramework.Controls.MetroButton();
-            this.labelStudentsRemainingAns = new MetroFramework.Controls.MetroLabel();
-            this.labelStudentsRemaining = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.comboboxShutOff = new MetroFramework.Controls.MetroComboBox();
             this.labelShutOffTime = new MetroFramework.Controls.MetroLabel();
             this.labelPassword = new MetroFramework.Controls.MetroLabel();
-            this.labelStudentsAccountedFor = new MetroFramework.Controls.MetroLabel();
-            this.progressbarStudents = new MetroFramework.Controls.MetroProgressBar();
             this.labelManualAttendance = new MetroFramework.Controls.MetroLabel();
             this.textboxStudentSearch = new MetroFramework.Controls.MetroTextBox();
-            this.labelStudentCountAns = new MetroFramework.Controls.MetroLabel();
             this.labelCourseNameAns = new MetroFramework.Controls.MetroLabel();
             this.buttonStop = new MetroFramework.Controls.MetroButton();
             this.buttonStart = new MetroFramework.Controls.MetroButton();
             this.labelSSID = new MetroFramework.Controls.MetroLabel();
             this.textboxPassword = new MetroFramework.Controls.MetroTextBox();
             this.textboxSSID = new MetroFramework.Controls.MetroTextBox();
-            this.labelStudentCount = new MetroFramework.Controls.MetroLabel();
             this.labelCourseName = new MetroFramework.Controls.MetroLabel();
             this.tabFacultyInfo = new MetroFramework.Controls.MetroTabPage();
             this.groupboxFacultyInformation = new System.Windows.Forms.GroupBox();
@@ -95,6 +89,8 @@
             this.labelSectionAns = new MetroFramework.Controls.MetroLabel();
             this.labelCourseNameAnswer = new MetroFramework.Controls.MetroLabel();
             this.labelCourseIDAns = new MetroFramework.Controls.MetroLabel();
+            this.labelClassNumber = new MetroFramework.Controls.MetroLabel();
+            this.comboboxClassNumber = new MetroFramework.Controls.MetroComboBox();
             this.tabAcademics.SuspendLayout();
             this.groupboxCourseInformation.SuspendLayout();
             this.grouboxAttendance.SuspendLayout();
@@ -180,27 +176,23 @@
             // grouboxAttendance
             // 
             this.grouboxAttendance.BackColor = System.Drawing.Color.Transparent;
+            this.grouboxAttendance.Controls.Add(this.comboboxClassNumber);
+            this.grouboxAttendance.Controls.Add(this.labelClassNumber);
             this.grouboxAttendance.Controls.Add(this.richTextBox1);
-            this.grouboxAttendance.Controls.Add(this.buttonTest);
+            this.grouboxAttendance.Controls.Add(this.buttonGenerateAttendance);
             this.grouboxAttendance.Controls.Add(this.buttonAutoCredentials);
-            this.grouboxAttendance.Controls.Add(this.labelStudentsRemainingAns);
-            this.grouboxAttendance.Controls.Add(this.labelStudentsRemaining);
             this.grouboxAttendance.Controls.Add(this.metroButton1);
             this.grouboxAttendance.Controls.Add(this.comboboxShutOff);
             this.grouboxAttendance.Controls.Add(this.labelShutOffTime);
             this.grouboxAttendance.Controls.Add(this.labelPassword);
-            this.grouboxAttendance.Controls.Add(this.labelStudentsAccountedFor);
-            this.grouboxAttendance.Controls.Add(this.progressbarStudents);
             this.grouboxAttendance.Controls.Add(this.labelManualAttendance);
             this.grouboxAttendance.Controls.Add(this.textboxStudentSearch);
-            this.grouboxAttendance.Controls.Add(this.labelStudentCountAns);
             this.grouboxAttendance.Controls.Add(this.labelCourseNameAns);
             this.grouboxAttendance.Controls.Add(this.buttonStop);
             this.grouboxAttendance.Controls.Add(this.buttonStart);
             this.grouboxAttendance.Controls.Add(this.labelSSID);
             this.grouboxAttendance.Controls.Add(this.textboxPassword);
             this.grouboxAttendance.Controls.Add(this.textboxSSID);
-            this.grouboxAttendance.Controls.Add(this.labelStudentCount);
             this.grouboxAttendance.Controls.Add(this.labelCourseName);
             this.grouboxAttendance.Location = new System.Drawing.Point(411, 32);
             this.grouboxAttendance.Name = "grouboxAttendance";
@@ -211,25 +203,26 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(430, 133);
+            this.richTextBox1.Location = new System.Drawing.Point(379, 102);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(295, 261);
+            this.richTextBox1.Size = new System.Drawing.Size(346, 292);
             this.richTextBox1.TabIndex = 23;
             this.richTextBox1.Text = "";
             // 
-            // buttonTest
+            // buttonGenerateAttendance
             // 
-            this.buttonTest.Location = new System.Drawing.Point(531, 82);
-            this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(100, 40);
-            this.buttonTest.TabIndex = 22;
-            this.buttonTest.Text = "Test";
-            this.buttonTest.UseSelectable = true;
-            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            this.buttonGenerateAttendance.Highlight = true;
+            this.buttonGenerateAttendance.Location = new System.Drawing.Point(451, 35);
+            this.buttonGenerateAttendance.Name = "buttonGenerateAttendance";
+            this.buttonGenerateAttendance.Size = new System.Drawing.Size(201, 40);
+            this.buttonGenerateAttendance.TabIndex = 22;
+            this.buttonGenerateAttendance.Text = "Take Attendance";
+            this.buttonGenerateAttendance.UseSelectable = true;
+            this.buttonGenerateAttendance.Click += new System.EventHandler(this.buttonTest_Click);
             // 
             // buttonAutoCredentials
             // 
-            this.buttonAutoCredentials.Location = new System.Drawing.Point(236, 204);
+            this.buttonAutoCredentials.Location = new System.Drawing.Point(236, 248);
             this.buttonAutoCredentials.Name = "buttonAutoCredentials";
             this.buttonAutoCredentials.Size = new System.Drawing.Size(84, 40);
             this.buttonAutoCredentials.TabIndex = 21;
@@ -237,27 +230,9 @@
             this.buttonAutoCredentials.UseSelectable = true;
             this.buttonAutoCredentials.Click += new System.EventHandler(this.buttonAutoCredentials_Click);
             // 
-            // labelStudentsRemainingAns
-            // 
-            this.labelStudentsRemainingAns.AutoSize = true;
-            this.labelStudentsRemainingAns.Location = new System.Drawing.Point(199, 375);
-            this.labelStudentsRemainingAns.Name = "labelStudentsRemainingAns";
-            this.labelStudentsRemainingAns.Size = new System.Drawing.Size(141, 19);
-            this.labelStudentsRemainingAns.TabIndex = 20;
-            this.labelStudentsRemainingAns.Text = "StudentsRemainingAns";
-            // 
-            // labelStudentsRemaining
-            // 
-            this.labelStudentsRemaining.AutoSize = true;
-            this.labelStudentsRemaining.Location = new System.Drawing.Point(37, 375);
-            this.labelStudentsRemaining.Name = "labelStudentsRemaining";
-            this.labelStudentsRemaining.Size = new System.Drawing.Size(127, 19);
-            this.labelStudentsRemaining.TabIndex = 19;
-            this.labelStudentsRemaining.Text = "Students Remaining:";
-            // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(199, 296);
+            this.metroButton1.Location = new System.Drawing.Point(199, 343);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(100, 40);
             this.metroButton1.TabIndex = 18;
@@ -274,7 +249,7 @@
             "15 minutes",
             "20 minutes",
             "30 minutes"});
-            this.comboboxShutOff.Location = new System.Drawing.Point(199, 103);
+            this.comboboxShutOff.Location = new System.Drawing.Point(199, 123);
             this.comboboxShutOff.Name = "comboboxShutOff";
             this.comboboxShutOff.Size = new System.Drawing.Size(121, 29);
             this.comboboxShutOff.TabIndex = 17;
@@ -283,7 +258,7 @@
             // labelShutOffTime
             // 
             this.labelShutOffTime.AutoSize = true;
-            this.labelShutOffTime.Location = new System.Drawing.Point(37, 103);
+            this.labelShutOffTime.Location = new System.Drawing.Point(37, 123);
             this.labelShutOffTime.Name = "labelShutOffTime";
             this.labelShutOffTime.Size = new System.Drawing.Size(132, 19);
             this.labelShutOffTime.TabIndex = 16;
@@ -292,34 +267,16 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(37, 173);
+            this.labelPassword.Location = new System.Drawing.Point(37, 195);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(66, 19);
             this.labelPassword.TabIndex = 15;
             this.labelPassword.Text = "Password:";
             // 
-            // labelStudentsAccountedFor
-            // 
-            this.labelStudentsAccountedFor.AutoSize = true;
-            this.labelStudentsAccountedFor.Location = new System.Drawing.Point(37, 342);
-            this.labelStudentsAccountedFor.Name = "labelStudentsAccountedFor";
-            this.labelStudentsAccountedFor.Size = new System.Drawing.Size(61, 19);
-            this.labelStudentsAccountedFor.TabIndex = 13;
-            this.labelStudentsAccountedFor.Text = "Students:";
-            // 
-            // progressbarStudents
-            // 
-            this.progressbarStudents.Location = new System.Drawing.Point(199, 342);
-            this.progressbarStudents.Maximum = 40;
-            this.progressbarStudents.Name = "progressbarStudents";
-            this.progressbarStudents.Size = new System.Drawing.Size(145, 23);
-            this.progressbarStudents.Step = 1;
-            this.progressbarStudents.TabIndex = 5;
-            // 
             // labelManualAttendance
             // 
             this.labelManualAttendance.AutoSize = true;
-            this.labelManualAttendance.Location = new System.Drawing.Point(37, 265);
+            this.labelManualAttendance.Location = new System.Drawing.Point(37, 312);
             this.labelManualAttendance.Name = "labelManualAttendance";
             this.labelManualAttendance.Size = new System.Drawing.Size(125, 19);
             this.labelManualAttendance.TabIndex = 12;
@@ -340,7 +297,7 @@
             this.textboxStudentSearch.CustomButton.UseSelectable = true;
             this.textboxStudentSearch.CustomButton.Visible = false;
             this.textboxStudentSearch.Lines = new string[0];
-            this.textboxStudentSearch.Location = new System.Drawing.Point(199, 265);
+            this.textboxStudentSearch.Location = new System.Drawing.Point(199, 312);
             this.textboxStudentSearch.MaxLength = 32767;
             this.textboxStudentSearch.Name = "textboxStudentSearch";
             this.textboxStudentSearch.PasswordChar = '\0';
@@ -358,19 +315,10 @@
             this.textboxStudentSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxStudentSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // labelStudentCountAns
-            // 
-            this.labelStudentCountAns.AutoSize = true;
-            this.labelStudentCountAns.Location = new System.Drawing.Point(199, 68);
-            this.labelStudentCountAns.Name = "labelStudentCountAns";
-            this.labelStudentCountAns.Size = new System.Drawing.Size(109, 19);
-            this.labelStudentCountAns.TabIndex = 9;
-            this.labelStudentCountAns.Text = "StudentCountAns";
-            // 
             // labelCourseNameAns
             // 
             this.labelCourseNameAns.AutoSize = true;
-            this.labelCourseNameAns.Location = new System.Drawing.Point(199, 35);
+            this.labelCourseNameAns.Location = new System.Drawing.Point(199, 49);
             this.labelCourseNameAns.Name = "labelCourseNameAns";
             this.labelCourseNameAns.Size = new System.Drawing.Size(107, 19);
             this.labelCourseNameAns.TabIndex = 8;
@@ -378,7 +326,7 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(137, 204);
+            this.buttonStop.Location = new System.Drawing.Point(137, 248);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(84, 40);
             this.buttonStop.TabIndex = 7;
@@ -388,7 +336,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(37, 204);
+            this.buttonStart.Location = new System.Drawing.Point(37, 248);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(84, 40);
             this.buttonStart.TabIndex = 6;
@@ -399,7 +347,7 @@
             // labelSSID
             // 
             this.labelSSID.AutoSize = true;
-            this.labelSSID.Location = new System.Drawing.Point(37, 144);
+            this.labelSSID.Location = new System.Drawing.Point(37, 166);
             this.labelSSID.Name = "labelSSID";
             this.labelSSID.Size = new System.Drawing.Size(84, 19);
             this.labelSSID.TabIndex = 5;
@@ -420,7 +368,7 @@
             this.textboxPassword.CustomButton.UseSelectable = true;
             this.textboxPassword.CustomButton.Visible = false;
             this.textboxPassword.Lines = new string[0];
-            this.textboxPassword.Location = new System.Drawing.Point(199, 173);
+            this.textboxPassword.Location = new System.Drawing.Point(199, 195);
             this.textboxPassword.MaxLength = 32767;
             this.textboxPassword.Name = "textboxPassword";
             this.textboxPassword.PasswordChar = '\0';
@@ -453,7 +401,7 @@
             this.textboxSSID.CustomButton.UseSelectable = true;
             this.textboxSSID.CustomButton.Visible = false;
             this.textboxSSID.Lines = new string[0];
-            this.textboxSSID.Location = new System.Drawing.Point(199, 144);
+            this.textboxSSID.Location = new System.Drawing.Point(199, 166);
             this.textboxSSID.MaxLength = 32767;
             this.textboxSSID.Name = "textboxSSID";
             this.textboxSSID.PasswordChar = '\0';
@@ -471,19 +419,10 @@
             this.textboxSSID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textboxSSID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // labelStudentCount
-            // 
-            this.labelStudentCount.AutoSize = true;
-            this.labelStudentCount.Location = new System.Drawing.Point(37, 68);
-            this.labelStudentCount.Name = "labelStudentCount";
-            this.labelStudentCount.Size = new System.Drawing.Size(95, 19);
-            this.labelStudentCount.TabIndex = 1;
-            this.labelStudentCount.Text = "Student Count:";
-            // 
             // labelCourseName
             // 
             this.labelCourseName.AutoSize = true;
-            this.labelCourseName.Location = new System.Drawing.Point(37, 35);
+            this.labelCourseName.Location = new System.Drawing.Point(37, 49);
             this.labelCourseName.Name = "labelCourseName";
             this.labelCourseName.Size = new System.Drawing.Size(93, 19);
             this.labelCourseName.TabIndex = 0;
@@ -865,6 +804,34 @@
             this.labelCourseIDAns.TabIndex = 18;
             this.labelCourseIDAns.Text = "CourseNameAns";
             // 
+            // labelClassNumber
+            // 
+            this.labelClassNumber.AutoSize = true;
+            this.labelClassNumber.Location = new System.Drawing.Point(37, 82);
+            this.labelClassNumber.Name = "labelClassNumber";
+            this.labelClassNumber.Size = new System.Drawing.Size(95, 19);
+            this.labelClassNumber.TabIndex = 24;
+            this.labelClassNumber.Text = "Class Number:";
+            // 
+            // comboboxClassNumber
+            // 
+            this.comboboxClassNumber.FormattingEnabled = true;
+            this.comboboxClassNumber.ItemHeight = 23;
+            this.comboboxClassNumber.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.comboboxClassNumber.Location = new System.Drawing.Point(199, 82);
+            this.comboboxClassNumber.Name = "comboboxClassNumber";
+            this.comboboxClassNumber.Size = new System.Drawing.Size(121, 29);
+            this.comboboxClassNumber.TabIndex = 25;
+            this.comboboxClassNumber.UseSelectable = true;
+            // 
             // FacultyInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -902,26 +869,20 @@
         private MetroFramework.Controls.MetroLabel labelSelectCourse;
         private System.Windows.Forms.GroupBox grouboxAttendance;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private MetroFramework.Controls.MetroButton buttonTest;
+        private MetroFramework.Controls.MetroButton buttonGenerateAttendance;
         private MetroFramework.Controls.MetroButton buttonAutoCredentials;
-        private MetroFramework.Controls.MetroLabel labelStudentsRemainingAns;
-        private MetroFramework.Controls.MetroLabel labelStudentsRemaining;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox comboboxShutOff;
         private MetroFramework.Controls.MetroLabel labelShutOffTime;
         private MetroFramework.Controls.MetroLabel labelPassword;
-        private MetroFramework.Controls.MetroLabel labelStudentsAccountedFor;
-        private MetroFramework.Controls.MetroProgressBar progressbarStudents;
         private MetroFramework.Controls.MetroLabel labelManualAttendance;
         private MetroFramework.Controls.MetroTextBox textboxStudentSearch;
-        private MetroFramework.Controls.MetroLabel labelStudentCountAns;
         private MetroFramework.Controls.MetroLabel labelCourseNameAns;
         private MetroFramework.Controls.MetroButton buttonStop;
         private MetroFramework.Controls.MetroButton buttonStart;
         private MetroFramework.Controls.MetroLabel labelSSID;
         private MetroFramework.Controls.MetroTextBox textboxPassword;
         private MetroFramework.Controls.MetroTextBox textboxSSID;
-        private MetroFramework.Controls.MetroLabel labelStudentCount;
         private MetroFramework.Controls.MetroLabel labelCourseName;
         private MetroFramework.Controls.MetroTabPage tabFacultyInfo;
         private System.Windows.Forms.GroupBox groupboxFacultyInformation;
@@ -960,5 +921,7 @@
         private MetroFramework.Controls.MetroLabel labelCourseID;
         private MetroFramework.Controls.MetroLabel labelCourseInfoCourseName;
         private MetroFramework.Controls.MetroLabel labelCourseSection;
+        private MetroFramework.Controls.MetroComboBox comboboxClassNumber;
+        private MetroFramework.Controls.MetroLabel labelClassNumber;
     }
 }

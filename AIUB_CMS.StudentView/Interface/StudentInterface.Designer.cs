@@ -56,8 +56,7 @@
             this.labelName = new MetroFramework.Controls.MetroLabel();
             this.labelEmailAns = new MetroFramework.Controls.MetroLabel();
             this.labelFatherAns = new MetroFramework.Controls.MetroLabel();
-            this.tabAcademics = new MetroFramework.Controls.MetroTabPage();
-            this.tabSchedule = new MetroFramework.Controls.MetroTabPage();
+            this.tabAcademicsAppointments = new MetroFramework.Controls.MetroTabPage();
             this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.buttonLogout = new MetroFramework.Controls.MetroButton();
             this.tabControlStudent.SuspendLayout();
@@ -69,12 +68,11 @@
             // tabControlStudent
             // 
             this.tabControlStudent.Controls.Add(this.tabStudentInfo);
-            this.tabControlStudent.Controls.Add(this.tabAcademics);
-            this.tabControlStudent.Controls.Add(this.tabSchedule);
+            this.tabControlStudent.Controls.Add(this.tabAcademicsAppointments);
             this.tabControlStudent.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.tabControlStudent.Location = new System.Drawing.Point(20, 121);
             this.tabControlStudent.Name = "tabControlStudent";
-            this.tabControlStudent.SelectedIndex = 0;
+            this.tabControlStudent.SelectedIndex = 1;
             this.tabControlStudent.Size = new System.Drawing.Size(1181, 490);
             this.tabControlStudent.TabIndex = 0;
             this.tabControlStudent.UseSelectable = true;
@@ -344,34 +342,19 @@
             this.labelFatherAns.Size = new System.Drawing.Size(0, 0);
             this.labelFatherAns.TabIndex = 18;
             // 
-            // tabAcademics
+            // tabAcademicsAppointments
             // 
-            this.tabAcademics.HorizontalScrollbarBarColor = true;
-            this.tabAcademics.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabAcademics.HorizontalScrollbarSize = 10;
-            this.tabAcademics.Location = new System.Drawing.Point(4, 38);
-            this.tabAcademics.Name = "tabAcademics";
-            this.tabAcademics.Size = new System.Drawing.Size(1173, 448);
-            this.tabAcademics.TabIndex = 2;
-            this.tabAcademics.Text = "Academics";
-            this.tabAcademics.VerticalScrollbarBarColor = true;
-            this.tabAcademics.VerticalScrollbarHighlightOnWheel = false;
-            this.tabAcademics.VerticalScrollbarSize = 10;
-            // 
-            // tabSchedule
-            // 
-            this.tabSchedule.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabSchedule.HorizontalScrollbarBarColor = true;
-            this.tabSchedule.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabSchedule.HorizontalScrollbarSize = 10;
-            this.tabSchedule.Location = new System.Drawing.Point(4, 38);
-            this.tabSchedule.Name = "tabSchedule";
-            this.tabSchedule.Size = new System.Drawing.Size(1173, 448);
-            this.tabSchedule.TabIndex = 0;
-            this.tabSchedule.Text = "Schedule";
-            this.tabSchedule.VerticalScrollbarBarColor = true;
-            this.tabSchedule.VerticalScrollbarHighlightOnWheel = false;
-            this.tabSchedule.VerticalScrollbarSize = 10;
+            this.tabAcademicsAppointments.HorizontalScrollbarBarColor = true;
+            this.tabAcademicsAppointments.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabAcademicsAppointments.HorizontalScrollbarSize = 10;
+            this.tabAcademicsAppointments.Location = new System.Drawing.Point(4, 38);
+            this.tabAcademicsAppointments.Name = "tabAcademicsAppointments";
+            this.tabAcademicsAppointments.Size = new System.Drawing.Size(1173, 448);
+            this.tabAcademicsAppointments.TabIndex = 2;
+            this.tabAcademicsAppointments.Text = "Academics and Appointments";
+            this.tabAcademicsAppointments.VerticalScrollbarBarColor = true;
+            this.tabAcademicsAppointments.VerticalScrollbarHighlightOnWheel = false;
+            this.tabAcademicsAppointments.VerticalScrollbarSize = 10;
             // 
             // pictureLogo
             // 
@@ -420,8 +403,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroTabControl tabControlStudent;
-        private MetroFramework.Controls.MetroTabPage tabSchedule;
-        private MetroFramework.Controls.MetroTabPage tabAcademics;
+        private MetroFramework.Controls.MetroTabPage tabAcademicsAppointments;
         private System.Windows.Forms.PictureBox pictureLogo;
         private MetroFramework.Controls.MetroTabPage tabStudentInfo;
         private System.Windows.Forms.GroupBox groupboxStudentPersonalInformation;

@@ -37,4 +37,18 @@
       <Column Name="Assigned" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Test_AttendanceTable" Member="Test_AttendanceTables">
+    <Type Name="Test_AttendanceTable">
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StudentMAC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class8" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

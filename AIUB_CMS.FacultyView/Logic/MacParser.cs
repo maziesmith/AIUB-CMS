@@ -13,7 +13,7 @@ namespace AIUB_CMS.FacultyView.Logic
         public List<string> ParseForMacAddress(string fileAddress)
         {
             string rawArpList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
-            List<string> parsed = showMatch(rawArpList, @"\w\w-\w\w-\w\w-\w\w");
+            List<string> parsed = showMatch(rawArpList, @"\w\w-\w\w-\w\w-\w\w-\w\w-\w\w");
             Console.WriteLine(parsed);
             return parsed;
         }

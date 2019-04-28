@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AttendanceDataHandler.cs" />
     <Compile Include="Data\CourseDataHandler.cs" />
     <Compile Include="Data\FacultyData.designer.cs">
       <AutoGen>True</AutoGen>

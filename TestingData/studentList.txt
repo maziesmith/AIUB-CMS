@@ -2,11 +2,8 @@
 Interface: 192.168.0.106 --- 0x10
   Internet Address      Physical Address      Type
   192.168.0.1           0c-80-63-b7-c2-42     dynamic   
-  192.168.0.104         40-b8-9a-68-07-21     dynamic   
   192.168.0.255         ff-ff-ff-ff-ff-ff     static    
   224.0.0.22            01-00-5e-00-00-16     static    
   224.0.0.251           01-00-5e-00-00-fb     static    
   224.0.0.252           01-00-5e-00-00-fc     static    
-  239.192.152.143       01-00-5e-40-98-8f     static    
   239.255.255.250       01-00-5e-7f-ff-fa     static    
-  255.255.255.255       ff-ff-ff-ff-ff-ff     static    

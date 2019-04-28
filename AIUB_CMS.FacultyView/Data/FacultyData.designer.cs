@@ -36,6 +36,9 @@ namespace AIUB_CMS.FacultyView.Data
     partial void InsertTest_CourseAssignment(Test_CourseAssignment instance);
     partial void UpdateTest_CourseAssignment(Test_CourseAssignment instance);
     partial void DeleteTest_CourseAssignment(Test_CourseAssignment instance);
+    partial void InsertTest_AttendanceTable(Test_AttendanceTable instance);
+    partial void UpdateTest_AttendanceTable(Test_AttendanceTable instance);
+    partial void DeleteTest_AttendanceTable(Test_AttendanceTable instance);
     #endregion
 		
 		public FacultyDataDataContext() : 
@@ -89,6 +92,14 @@ namespace AIUB_CMS.FacultyView.Data
 			get
 			{
 				return this.GetTable<Test_CourseAssignment>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Test_AttendanceTable> Test_AttendanceTables
+		{
+			get
+			{
+				return this.GetTable<Test_AttendanceTable>();
 			}
 		}
 	}
@@ -675,6 +686,284 @@ namespace AIUB_CMS.FacultyView.Data
 					this._Assigned = value;
 					this.SendPropertyChanged("Assigned");
 					this.OnAssignedChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_AttendanceTable")]
+	public partial class Test_AttendanceTable : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _StudentID;
+		
+		private string _StudentMAC;
+		
+		private string _Class1;
+		
+		private string _Class2;
+		
+		private string _Class3;
+		
+		private string _Class4;
+		
+		private string _Class5;
+		
+		private string _Class6;
+		
+		private string _Class7;
+		
+		private string _Class8;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnStudentIDChanging(string value);
+    partial void OnStudentIDChanged();
+    partial void OnStudentMACChanging(string value);
+    partial void OnStudentMACChanged();
+    partial void OnClass1Changing(string value);
+    partial void OnClass1Changed();
+    partial void OnClass2Changing(string value);
+    partial void OnClass2Changed();
+    partial void OnClass3Changing(string value);
+    partial void OnClass3Changed();
+    partial void OnClass4Changing(string value);
+    partial void OnClass4Changed();
+    partial void OnClass5Changing(string value);
+    partial void OnClass5Changed();
+    partial void OnClass6Changing(string value);
+    partial void OnClass6Changed();
+    partial void OnClass7Changing(string value);
+    partial void OnClass7Changed();
+    partial void OnClass8Changing(string value);
+    partial void OnClass8Changed();
+    #endregion
+		
+		public Test_AttendanceTable()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudentID", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string StudentID
+		{
+			get
+			{
+				return this._StudentID;
+			}
+			set
+			{
+				if ((this._StudentID != value))
+				{
+					this.OnStudentIDChanging(value);
+					this.SendPropertyChanging();
+					this._StudentID = value;
+					this.SendPropertyChanged("StudentID");
+					this.OnStudentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudentMAC", DbType="NVarChar(50)")]
+		public string StudentMAC
+		{
+			get
+			{
+				return this._StudentMAC;
+			}
+			set
+			{
+				if ((this._StudentMAC != value))
+				{
+					this.OnStudentMACChanging(value);
+					this.SendPropertyChanging();
+					this._StudentMAC = value;
+					this.SendPropertyChanged("StudentMAC");
+					this.OnStudentMACChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class1", DbType="NVarChar(50)")]
+		public string Class1
+		{
+			get
+			{
+				return this._Class1;
+			}
+			set
+			{
+				if ((this._Class1 != value))
+				{
+					this.OnClass1Changing(value);
+					this.SendPropertyChanging();
+					this._Class1 = value;
+					this.SendPropertyChanged("Class1");
+					this.OnClass1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class2", DbType="NVarChar(50)")]
+		public string Class2
+		{
+			get
+			{
+				return this._Class2;
+			}
+			set
+			{
+				if ((this._Class2 != value))
+				{
+					this.OnClass2Changing(value);
+					this.SendPropertyChanging();
+					this._Class2 = value;
+					this.SendPropertyChanged("Class2");
+					this.OnClass2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class3", DbType="NVarChar(50)")]
+		public string Class3
+		{
+			get
+			{
+				return this._Class3;
+			}
+			set
+			{
+				if ((this._Class3 != value))
+				{
+					this.OnClass3Changing(value);
+					this.SendPropertyChanging();
+					this._Class3 = value;
+					this.SendPropertyChanged("Class3");
+					this.OnClass3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class4", DbType="NVarChar(50)")]
+		public string Class4
+		{
+			get
+			{
+				return this._Class4;
+			}
+			set
+			{
+				if ((this._Class4 != value))
+				{
+					this.OnClass4Changing(value);
+					this.SendPropertyChanging();
+					this._Class4 = value;
+					this.SendPropertyChanged("Class4");
+					this.OnClass4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class5", DbType="NVarChar(50)")]
+		public string Class5
+		{
+			get
+			{
+				return this._Class5;
+			}
+			set
+			{
+				if ((this._Class5 != value))
+				{
+					this.OnClass5Changing(value);
+					this.SendPropertyChanging();
+					this._Class5 = value;
+					this.SendPropertyChanged("Class5");
+					this.OnClass5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class6", DbType="NVarChar(50)")]
+		public string Class6
+		{
+			get
+			{
+				return this._Class6;
+			}
+			set
+			{
+				if ((this._Class6 != value))
+				{
+					this.OnClass6Changing(value);
+					this.SendPropertyChanging();
+					this._Class6 = value;
+					this.SendPropertyChanged("Class6");
+					this.OnClass6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class7", DbType="NVarChar(50)")]
+		public string Class7
+		{
+			get
+			{
+				return this._Class7;
+			}
+			set
+			{
+				if ((this._Class7 != value))
+				{
+					this.OnClass7Changing(value);
+					this.SendPropertyChanging();
+					this._Class7 = value;
+					this.SendPropertyChanged("Class7");
+					this.OnClass7Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class8", DbType="NChar(10)")]
+		public string Class8
+		{
+			get
+			{
+				return this._Class8;
+			}
+			set
+			{
+				if ((this._Class8 != value))
+				{
+					this.OnClass8Changing(value);
+					this.SendPropertyChanging();
+					this._Class8 = value;
+					this.SendPropertyChanged("Class8");
+					this.OnClass8Changed();
 				}
 			}
 		}

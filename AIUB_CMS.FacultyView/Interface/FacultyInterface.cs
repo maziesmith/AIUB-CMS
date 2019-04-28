@@ -59,7 +59,11 @@ namespace AIUB_CMS.FacultyView.Interface
             hotspot.StartHotspot(this.textboxSSID.Text, this.textboxPassword.Text);
             // hotspot.GenerateStudentList();
             timerForHotspot.Start();
-            await Task.Delay(20000);
+            int hotspotDelay = this.comboboxShutOff.SelectedIndex;
+            if (hotspotDelay != 0)
+                await Task.Delay(hotspotDelay * 5 * 6000);
+            else
+                await Task.Delay(20000);
             hotspot.StopHotspot();
             timerForHotspot.Stop();
 
@@ -67,16 +71,28 @@ namespace AIUB_CMS.FacultyView.Interface
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
-            // hotspot.GenerateStudentList();
-            //string macList = File.ReadAllText("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
-            //this.richTextBox1.Text = macList;
-
             MacParser macParser = new MacParser();
             List<string> studentList = macParser.ParseForMacAddress("C:\\Users\\Saqibur Rahman\\Desktop\\AIUB-CMS\\TestingData\\studentList.txt");
-
+            string studentMacs = "";
             foreach(string student in studentList)
             {
                 this.richTextBox1.AppendText("\n" + student);
+                studentMacs = studentMacs + " " + student;
+            }
+
+            AttendanceDataHandler attendanceData = new AttendanceDataHandler();
+
+            List<string> MacList = attendanceData.GetStudentMACs();
+
+            foreach (var mac in MacList)
+            {
+                Console.WriteLine(mac);
+                if (studentMacs.Contains(mac))
+                {
+                    attendanceData.GiveAttendance(Convert.ToInt32(this.comboboxClassNumber.SelectedItem) + 1, mac);
+                    Console.WriteLine("Attendance Given");
+                }
+                    
             }
 
         }
