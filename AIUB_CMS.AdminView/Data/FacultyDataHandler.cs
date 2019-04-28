@@ -52,6 +52,15 @@ namespace AIUB_CMS.AdminView.Data
             }
         }
 
+        public List<string> GetAllFaculty()
+        {
+            var allFaculty = from faculty in FacultyDataContext.Test_FacultyTables
+                             select faculty.Name;
+
+            
+            return allFaculty.ToList<string>();
+        }
+
         public void InsertFaculty()
         {
             var newFaculty = new Test_FacultyTable();

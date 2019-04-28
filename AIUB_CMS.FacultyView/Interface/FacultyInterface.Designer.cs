@@ -703,7 +703,7 @@
             this.tabcontrolFaculty.Controls.Add(this.tabTSF);
             this.tabcontrolFaculty.Location = new System.Drawing.Point(4, 86);
             this.tabcontrolFaculty.Name = "tabcontrolFaculty";
-            this.tabcontrolFaculty.SelectedIndex = 0;
+            this.tabcontrolFaculty.SelectedIndex = 1;
             this.tabcontrolFaculty.Size = new System.Drawing.Size(1174, 528);
             this.tabcontrolFaculty.TabIndex = 0;
             this.tabcontrolFaculty.UseSelectable = true;
@@ -721,6 +721,7 @@
             this.Controls.Add(this.tabcontrolFaculty);
             this.Name = "FacultyInterface";
             this.Text = "FacultyInterface";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Right;
             this.tabAcademics.ResumeLayout(false);
             this.tabAcademics.PerformLayout();
             this.grouboxAttendance.ResumeLayout(false);

@@ -39,6 +39,12 @@ namespace AIUB_CMS.AdminView.Data
     partial void InsertTest_FacultyTable(Test_FacultyTable instance);
     partial void UpdateTest_FacultyTable(Test_FacultyTable instance);
     partial void DeleteTest_FacultyTable(Test_FacultyTable instance);
+    partial void InsertTest_CourseTable(Test_CourseTable instance);
+    partial void UpdateTest_CourseTable(Test_CourseTable instance);
+    partial void DeleteTest_CourseTable(Test_CourseTable instance);
+    partial void InsertTest_CourseAssignment(Test_CourseAssignment instance);
+    partial void UpdateTest_CourseAssignment(Test_CourseAssignment instance);
+    partial void DeleteTest_CourseAssignment(Test_CourseAssignment instance);
     #endregion
 		
 		public AdminDataDataContext() : 
@@ -100,6 +106,22 @@ namespace AIUB_CMS.AdminView.Data
 			get
 			{
 				return this.GetTable<Test_FacultyTable>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Test_CourseTable> Test_CourseTables
+		{
+			get
+			{
+				return this.GetTable<Test_CourseTable>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Test_CourseAssignment> Test_CourseAssignments
+		{
+			get
+			{
+				return this.GetTable<Test_CourseAssignment>();
 			}
 		}
 	}
@@ -1198,6 +1220,370 @@ namespace AIUB_CMS.AdminView.Data
 					this._ImageDirectory = value;
 					this.SendPropertyChanged("ImageDirectory");
 					this.OnImageDirectoryChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_CourseTable")]
+	public partial class Test_CourseTable : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _Department;
+		
+		private System.Nullable<int> _Credits;
+		
+		private System.Nullable<int> _Section;
+		
+		private System.Nullable<int> _DaySlot;
+		
+		private System.Nullable<int> _StartTime;
+		
+		private System.Nullable<int> _EndTime;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnDepartmentChanging(System.Nullable<int> value);
+    partial void OnDepartmentChanged();
+    partial void OnCreditsChanging(System.Nullable<int> value);
+    partial void OnCreditsChanged();
+    partial void OnSectionChanging(System.Nullable<int> value);
+    partial void OnSectionChanged();
+    partial void OnDaySlotChanging(System.Nullable<int> value);
+    partial void OnDaySlotChanged();
+    partial void OnStartTimeChanging(System.Nullable<int> value);
+    partial void OnStartTimeChanged();
+    partial void OnEndTimeChanging(System.Nullable<int> value);
+    partial void OnEndTimeChanged();
+    #endregion
+		
+		public Test_CourseTable()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="Int")]
+		public System.Nullable<int> Department
+		{
+			get
+			{
+				return this._Department;
+			}
+			set
+			{
+				if ((this._Department != value))
+				{
+					this.OnDepartmentChanging(value);
+					this.SendPropertyChanging();
+					this._Department = value;
+					this.SendPropertyChanged("Department");
+					this.OnDepartmentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Credits", DbType="Int")]
+		public System.Nullable<int> Credits
+		{
+			get
+			{
+				return this._Credits;
+			}
+			set
+			{
+				if ((this._Credits != value))
+				{
+					this.OnCreditsChanging(value);
+					this.SendPropertyChanging();
+					this._Credits = value;
+					this.SendPropertyChanged("Credits");
+					this.OnCreditsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Section", DbType="Int")]
+		public System.Nullable<int> Section
+		{
+			get
+			{
+				return this._Section;
+			}
+			set
+			{
+				if ((this._Section != value))
+				{
+					this.OnSectionChanging(value);
+					this.SendPropertyChanging();
+					this._Section = value;
+					this.SendPropertyChanged("Section");
+					this.OnSectionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DaySlot", DbType="Int")]
+		public System.Nullable<int> DaySlot
+		{
+			get
+			{
+				return this._DaySlot;
+			}
+			set
+			{
+				if ((this._DaySlot != value))
+				{
+					this.OnDaySlotChanging(value);
+					this.SendPropertyChanging();
+					this._DaySlot = value;
+					this.SendPropertyChanged("DaySlot");
+					this.OnDaySlotChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Int")]
+		public System.Nullable<int> StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="Int")]
+		public System.Nullable<int> EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Test_CourseAssignment")]
+	public partial class Test_CourseAssignment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _FacultyID;
+		
+		private System.Nullable<int> _CourseID;
+		
+		private System.Nullable<int> _Assigned;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnFacultyIDChanging(string value);
+    partial void OnFacultyIDChanged();
+    partial void OnCourseIDChanging(System.Nullable<int> value);
+    partial void OnCourseIDChanged();
+    partial void OnAssignedChanging(System.Nullable<int> value);
+    partial void OnAssignedChanged();
+    #endregion
+		
+		public Test_CourseAssignment()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FacultyID", DbType="NVarChar(50)")]
+		public string FacultyID
+		{
+			get
+			{
+				return this._FacultyID;
+			}
+			set
+			{
+				if ((this._FacultyID != value))
+				{
+					this.OnFacultyIDChanging(value);
+					this.SendPropertyChanging();
+					this._FacultyID = value;
+					this.SendPropertyChanged("FacultyID");
+					this.OnFacultyIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseID", DbType="Int")]
+		public System.Nullable<int> CourseID
+		{
+			get
+			{
+				return this._CourseID;
+			}
+			set
+			{
+				if ((this._CourseID != value))
+				{
+					this.OnCourseIDChanging(value);
+					this.SendPropertyChanging();
+					this._CourseID = value;
+					this.SendPropertyChanged("CourseID");
+					this.OnCourseIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Assigned", DbType="Int")]
+		public System.Nullable<int> Assigned
+		{
+			get
+			{
+				return this._Assigned;
+			}
+			set
+			{
+				if ((this._Assigned != value))
+				{
+					this.OnAssignedChanging(value);
+					this.SendPropertyChanging();
+					this._Assigned = value;
+					this.SendPropertyChanged("Assigned");
+					this.OnAssignedChanged();
 				}
 			}
 		}

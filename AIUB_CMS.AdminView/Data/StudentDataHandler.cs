@@ -298,6 +298,5 @@ namespace AIUB_CMS.AdminView.Data
         {
             this.password = value;
         }
-
     }
 }

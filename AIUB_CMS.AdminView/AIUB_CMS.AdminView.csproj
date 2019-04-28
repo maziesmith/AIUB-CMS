@@ -59,6 +59,7 @@
       <DependentUpon>AdminData.dbml</DependentUpon>
     </Compile>
     <Compile Include="Data\AdminDataHandler.cs" />
+    <Compile Include="Data\CourseDataHandler.cs" />
     <Compile Include="Data\FacultyDataHandler.cs" />
     <Compile Include="Data\StudentDataHandler.cs" />
     <Compile Include="Handler\AdminFormInitializer.cs" />
