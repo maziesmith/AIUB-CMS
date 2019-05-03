@@ -2,12 +2,6 @@
 
 This showcases a classroom management Windows Form Application which makes it easier for faculty to take attendance. The program features the usual student, faculty and course management system, with all the related CRUD operations. Additionally, we have implemented an appointment booking system which makes it easier for students and faculty to schedule consulting hours.
 
-Co-Contributors
----------------
-Sinthia Ahmed - sinabila001@gmail.com
-Tajbiul Ahmed - colddk1997@gmail.com
-Md. Muminur Rahman - muminur.rahman016@gmail.com
-
 ## Built With
 
 * [.Net Framework 4.7.1](https://docs.microsoft.com/en-us/dotnet/)
