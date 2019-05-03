@@ -17,9 +17,9 @@ Md. Muminur Rahman - muminur.rahman016@gmail.com
 
 ## Co-Contributors
 
-* **Sinthia Ahmed** - sinabila001@gmail.com \
-* **Tajbiul Ahmed** - colddk1997@gmail.com \
-* **Md. Muminur Rahman** - muminur.rahman016@gmail.com \
+* **Sinthia Ahmed** - sinabila001@gmail.com /
+* **Tajbiul Ahmed** - colddk1997@gmail.com /
+* **Md. Muminur Rahman** - muminur.rahman016@gmail.com /
 
 ## License
 
